@@ -5,7 +5,7 @@ import  { getImage } from "gatsby-plugin-image"
 import { BgImage } from "gbimage-bridge"
 import styled from "styled-components"
 
-import * as BannerStyle from  "../../styles/Banner.module.css"
+import * as BannerStyle from  "../../styles/origins.module.css"
 
 
 const VisionBanner = () => {

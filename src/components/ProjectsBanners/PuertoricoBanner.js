@@ -5,7 +5,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import  { getImage } from "gatsby-plugin-image"
 
 import { BgImage } from "gbimage-bridge"
-import * as BannerStyle from "../../styles/Banner.module.css"
+import * as BannerStyle from "../../styles/puertorico.module.css"
 
 
 const PuertoRicoBanner = () => {

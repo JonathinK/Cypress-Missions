@@ -5,8 +5,12 @@ import { graphql, useStaticQuery } from "gatsby"
 import  { getImage } from "gatsby-plugin-image"
 
 import { BgImage } from "gbimage-bridge"
-import * as BannerStyle from "../../styles/Banner.module.css"
+import * as BannerStyle from "../../styles/bahamas.module.css"
 
+const BahamasBannerWrap = styled.div`
+        width:100%;
+        height:100%;
+    `
 
 const BahamasBanner = () => {
   const { placeholderImage } = useStaticQuery(
@@ -37,7 +41,4 @@ const BahamasBanner = () => {
     }
     export default BahamasBanner
     
-    const BahamasBannerWrap = styled.div`
-        width:100%;
-        height:100%;
-    `
+    

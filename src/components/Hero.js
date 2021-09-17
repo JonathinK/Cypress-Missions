@@ -40,7 +40,10 @@ const HeroImage = () =>{
         <h1>One Goal</h1>
         <h1>One Mission</h1>
         <p>Building Back communities one person at a time</p>
-        <HeroButton>Learn How</HeroButton>
+        <ArrowWrap>
+          <div />
+          <div />
+        </ArrowWrap>
       </HeroInfo>
     </HeroGrid>
     
@@ -97,34 +100,29 @@ const HeroInfo = styled.div`
     letter-spacing:3px;
   }
 `
-const HeroButton = styled.button`
+const ArrowWrap = styled.div`
+  position:absolute;
+  width:4rem;
+  height:3rem;
+  bottom:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:8rem;
+  
+    div{
+    background:white;
+    height:3rem;
+    width:.7rem;
+    border-radius:10px;
     position:relative;
-    color:white;
-    background:transparent;
-    border: 3px white solid;
-    border-radius: 10px;
-    font-family:flood-std,sans-serif;
-    font-weight:300;
-    font-size:clamp(1.2rem,2vw, 3rem);
-    padding:1rem 2rem;
-    margin-top:3rem;
-    letter-spacing:3px;
-    cursor:pointer;
-
-    
-    @media ${breakpoints.md}{
-      :hover{
-      background:white;
-      color:#565656;
-      transition: background 400ms ease-in ;
-    }
-    }
-    @media ${breakpoints.sm}{
-      :active{
-        background:white;
-        color:#565656;
-      }
-    }
+  }
+  div:first-child{
+    transform:translate(-3px) rotate(-30deg);
+  }
+  div:last-child{
+    transform: translate(4px) rotate(30deg);
+  }
 `
 export default HeroImage
 

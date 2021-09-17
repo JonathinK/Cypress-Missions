@@ -22,7 +22,7 @@ const HowCypressWorksHome = () => {
             <TitleWrap>
                 <StyledBrush />
                 <h2>How Cypress Works</h2>
-            </TitleWrap>
+             </TitleWrap>
             <HowCypressWorks>
             <section>
                 <div>
@@ -120,6 +120,7 @@ const HowCypressWorksHome = () => {
         width:95%;
         min-width:18rem;
         margin-top:5rem;
+        position:relative;
 
         h2{
             grid-area: 1 / 1 / 2 / 2;
@@ -133,7 +134,7 @@ const HowCypressWorksHome = () => {
     `
     const StyledBrush = styled(Brush)`
         grid-area: 1 / 1 / 2 / 2;
-        width:100%;
+        
     `
     const HowCypressWorks = styled.main`
         h3{

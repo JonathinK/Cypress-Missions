@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../../components/layout"
-import * as BannerStyle from "../../styles/Banner.module.css"
+import * as BannerStyle from "../../styles/projects.module.css"
 import { breakpoints } from "../../utils/breakpoints"
 import { BgImage } from "gbimage-bridge"
 import { graphql, useStaticQuery } from "gatsby"
@@ -156,44 +156,6 @@ const Projects = () => {
                         Cras adipiscing enim eu turpis egestas pretium aenean. Massa sed elementum tempus egestas sed sed risus. Tempor orci eu lobortis elementum nibh. 
                         </p>
                          <Link to="/proj/newjersey">See More</Link>
-                    </div>
-                </section>{
-                /* Pennsylvania */}
-                <section>
-                <div>
-                    <StaticImage 
-                            src="../../images/pennsylvania.jpg"
-                            alt="Puerto Rico Image"
-                            placeholder="blurred"
-                        />
-                    </div>
-                    <div>
-                       <h3>Pennsylvania</h3>
-                        <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Quis risus sed vulputate odio ut enim blandit volutpat. Elit ut aliquam purus sit amet luctus venenatis lectus. Id diam maecenas ultricies mi eget. 
-                        Cras adipiscing enim eu turpis egestas pretium aenean. Massa sed elementum tempus egestas sed sed risus. Tempor orci eu lobortis elementum nibh.  
-                        </p>
-                        <Link to="/proj/pennsylvania">See More</Link> 
-                    </div>
-                </section>{
-                /* South Dakota */}
-                <section>
-                <div> 
-                    <StaticImage 
-                            src="../../images/southdakota.jpg"
-                            alt="Puerto Rico Image"
-                            placeholder="blurred"
-                        />
-                        
-                    </div>
-                    <div>
-                       <h3>South Dakota</h3>
-                        <p>
-                        Cypress Missions provided training for residents with essential building skills to construct basic housing for Native American families devastated 
-                        by flooding on the Pine Ridge Reservation in South Dakota. Tribal officials continue to struggle with a lack of resources, water, transportation, and facilities. 
-                        </p>
-                        <Link to="/proj/southdakota">See More</Link> 
                     </div>
                 </section>
             </ProjectsWrapper>
