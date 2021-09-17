@@ -1,6 +1,14 @@
+
 .hero{
     min-height:100vh;   
     width: 100%;
     background-size: cover;
     background-attachment: fixed;
 }
+
+@media  (max-width: 500px){
+    .hero{
+        background-attachment: initial;
+    }
+}
+

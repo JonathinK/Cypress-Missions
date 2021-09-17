@@ -6,6 +6,7 @@ import  { getImage } from "gatsby-plugin-image"
 
 import { BgImage } from "gbimage-bridge"
 import * as HeroStyle from "../styles/Hero.module.css"
+import { breakpoints } from "../utils/breakpoints"
 
 
 
@@ -33,7 +34,7 @@ const HeroImage = () =>{
   return(
     <HeroGrid>
       <HeroWrap>
-        <BgImage image={pluginImage} className={HeroStyle.hero} />
+        <StyledBgImage image={pluginImage} />
       </HeroWrap>
       <HeroOverlay />
       <HeroInfo>
@@ -55,7 +56,15 @@ const HeroGrid = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows:1fr;
   min-height:100vh;
-
+`
+const StyledBgImage = styled(BgImage)`
+  min-height:100vh;
+  width:100%;
+  background-attachment: fixed;
+  position:fixed;
+  left:0;
+  right:0;
+  z-index:-1;
 `
 const HeroWrap = styled.div`
   grid-area:1 / 1 / 2 / 2;
@@ -108,7 +117,7 @@ const ArrowWrap = styled.div`
   display:flex;
   justify-content:center;
   align-items:center;
-  margin-bottom:8rem;
+  margin-bottom:10vh;
   
     div{
     background:white;
