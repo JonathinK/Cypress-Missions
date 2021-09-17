@@ -6,7 +6,7 @@ import  { getImage } from "gatsby-plugin-image"
 
 import { BgImage } from "gbimage-bridge"
 import * as HeroStyle from "../styles/Hero.module.css"
-import { breakpoints } from "../utils/breakpoints"
+
 
 
 const HeroImage = () =>{
