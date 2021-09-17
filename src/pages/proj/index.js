@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../../components/Layout"
+import Layout from "../../components/layout"
 import * as BannerStyle from "../../styles/Banner.module.css"
 import { breakpoints } from "../../utils/breakpoints"
 import { BgImage } from "gbimage-bridge"

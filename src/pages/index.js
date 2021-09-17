@@ -5,7 +5,7 @@ import HowCypressWorks from "../components/HowCypressWorks"
 import ProjectsSpotlight from "../components/ProjectsSpotlight"
 
 
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const Home = () => { 

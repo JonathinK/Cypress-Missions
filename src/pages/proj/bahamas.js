@@ -1,7 +1,7 @@
 import React from "react"
 import BahamasImage from "../../components/ProjectsBanners/BahamasBanner"
 import styled from "styled-components"
-import Layout from "../../components/Layout"
+import Layout from "../../components/layout"
 import Brush from "../../svg/assets/brush.svg"
 import { breakpoints } from "../../utils/breakpoints"
 import { Link, graphql } from "gatsby"

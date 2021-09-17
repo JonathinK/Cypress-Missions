@@ -1,7 +1,7 @@
 import React from "react"
 import LonImage from "../../components/ProjectsBanners/LondonBanner"
 import styled from "styled-components"
-import Layout from "../../components/Layout"
+import Layout from "../../components/layout"
 import Brush from "../../svg/assets/brushw.svg"
 import { breakpoints } from "../../utils/breakpoints"
 import { Link, graphql } from "gatsby"
