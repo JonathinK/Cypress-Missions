@@ -55,9 +55,6 @@ const HeroGrid = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows:1fr;
   min-height:100vh;
-  position:fixed;
-  width:100%;
-
 `
 const StyledBgImage = styled(BgImage)`
   min-height:100vh;
