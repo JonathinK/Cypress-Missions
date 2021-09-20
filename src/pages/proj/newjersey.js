@@ -13,7 +13,7 @@ import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const London = ({ data }) => {
+const Jersey = ({ data }) => {
 
     return(
         <Layout>
@@ -32,9 +32,9 @@ const London = ({ data }) => {
             </TitleWrap>
             <Info>
                 <h3>
-                    Asbury / Longbranch
+                    Asbury Park
                 </h3>
-                <p>Cypress partnered with the community group <strong>Welcome Syrian Families</strong> to provide affordable housing for refugee families fleeing worn-torn Syria.</p>
+                <p> Cypress is helping Asbury Park to continue establishing a clothing closet and pantry, along with our consistent efforts of work at Bethel AME Church, while still assisting the local community with any extra needs.</p>
             </Info>
 
             <PhotoGridWrap>
@@ -64,7 +64,7 @@ const London = ({ data }) => {
     )
 }
 
-export default London
+export default Jersey
 
 export const pageQuery = graphql`
     query {
@@ -146,7 +146,7 @@ const Info = styled.div`
     h3{
         font-family:flood-std, sans-serif;
         font-weight:300;
-        font-size:clamp(1.8rem, 4vw, 2.5rem);
+        font-size:clamp(1.4rem, 4vw, 2.5rem);
         letter-spacing:2px;
         color:#199534;
         margin:0 0 1rem 0;

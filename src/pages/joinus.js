@@ -5,6 +5,7 @@ import Seo from "../components/seo"
 
 import styled from "styled-components"
 import { breakpoints } from "../utils/breakpoints"
+import { StaticImage } from "gatsby-plugin-image"
 
 
 
@@ -27,13 +28,21 @@ const JoinUs = () => {
             </JoinSvgWrap>
                 <MakeImpact>
                     <h2>Ready To Make An Impact?</h2>
-                    <p>We are always looking for for new volunteers to join our teams, locally and abroad. If you are interested in changing lives through giving back, then watch this short video from our founder Freddie.
-                        Fill out the form below, and someone will reach out to you with more information.
+                    <p>We are always looking for for new volunteers to join our teams, locally and abroad. If you are interested in changing lives through giving back, then
+                        fill out the form below, and someone will reach out to you with more information.
                     </p>
-                    <div>Video Goes Here</div>
+                    <div>
+                        <StaticImage 
+                            src="../images/joinus2.jpg"
+                            layout="fullWidth"
+                            alt="Join Us Photo"
+                            placeholder="blurred"
+                        />
+                    </div>
                 </MakeImpact>
                 <FormWrap>
-                    <form>
+                    <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="contact" / >
                         <h2>Join Our Team</h2>
                         <label>
                             <input type="text" name="name" placeholder="Full Name"/>
@@ -58,9 +67,6 @@ const JoinUs = () => {
 export default JoinUs
 
 const JoinUsWrap = styled.main`
-   @media ${breakpoints.sm}{
-    
-   }
     min-height:100vh;
     display:flex;
     flex-flow: column wrap;
@@ -93,7 +99,7 @@ const MakeImpact = styled.div`
         font-weight: 300;
         font-size:clamp(25px, 5vw, 40px);
         margin:0;
-        color:#5f5f5f;
+        color:#199534;
         text-align:center;
     }
 
@@ -109,19 +115,18 @@ const MakeImpact = styled.div`
         color:#5f5f5f;
     }
     div{
-       display:flex;
-       flex-flow:column;
-       justify-content:center;
-       align-items:center;
-       background:orange;
-       max-width:60rem;
-       width:90%;
-       min-height:12rem;
-       height:50vw;
-       max-height:30rem;
-       border-radius:10px;
-       box-shadow: 20px 20px 20px rgba(0,0,0,.3);
-       margin-top:5rem;
+      width:100%;
+      max-width:60rem;
+      max-height:30rem;
+      height:60vw;
+      display:flex;
+      flex-flow:column;
+      justify-content:center;
+      align-items:center;
+      margin-top: 3rem;
+      padding: 0 2rem;
+      filter: drop-shadow( 10px 10px 8px hsla(0,0%,0%,.3));
+      border-radius:10px;
     }
 `
 const FormWrap = styled.div`
@@ -147,7 +152,7 @@ const FormWrap = styled.div`
             font-weight: 300;
             font-size:clamp(25px, 5vw, 40px);
             margin:0 0 1rem 0;  
-            color:#5f5f5f;
+            color:#199534;
         }
         label{
             width:100%;

@@ -10,31 +10,29 @@ import { breakpoints } from "../utils/breakpoints"
 const DesktopNav = () => {
     const [fill, setFill] = useState(false)
     const [color, setColor] = useState(false)
+    const [boxShadow, setboxShadow] = useState(false)
     const colorRef = useRef()
     const navRef = useRef()
+    const boxShadowRef = useRef()
     colorRef.current = color
     navRef.current = fill
+    boxShadowRef.current = boxShadow
     useEffect(() => {
         const handleScroll = () => {
             const show = window.scrollY > 20
             if (navRef.current !== show) {
                 setFill(show)
                 setColor(show)
+                setboxShadow(show)
             }
         }
         document.addEventListener("scroll", handleScroll)
-
         return () => {
             document.removeEventListener("scroll", handleScroll)
         }
     }, [])
     return(
-        <NavWrap>
-            <NavSvg fill={fill}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="100%" preserveAspectRatio="none" viewBox="0 0 1920 120">
-                <path id="Path_406" data-name="Path 406" d="M-.965,0H1998.918V92.823S1683.116,120,998.977,120-.965,92.823-.965,92.823Z" transform="translate(0.965)" />
-                </svg>
-            </NavSvg>
+        <NavWrap fill={fill} boxShadow={boxShadow}>
             <LinksWrapper>
             <LeftLinks color={color}>
                 <Link to="/origins">Origins</Link>
@@ -75,30 +73,12 @@ const NavWrap = styled.nav`
     top:0;
     right:0;
     z-index:100;
+    background-color:${({ fill }) => (fill ? "white" : "transparent")};
+    box-shadow: ${({ boxShadow }) => (boxShadow ? "0px 10px 10px hsla(0,0%,0%,.4)" : "none")};
 @media ${breakpoints.md}{
     display:none;
 }   
     
-`
-const NavSvg = styled.div`
-
-    grid-area:1 / 1 / 2 / 2;
-    width:100%;
-    height:inherit;
-    
-    svg{
-        width:100%;
-        height:100%;
-        filter:drop-shadow(0 5px 10px rgba(0,0,0,.3));
-        -webkit-filter:drop-shadow(0 5px 10px rgba(0,0,0,.3));
-        drop-shadow:none;
-        fill:${({ fill }) => (fill ? "white" : "transparent")};
-        transition: fill 200ms ease-in;
-    }
-
-    
-
-
 `
 const LinksWrapper = styled.div`
 

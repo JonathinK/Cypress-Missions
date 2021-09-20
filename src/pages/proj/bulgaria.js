@@ -34,8 +34,9 @@ const Bulgaria = ({ data }) => {
                 <h3>
                     Malomir
                 </h3>
-                <p>Cypress Missions came to the remote village of Malomir, Bulgaria. The first objective was repairing the church, which will serve as a local center in one of the most vulnerable regions in Europe. 
-                    Cypress performed much needed repairs in the kindergarten in the village, as well as donating school materials to more than 50 children in the village of Tenevo.</p>
+                <p>In Bulgaria, Cypress was able to puchase much needed school supplies for village schools in one of Europe's poorest regions. Additionally, Cypress made repairs and upgrades to not only educational buildings but personal
+                    homes as well, including making a baby room for an expecting mother. The town of Malomir has many needs.
+                </p>
             </Info>
 
             <PhotoGridWrap>
@@ -128,7 +129,7 @@ const TitleWrap = styled.div`
            grid-area: 1 / 1 / 2 / 2; 
            font-family: flood-std, sans-serif;
            font-weight: 300;
-           font-size: clamp(1.6rem,6vw,3rem);
+           font-size: clamp(1.8rem,6vw,3rem);
            letter-spacing:2px;
            margin:0;
            color:#199453;
@@ -147,7 +148,7 @@ const Info = styled.div`
     h3{
         font-family:flood-std, sans-serif;
         font-weight:300;
-        font-size:clamp(1.8rem, 4vw, 2.5rem);
+        font-size:clamp(1.4rem, 4vw, 2.5rem);
         letter-spacing:2px;
         color:#199534;
         margin:0 0 1rem 0;

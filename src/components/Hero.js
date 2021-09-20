@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 
 import { graphql, useStaticQuery } from "gatsby"
 import  { getImage } from "gatsby-plugin-image"
@@ -61,7 +61,7 @@ const StyledBgImage = styled(BgImage)`
   width:100%;
 `
 const HeroWrap = styled.div`
-  grid-area:1 / 1 / 2 / 2;
+  grid-area: 1 / 1 / 2 / 2;
 `
 const HeroOverlay = styled.div`
   grid-area: 1 / 1 / 2 / 2;
@@ -81,7 +81,7 @@ const HeroInfo = styled.div`
   position:relative;
 
   h1{
-    font-size:clamp(2.8rem, 6vw, 8rem);
+    font-size:clamp(2.8rem, 8vw, 8rem);
     margin:0;
     color: white;
     text-align:center;
@@ -96,35 +96,53 @@ const HeroInfo = styled.div`
     
   }
   p{
-    font-size:clamp(1.5rem, 2.5vw, 5rem);
+    font-size:clamp(1.5rem, 3vw, 5rem);
     margin: 4rem 1rem 0 1rem;
     color:white;
     text-align:center;
     letter-spacing:3px;
   }
 `
+const arrowmovement = keyframes`
+  0%{
+    transform: translateY(0)
+  }
+  50%{
+    transform: translateY(1rem)
+  }
+
+  100%{
+    transform: translateY(0)
+  }
+`
 const ArrowWrap = styled.div`
-  position:absolute;
-  width:4rem;
-  height:3rem;
+  position:absolute; 
+  max-height:4rem;
+  height:10vw;
+  min-height:2rem;
+  max-width:7rem;
+  width:13vw;
+  min-width:2rem;
+  
   bottom:0;
   display:flex;
   justify-content:center;
   align-items:center;
-  margin-bottom:10vh;
+  margin-bottom:5vh;
+  animation: ${arrowmovement} 2s linear infinite;
   
     div{
     background:white;
-    height:3rem;
-    width:.7rem;
     border-radius:10px;
     position:relative;
+    height:100%;
+    width:15%;
   }
   div:first-child{
     transform:translate(-5px) rotate(-30deg);
   }
   div:last-child{
-    transform: translate(4px) rotate(30deg);
+    transform: translate(5px) rotate(30deg);
   }
 `
 export default HeroImage

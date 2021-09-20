@@ -126,7 +126,7 @@ const TitleWrap = styled.div`
            grid-area: 1 / 1 / 2 / 2; 
            font-family: flood-std, sans-serif;
            font-weight: 300;
-           font-size: clamp(1.6rem,6vw,3rem);
+           font-size: clamp(1.8rem,6vw,3rem);
            letter-spacing:2px;
            margin:0;
            color:#199453;
@@ -145,7 +145,7 @@ const Info = styled.div`
     h3{
         font-family:flood-std, sans-serif;
         font-weight:300;
-        font-size:clamp(1.8rem, 4vw, 2.5rem);
+        font-size:clamp(1.4rem, 4vw, 2.5rem);
         letter-spacing:2px;
         color:#199534;
         margin:0 0 1rem 0;

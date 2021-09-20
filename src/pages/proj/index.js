@@ -132,8 +132,8 @@ const Projects = () => {
                     </div>
                     <div>
                         <h3>Bulgaria</h3>
-                        <p>Cypress Missions came to the remote village of Malomir, Bulgaria. The first objective was repairing the church, which will serve as a local center in one of the most vulnerable regions in Europe. 
-                            Cypress performed much needed repairs in the kindergarten in the village, as well as donating school materials to more than 50 children in the village of Tenevo.
+                        <p>In Bulgaria, Cypress was able to puchase much needed school supplies for village schools in one of Europe's poorest regions. Additionally, Cypress made repairs and upgrades to not only educational buildings but personal
+                    homes as well, including making a baby room for an expecting mother. The town of Malomir has many needs.
                          </p>
                          <Link to="/proj/bulgaria">See More</Link>
                     </div>
@@ -151,9 +151,7 @@ const Projects = () => {
                     <div>
                        <h3>New Jersey</h3>
                         <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Quis risus sed vulputate odio ut enim blandit volutpat. Elit ut aliquam purus sit amet luctus venenatis lectus. Id diam maecenas ultricies mi eget. 
-                        Cras adipiscing enim eu turpis egestas pretium aenean. Massa sed elementum tempus egestas sed sed risus. Tempor orci eu lobortis elementum nibh. 
+                            Cypress is helping Asbury Park to continue establishing a clothing closet and pantry, along with our consistent efforts of work at Bethel AME Church, while still assisting the local community with any extra needs.
                         </p>
                          <Link to="/proj/newjersey">See More</Link>
                     </div>

@@ -11,11 +11,6 @@ const MobileNav = () => {
 
     return(
         <MobileBar>
-            <MobileSvg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="100%"  preserveAspectRatio="none" viewBox="0 0 1999.883 120">
-                 <path id="Path_406" data-name="Path 406" d="M-.965,0H1998.918V92.823S1683.116,120,998.977,120-.965,92.823-.965,92.823Z" transform="translate(0.965)" fill="#fff"/>
-                </svg>
-            </MobileSvg>
             <MobileLogo>
                 <Link to="/">
                 <StaticImage 
@@ -62,19 +57,11 @@ const MobileBar = styled.div`
     top:0:
     right:0;
     z-index:100;
+    background-color:white;
+    box-shadow: 0 10px 10px hsla(0,0%,0%,.3);
 }
 `
-const MobileSvg = styled.div`
-    width:100%;
-    height:100%;
-    grid-area:  1 / 1 / 2 / 4;
 
-    svg{
-        width:100%;
-        height:100%;
-        filter: drop-shadow(0 5px 10px rgba(0,0,0,.3));
-    } 
-`
 const MobileLogo = styled.div`
  grid-area: 1 / 2 / 2 / 3;
  width:100%;
@@ -96,8 +83,6 @@ const MenuBarWrap = styled.div`
     display:none;
 `
 const MenuBar = styled.div`
-    width:2.5rem;
-    height:2rem;
     display:flex;
     flex-flow:column;
     justify-content:space-between;
@@ -105,16 +90,17 @@ const MenuBar = styled.div`
     cursor:pointer;
     position:relative; 
     z-index:102;
+    
+    width:2rem;
+    height:1.5rem;
    
-
     div{
-        height:.4rem;
-        width:100%;
         background:${({ menuOpen }) => (menuOpen ? "red" : "black")};
         border-radius:10px;
         transform-origin:4px;
         transition: transform 400ms ease-in-out, opacity 400ms ease-in-out;
-        
+        width:100%;
+        height:.4rem;
 
         :first-child{
             transform: ${({ menuOpen }) => menuOpen ? "rotate(45deg)" : "rotate(0)"};
@@ -129,18 +115,15 @@ const MenuBar = styled.div`
         :nth-child(3){
             transform: ${({menuOpen}) => menuOpen ?  "rotate(-45deg)" : "rotate(0)"}
         }
-    }
-
-    @media ${breakpoints.sm}{
-        
-        height:1.5rem;
-        width:2rem;
-        
+    } 
+     @media ${breakpoints.sm}{
+       height:1rem;
+       width:1.5rem;
         div{
-
+            transform-origin:3.5px;
+            height:.25rem;
         }
     }
-   
 `
 
 const MobileMenu = styled.nav`
