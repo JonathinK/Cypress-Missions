@@ -149,7 +149,7 @@ const HowCypressWorksHome = () => {
             padding:1rem 0;
         }
             section{
-                max-width:1600px;
+                max-width:1700px;
                 width:65%;
                 margin: 5rem auto; 
                 display:grid;

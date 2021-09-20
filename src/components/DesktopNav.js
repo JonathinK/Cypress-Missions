@@ -31,7 +31,7 @@ const DesktopNav = () => {
     return(
         <NavWrap>
             <NavSvg fill={fill}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="100%"  preserveAspectRatio="none" viewBox="0 0 1920 120">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" preserveAspectRatio="none" viewBox="0 0 1920 120">
                 <path id="Path_406" data-name="Path 406" d="M-.965,0H1998.918V92.823S1683.116,120,998.977,120-.965,92.823-.965,92.823Z" transform="translate(0.965)" />
                 </svg>
             </NavSvg>

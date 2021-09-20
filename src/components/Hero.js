@@ -5,7 +5,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import  { getImage } from "gatsby-plugin-image"
 
 import { BgImage } from "gbimage-bridge"
-import * as HeroStyle from "../styles/Hero.module.css"
 import { breakpoints } from "../utils/breakpoints"
 
 
@@ -56,15 +55,13 @@ const HeroGrid = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows:1fr;
   min-height:100vh;
+  position:fixed;
+  width:100%;
+
 `
 const StyledBgImage = styled(BgImage)`
   min-height:100vh;
   width:100%;
-  background-attachment: fixed;
-  position:fixed;
-  left:0;
-  right:0;
-  z-index:-1;
 `
 const HeroWrap = styled.div`
   grid-area:1 / 1 / 2 / 2;
@@ -127,7 +124,7 @@ const ArrowWrap = styled.div`
     position:relative;
   }
   div:first-child{
-    transform:translate(-3px) rotate(-30deg);
+    transform:translate(-5px) rotate(-30deg);
   }
   div:last-child{
     transform: translate(4px) rotate(30deg);

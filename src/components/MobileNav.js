@@ -71,9 +71,9 @@ const MobileSvg = styled.div`
 
     svg{
         width:100%;
-        height:inherit;
+        height:100%;
         filter: drop-shadow(0 5px 10px rgba(0,0,0,.3));
-    }
+    } 
 `
 const MobileLogo = styled.div`
  grid-area: 1 / 2 / 2 / 3;
@@ -135,6 +135,7 @@ const MenuBar = styled.div`
         
         height:1.5rem;
         width:2rem;
+        
         div{
 
         }
