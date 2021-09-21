@@ -48,7 +48,7 @@ const OriginsPage = ({data}) => {
              <HowWeStarted>
                  <div>
                     <h3>How We Started</h3>
-                        <p>We are recently formed, but our roots run deep. Before Cypress, there was Freddie and his group centered, work oriented trips throughout North America.
+                        <p>We are recently formed, but our roots run deep. Before Cypress, there was Freddie and his group-centered, work oriented trips throughout North America.
                            Years of hard work, compassion, skill and a dedication to a higher cause, have all shaped the ground work for what has become Cypress.  
                         </p>
                  </div>

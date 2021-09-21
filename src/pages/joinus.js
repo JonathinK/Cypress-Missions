@@ -54,7 +54,7 @@ const JoinUs = () => {
                             <input type="text" name="subject" placeholder="Subject" />
                         </label>
                         <label>
-                            <textarea name="messsage" placeholder="Tell us about yourself"/> 
+                            <textarea name="message" placeholder="Tell us about yourself"/> 
                         </label>
                         <div><button type="submit">Submit</button></div>
                     </form>
