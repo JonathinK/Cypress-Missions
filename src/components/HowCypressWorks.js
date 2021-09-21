@@ -38,7 +38,7 @@ const HowCypressWorksHome = () => {
                     <StaticImage 
                         src="../images/hcwPhotos/disasterrelief.jpg"
                         alt="disaster relief photo"
-                        quality= {50}
+                        quality= {40}
                         layout="fullWidth"
                         loading='lazy'
                         formats={["auto"]}
@@ -63,7 +63,7 @@ const HowCypressWorksHome = () => {
                     <StaticImage 
                             src="../images/hcwPhotos/buildingback.jpg"
                             alt="building back communities photo"
-                            quality= {50}
+                            quality= {40}
                             layout="fullWidth"
                             loading="lazy"
                             formats={["auto"]}
@@ -85,7 +85,7 @@ const HowCypressWorksHome = () => {
                     <StaticImage 
                             src="../images/hcwPhotos/localoutreach.jpg"
                             alt="local outreach photo"
-                            quality= {50}
+                            quality= {40}
                             layout="fullWidth"
                             loading="lazy"
                             formats={["auto"]}

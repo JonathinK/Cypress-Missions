@@ -56,10 +56,13 @@ const HeroGrid = styled.div`
   grid-template-rows:1fr;
   min-height:100vh;
   height:100vh;
-  max-height:100vh;
+  @media ${breakpoints.sm}{
+    min-height:95vh;
+    height:90vh;
+  }
 `
 const StyledBgImage = styled(BgImage)`
-  min-height:100vh;
+  height:100%;
   width:100%;
 `
 const HeroWrap = styled.div`

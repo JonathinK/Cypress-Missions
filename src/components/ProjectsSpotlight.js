@@ -19,6 +19,7 @@ const ProjectsSpotlight = () => {
                 <StaticImage 
                     src="../images/puertorico.jpg"
                     alt="puerto rico image"
+                    quality={50}
 
                 />
                 <Link to="/proj/puertorico">Puerto Rico</Link>
@@ -28,6 +29,7 @@ const ProjectsSpotlight = () => {
                     src="../images/bahamas.jpg"
                     alt="bahamas image"
                     aspectRatio={1.5}
+                    quality={50}
 
                 />
                 <Link to="/proj/bahamas">Bahamas</Link>
@@ -36,6 +38,7 @@ const ProjectsSpotlight = () => {
                 <StaticImage 
                         src="../images/haiti.jpg"
                         alt="haiti image"
+                        quality={50}
 
                     />
                 <Link to="/proj/haiti">Haiti</Link>
@@ -43,6 +46,8 @@ const ProjectsSpotlight = () => {
              <div>
                 <StaticImage 
                     src="../images/bulgaria.jpg"
+                    alt="bulgaria image"
+                    quality={50}
 
                 />
                 <Link to="/proj/bulgaria">Bulgaria</Link>
@@ -52,6 +57,7 @@ const ProjectsSpotlight = () => {
                     src="../images/newjersey.jpg"
                     alt="New Jersey"
                     aspectRatio={1.5}
+                    quality={50}
 
                 />
                 <Link to="/proj/newjersey">New Jersey</Link>
