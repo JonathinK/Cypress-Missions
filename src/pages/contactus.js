@@ -18,7 +18,7 @@ const Contact = () => {
               gatsbyImageData(
                 formats: AUTO
                 placeholder: BLURRED
-                quality: 60
+                quality: 50
                 width: 4000
                 webpOptions: {quality: 80}
                 layout: FULL_WIDTH
@@ -34,9 +34,10 @@ const Contact = () => {
     return(
        <Layout> 
         <ContactWrap>
-          <BackgroundImage>
+          <Background>
             <BgImage  image={pluginImage} className={ContactStyle.background}/>
-          </BackgroundImage>
+          </Background>
+          <Overlay />
               <ContactElement>
                 <div>
                   <h2>We'd Love To Hear From You</h2>
@@ -71,16 +72,25 @@ const ContactWrap = styled.main`
   grid-template-columns:auto;
   grid-template-rows:auto;
 `
-const BackgroundImage = styled.div`
+const Background= styled.div`
   grid-area: 1 / 1 / 2 / 2;
   height:100%;
   width:100%;
 `
+const Overlay = styled.div`
+  width:100%;
+  height:100vh;
+  background-color:hsla(0,0%,0%,.4);
+  position:absolute;
+  z-index:-1;
 
+`
 const ContactElement = styled.div`
   grid-area: 1 / 1 / 2 / 2;
   height:100%;
   width:100%;
+  position:relative;
+  z-index:3;
 
   div{
     height:auto;

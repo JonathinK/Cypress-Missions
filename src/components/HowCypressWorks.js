@@ -141,6 +141,7 @@ const HowCypressWorksHome = () => {
             font-family: flood-std, sans-serif;
             font-size: clamp(1.2rem, 5vw, 1.8rem);
             color:#199534;
+            margin:0 1rem 0 0;
         }
         p{
             font-family: co-text, sans-serif;
@@ -154,6 +155,8 @@ const HowCypressWorksHome = () => {
                 margin: 5rem auto; 
                 display:grid;
             }
+
+            
             
             section:nth-child(even){
                grid-template-columns: 55% 10% 35%;
@@ -202,13 +205,7 @@ const HowCypressWorksHome = () => {
                 }
             }
         }
-        // @media ${breakpoints.md}{
-        //     section{
-        //         div:nth-child(2){
-        //             width:70%;
-        //         }
-        //     }
-        // }
+       
     `
     const StyledHurricaneIcon = styled(HurricaneIcon)`
         border-radius:10px;

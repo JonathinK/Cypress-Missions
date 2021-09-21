@@ -126,6 +126,8 @@ const FooterWrap = styled.footer`
     grid-template-rows:1fr;
     grid-template-columns:repeat(3, 1fr);
     padding:1rem 0;
+    position:relative;
+    z-index:10;
   
     @media ${breakpoints.md}{
         display:flex;

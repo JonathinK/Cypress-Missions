@@ -52,13 +52,12 @@ const HeroImage = () =>{
 
 const HeroGrid = styled.div`
   display:grid;
-  grid-template-columns: 1fr;
-  grid-template-rows:1fr;
+  grid-template-columns: 100%;
+  grid-template-rows:100%;
   min-height:100vh;
   height:100vh;
   @media ${breakpoints.sm}{
-    min-height:95vh;
-    height:90vh;
+   min-height:100%;
   }
 `
 const StyledBgImage = styled(BgImage)`
@@ -106,6 +105,14 @@ const HeroInfo = styled.div`
     color:white;
     text-align:center;
     letter-spacing:3px;
+  }
+
+  @media ${breakpoints.md}{
+      
+  }
+
+  @media ${breakpoints.sm}{
+
   }
 `
 const arrowmovement = keyframes`
