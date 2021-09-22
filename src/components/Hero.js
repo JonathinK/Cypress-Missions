@@ -39,7 +39,7 @@ const HeroImage = () =>{
       <HeroInfo>
         <h1>One Goal</h1>
         <h1>One Mission</h1>
-        <p>Building Back communities one person at a time</p>
+        <p>Building Back communities one relationship at a time</p>
         <ArrowWrap>
           <div />
           <div />
@@ -108,11 +108,22 @@ const HeroInfo = styled.div`
   }
 
   @media ${breakpoints.md}{
-      
+      justify-content:flex-start;
+      margin-top: 15rem;
   }
 
   @media ${breakpoints.sm}{
+      justify-content:flex-start;
+      margin-top:23vh;
 
+      h1{
+        :first-child{
+          margin:0;
+        }
+      }
+      p{
+        margin: 1rem 1rem 0 1rem;
+      }
   }
 `
 const arrowmovement = keyframes`
@@ -129,13 +140,12 @@ const arrowmovement = keyframes`
 `
 const ArrowWrap = styled.div`
   position:absolute; 
-  max-height:4rem;
+  max-height:3rem;
   height:10vw;
   min-height:2rem;
-  max-width:7rem;
+  max-width:5rem;
   width:13vw;
   min-width:2rem;
-  
   bottom:0;
   display:flex;
   justify-content:center;
@@ -155,6 +165,14 @@ const ArrowWrap = styled.div`
   }
   div:last-child{
     transform: translate(5px) rotate(30deg);
+  }
+
+ @media ${breakpoints.md}{
+    margin-bottom:30vh;
+ }
+
+  @media ${breakpoints.sm}{
+    margin-bottom:35vh;
   }
 `
 export default HeroImage

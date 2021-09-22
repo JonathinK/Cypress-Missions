@@ -27,7 +27,7 @@ const HowCypressWorksHome = () => {
             <section>
                 <div>
                    <div>
-                       <h3>Disaster Relief</h3><StyledHurricaneIcon /> <Cross />
+                       <h3>Disaster Relief</h3>
                     </div> 
                     <p>In the weeks and months following a natural disaster, Cypress can bring much-needed supplies to communities in desperate need of humanitarian relief. Putting a roof back on a family's house or fixing a plumbing problem at a school are just
                     some of the ways we help people recover after the headlines fade.
@@ -54,7 +54,7 @@ const HowCypressWorksHome = () => {
 
             <section>        
                 <div>
-                    <div><h3>Building Back Communities </h3><StyledHumanitarian /> <Hammer /></div>
+                    <div><h3>Building Back Communities </h3></div>
                     <p>Cypress has ongoing volunteer projects in the Bahamas and Puerto Rico , two countries ravaged by hurricanes, as well as Haiti and Bulgaria , two countries in the grip of systemic poverty.
                     We concentrate on collecting and donating school supplies for classrooms that need it most, as well as using decades of construction experience to complete vital repairs to personal homes. Along the way Cypress cares about building lasting relationships 
                     with community leaders to target how we can be most helpful.</p>
@@ -77,7 +77,7 @@ const HowCypressWorksHome = () => {
             
             <section>
                 <div>
-                    <div><h3>Local Outreach</h3> <StyledCommunity /> <Jersey /></div>
+                    <div><h3>Local Outreach</h3></div>
                     <p>When COVID hit, Cypress sprung into action by opening a much-needed food kitchen and clothing closet in Asbury Park, NJ. Now with a steady stream of local donations and a dedicated work force we plan to open more outreach centers throughout New Jersey.</p>
                 </div>
              
@@ -152,7 +152,7 @@ const HowCypressWorksHome = () => {
             section{
                 max-width:1700px;
                 width:65%;
-                margin: 5rem auto; 
+                margin: 10rem auto; 
                 display:grid;
             }
 
@@ -206,25 +206,5 @@ const HowCypressWorksHome = () => {
             }
         }
        
-    `
-    const StyledHurricaneIcon = styled(HurricaneIcon)`
-        border-radius:10px;
-        margin-right: 1rem;
-        animation: 1.5s  CaneRotation linear infinite;
-
-        @keyframes CaneRotation{
-          from{
-              transform: rotate(0);   
-          }
-          to{
-            transform: rotate(-360deg);
-          }
-      }
-    `
-    const StyledHumanitarian = styled(Humanitarian)`
-        margin-right:1rem;
-    `
-    const StyledCommunity = styled(Community)`
-     margin-right:1rem;
     `
 

@@ -1,4 +1,4 @@
-import  React, { useState} from "react"
+import  React, { useState, useRef, useEffect} from "react"
 
 import styled from "styled-components"
 import { Link } from "gatsby"
@@ -6,11 +6,35 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import { breakpoints } from "../utils/breakpoints"
 
+
 const MobileNav = () => {
     const [menuOpen, toggleMenuOpen] = useState(false)
+    const [fill, setFill] = useState(false)
+    const [color, setColor] = useState(false)
+    const [boxShadow, setboxShadow] = useState(false)
+    const colorRef = useRef()
+    const navRef = useRef()
+    const boxShadowRef = useRef()
+    colorRef.current = color
+    navRef.current = fill
+    boxShadowRef.current = boxShadow
+    useEffect(() => {
+        const handleScroll = () => {
+            const show = window.scrollY > 20
+            if (navRef.current !== show) {
+                setFill(show)
+                setColor(show)
+                setboxShadow(show)
+            }
+        }
+        document.addEventListener("scroll", handleScroll)
+        return () => {
+            document.removeEventListener("scroll", handleScroll)
+        }
+    }, [])
 
     return(
-        <MobileBar>
+        <MobileBar fill={fill} boxShadow={boxShadow}>
             <MobileLogo>
                 <Link to="/">
                 <StaticImage 

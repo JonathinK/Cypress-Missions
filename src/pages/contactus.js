@@ -79,7 +79,7 @@ const Background= styled.div`
 `
 const Overlay = styled.div`
   width:100%;
-  height:100vh;
+  min-height:100vh;
   background-color:hsla(0,0%,0%,.4);
   position:absolute;
   z-index:-1;
