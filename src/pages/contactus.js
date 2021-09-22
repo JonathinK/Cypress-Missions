@@ -79,10 +79,13 @@ const Background= styled.div`
 `
 const Overlay = styled.div`
   width:100%;
-  min-height:100vh;
+  min-height:100%;
   background-color:hsla(0,0%,0%,.4);
-  position:fixed;
-  z-index:-1;
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  z-index:1;
 
 `
 const ContactElement = styled.div`
