@@ -81,7 +81,7 @@ const Overlay = styled.div`
   width:100%;
   min-height:100vh;
   background-color:hsla(0,0%,0%,.4);
-  position:absolute;
+  position:fixed;
   z-index:-1;
 
 `
