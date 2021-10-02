@@ -12,16 +12,16 @@ const NewJerseyBanner = () => {
   const { placeholderImage } = useStaticQuery(
     graphql`
       query {
-        placeholderImage:file(relativePath: {eq: "newjersey.jpg"}) {
+        placeholderImage:file(relativePath: {eq: "greetings.jpg"}) {
           childImageSharp {
             gatsbyImageData(
               width: 4000
-              quality: 50
+              quality: 60
               webpOptions: {quality: 70}
-              aspectRatio: 2.5
+              aspectRatio: 4
               placeholder: BLURRED
               formats: AUTO
-              transformOptions:{cropFocus:NORTH, fit: FILL, trim: 2}
+              transformOptions:{cropFocus:CENTER, fit: FILL, trim: 2}
             )
           }
         }

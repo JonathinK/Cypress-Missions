@@ -54,7 +54,7 @@ const ProjectsSpotlight = () => {
              </div>
              <div>
                  <StaticImage 
-                    src="../images/newjersey.jpg"
+                    src="../images/greetings.jpg"
                     alt="New Jersey"
                     aspectRatio={1.5}
                     quality={50}

@@ -3,7 +3,7 @@ module.exports = {
     title: `Cypress Missions`,
     description: `Cypress offers humanitarian aid to those who have been affected by natural disasters or harsh levels of poverty. We bring resources and use of construction knowledge to build back those communities.`,
     author: `@NerdLogicDesigns`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://www.cypressmissions.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

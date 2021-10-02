@@ -107,7 +107,7 @@ const BackgroundWrap = styled.div`
 const Overlay = styled.div`
     grid-area: 1 / 1 / 4 / 3;
     position:relative;
-    background:rgba(0,0,0,.2);
+    background:rgba(0,0,0,.3);
 `
 const TitleWrap = styled.div`
     width:100%;

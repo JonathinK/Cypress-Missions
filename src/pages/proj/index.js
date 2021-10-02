@@ -142,9 +142,10 @@ const Projects = () => {
                 <section>
                 <div> 
                     <StaticImage 
-                            src="../../images/newjersey.jpg"
+                            src="../../images/greetings.jpg"
                             alt="Puerto Rico Image"
                             placeholder="blurred"
+                            quality={60}
                         />
                         
                     </div>
