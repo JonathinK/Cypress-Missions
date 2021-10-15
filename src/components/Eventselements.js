@@ -37,14 +37,12 @@ export const EventElement = styled.div`
 `
 export const EventCard = styled.div`
     box-shadow: 20px 20px 20px hsla(50, 0%,0%, .3);
-    border-radius:20px;
     overflow:hidden;
     background:white;
     display:flex;
     flex-flow:row wrap;
     justify-content: flex-start;
     align-items:center;
-    -webkit-appearance:none;
     
     @media ${breakpoints.lg}{
        width:60%;
