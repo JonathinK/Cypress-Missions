@@ -38,7 +38,7 @@ export const EventElement = styled.div`
 export const EventCard = styled.div`
     box-shadow: 20px 20px 20px hsla(50, 0%,0%, .3);
     border-radius:20px;
-    overflow:hidden;
+    overflow:none;
     background:white;
     display:flex;
     flex-flow:row wrap;

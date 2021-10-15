@@ -165,7 +165,9 @@ const FormWrap = styled.div`
                 width:70%;
                 height:2rem;
                 text-align:center;
-                box-shadow: inset 0px 0px 5px rgba(0,0,0,.3);
+                -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.3) inset;
+                // box-shadow: 0px 0px 5px rgba(0,0,0,.3);
+                // border:1px  solid #199345;
                 border:none;
                 border-radius:10px;
             }
@@ -178,7 +180,7 @@ const FormWrap = styled.div`
                 max-width:50rem;
                 border:none;
                 border-radius:10px;
-                box-shadow: inset 0px 0px 5px rgba(0,0,0,.3);   
+                box-shadow: 0px 0px 5px rgba(0,0,0,.3) inset;   
                 padding:5px 5px;
             }
         }
