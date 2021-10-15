@@ -2,60 +2,36 @@ import React from "react"
 
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
-import styled from "styled-components"
+import { EventDescription, EventElement, EventImage, EventLocation, EventTime, EventInfoWrap, EventCard, EventWrapper, UpcomingEventsTitle } from "../components/Eventselements"
 
 const Events = () => {
   return(
       <Layout>
-          <ComingSoon>
-              <Logo>
-                  <StaticImage 
-                    src="../images/CypressLogo2.png"
-                    layout="constrained"
-                    width={500}
-                    style={{
-                        filter: `drop-shadow(3px 3px 5px rgba(0,0,0,.4))`
-                    }}
-                  />
-              </Logo>
-              
-              <h1>Coming Soon</h1>
-              <p>OOPS! It's seems you've stumbled on a page that doesn't exist yet. This was put here to tell you that we are working very hard to get this page ready for you and it will be awesome =).</p>
-          </ComingSoon>
+        <EventWrapper>
+               
+            <EventElement>
+                <UpcomingEventsTitle> Upcoming Events</UpcomingEventsTitle>
+                <EventCard>
+                <EventImage>
+                    <StaticImage 
+                        src="../images/bahamas/bahamas-15.jpg"
+                        layout="fullWidth"
+                        quality={50}
+                        alt="bahamas trip photo" 
+                    />
+                </EventImage>
+                <EventInfoWrap>
+                <EventLocation>Green Turtle Cay, Bahamas</EventLocation>
+                <EventTime>November 8th - 15th, 2021</EventTime>
+                <EventDescription>Cypress will be building a new house for Charles, an 84-year old community leader who actively helped many families on the island back into their homes despite not having a house for himself.
+                    Now it is time to help him live his golden years in comfort. Additionally, we will be bringing much-needed educational supplies to the one school on the island as we continue to support teachers on Green Turtle Cay.
+                </EventDescription>
+                </EventInfoWrap>
+                </EventCard>
+            </EventElement>
+        </EventWrapper>
       </Layout>
   )
 }
 
 export default Events
-
-const ComingSoon = styled.main`
-    width:100%;
-    height:100vh;
-    display:flex;
-    flex-flow:column;
-    justify-content:center;
-    align-items:center;
-    background-image: linear-gradient(#48B97E 10%, white 90%);
-    
-    h1{
-        font-family:flood-std, sans-serif;
-        font-size:clamp(2rem,8vw,3rem);
-        margin: 3rem 0;
-        color:#5f5f5f;
-    }
-    p{
-        font-family:co-text, sans-serif;
-        font-size: clamp(1rem, 3vw, 1.5rem);
-        max-width:60rem;
-        width:90%;
-        text-align:center;
-        color:#5f5f5f;
-    }
-
-`
-const Logo = styled.div`
-    width: 70%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-`

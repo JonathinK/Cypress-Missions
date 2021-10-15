@@ -205,6 +205,11 @@ const HowCypressWorksHome = () => {
                 }
             }
         }
+        
+        @media ${breakpoints.md}{
+            section{
+                margin: 5rem auto;
+            }
        
     `
 

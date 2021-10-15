@@ -39,7 +39,7 @@ const VisionPage = () => {
              <Vision>
                  <h3>Our Vision</h3>
                 <p>Our Vision is simple, to help communities recover one person at a time.
-                    Whether it's from an unexpected natural disaster or sytemic poverty, 
+                    Whether it's from an unexpected natural disaster or sytematic poverty, 
                     Cypress offers ways for families to bounce back.</p>
              </Vision>
              <CoreValues>
