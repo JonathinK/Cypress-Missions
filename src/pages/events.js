@@ -18,6 +18,7 @@ const Events = () => {
                         layout="fullWidth"
                         quality={50}
                         alt="bahamas trip photo" 
+                        loading="eager"
                     />
                 </EventImage>
                 <EventInfoWrap>
