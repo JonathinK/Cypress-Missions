@@ -14,7 +14,7 @@ const Events = () => {
                 <EventCard>
                 <EventImage>
                     <StaticImage 
-                        src="../images/bahamas/bahamas-15.jpg"
+                        src="../images/bahamas/Bahamas-15.jpg"
                         layout="fullWidth"
                         quality={50}
                         alt="bahamas trip photo" 
