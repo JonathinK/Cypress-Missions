@@ -67,6 +67,8 @@ export const EventCard = styled.div`
 export const EventImage = styled.div`
    width:40%;
    min-width:400px;
+   overflow:hidden;
+   border-radius: 20px 20px 0 0;
   @media ${breakpoints.sm}{
       width:100%;
   }
