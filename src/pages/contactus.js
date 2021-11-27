@@ -42,16 +42,16 @@ const Contact = () => {
                 <div>
                   <h2>We'd Love To Hear From You</h2>
                   <h3>Email Us:</h3>
-                   <a href="mailto:info@cypressmissions.com" target="_blank">info@cypressmissions.com</a>
+                   <a href="mailto:info@cypressmissions.com" target="_blank" rel="noreferrer">info@cypressmissions.com</a>
                    <br />
-                   <a href="mailto:freddie@cypressmissions.com" target="_blank">freddie@cypressmissions.com</a>
+                   <a href="mailto:freddie@cypressmissions.com" target="_blank" rel="noreferrer">freddie@cypressmissions.com</a>
                    <h3>Call Us:</h3>
                    <a href="tel:732-278-3797">732-278-3797</a>
                    <h2>Donate To Cypress</h2>
                    <h3>Changing lives through service</h3>
                    <p>Your financial donations are used to support humanitarian needs both home and abroad. 
                      Our goal is to support communities who are stuck in systemic poverty, or recovering from natural disasters get back on their feet. Your support is greatly appreciated.</p>
-                  <a href="https://www.aplos.com/aws/give/CypressMissions/general" target="_blank"><button>Donate</button></a>
+                  <a href="https://www.aplos.com/aws/give/CypressMissions/general" target="_blank" rel="noreferrer"><button>Donate</button></a>
                 </div>
                 
               </ContactElement>
