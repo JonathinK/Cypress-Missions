@@ -8,9 +8,9 @@ const Events = () => {
   return(
       <Layout>
         <EventWrapper>
-               
             <EventElement>
-                <UpcomingEventsTitle> Upcoming Events</UpcomingEventsTitle>
+            <h2>Check back for new upcoming events</h2>
+              {/*  <UpcomingEventsTitle> Upcoming Events</UpcomingEventsTitle>
                 <EventCard>
                 <EventImage>
                     <StaticImage 
@@ -28,7 +28,7 @@ const Events = () => {
                     Now it is time to help him live his golden years in comfort. Additionally, we will be bringing much-needed educational supplies to the one school on the island as we continue to support teachers on Green Turtle Cay.
                 </EventDescription>
                 </EventInfoWrap>
-                </EventCard>
+              </EventCard> */}
             </EventElement>
         </EventWrapper>
       </Layout>

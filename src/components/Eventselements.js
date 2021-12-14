@@ -9,10 +9,15 @@ export const EventWrapper = styled.main`
     justify-content:center;
     align-items:center;
     background-image: linear-gradient(#199543 5%, white 80%);
+
+    h2{
+        text-align:center;
+        font-family: flood-std, sans-serif;
+    }
     
     @media ${breakpoints.sm}{
-        justify-content:flex-start;
-         align-items:flex-start; 
+        justify-content:center; 
+        align-items:center; 
     }
 `
 export const UpcomingEventsTitle = styled.h2`
