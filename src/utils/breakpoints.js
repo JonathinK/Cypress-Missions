@@ -4,7 +4,7 @@ const size = {
     md: '810px',
     lg: '1299px',
     xlg:'1300px',
-    aux: '1129ox'
+    aux: '1129px'
 }
 
 export const breakpoints = {
