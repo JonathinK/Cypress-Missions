@@ -8,7 +8,8 @@ const Events = () => {
   return(
       <Layout>
         <EventWrapper>
-            <EventElement>
+          <h1>Check Back Soon For More Events</h1>
+            {/*<EventElement>
               <ImageWrapper>
                 <ImageContainer>
                   <StaticImage
@@ -41,7 +42,7 @@ const Events = () => {
                   <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
                 </ButtonWrapper>
               </InfoWrapper>
-            </EventElement>
+            </EventElement>*/}
         </EventWrapper>
       </Layout>
   )

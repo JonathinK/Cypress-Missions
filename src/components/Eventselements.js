@@ -12,6 +12,13 @@ export const EventWrapper = styled.main`
         hsl(148, 10%, 78%),
         hsl(0,0%,90%) 
     );
+    h1{
+        font-family:flood-std, sans-serif;
+        color:white;
+        text-shadow: 5px 5px 10px grey;
+        text-align:center;
+        margin:0 1rem;
+    }
 
     @media ${breakpoints.sm}{
         justify-content:center; 
