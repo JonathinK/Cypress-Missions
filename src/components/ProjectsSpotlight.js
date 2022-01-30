@@ -45,12 +45,12 @@ const ProjectsSpotlight = () => {
              </div>
              <div>
                 <StaticImage 
-                    src="../images/bulgaria.jpg"
+                    src="../images/kentuckybanner.jpg"
                     alt="bulgaria image"
                     quality={50}
 
                 />
-                <Link to="/proj/bulgaria">Bulgaria</Link>
+                <Link to="/proj/kentucky">Kentucky</Link>
              </div>
              <div>
                  <StaticImage 

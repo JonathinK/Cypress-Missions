@@ -47,7 +47,7 @@ const Jersey = ({ data }) => {
                                 <a href={node.publicURL}>
                                     <GatsbyImage 
                                     image={node.childImageSharp.gatsbyImageData} 
-                                    alt={node.base.split('-').join(' ').split('.')[0]}
+                                    alt=""
                                     style={{
                                         boxShadow:`10px 10px 10px rgba(0,0,0,.3)`,
                                         borderRadius: `5px`}}

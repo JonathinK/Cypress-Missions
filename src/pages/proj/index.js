@@ -53,10 +53,28 @@ const Projects = () => {
                      </div>
                  </ProjectsTitle>
                  <ProjectsWrapper>
-                {/* PuertoRico Trip */}
+                  {/* Kentucky Trip */}
                 <section>
                     <div>
-                       
+                        <StaticImage 
+                            src="../../images/KentuckyBanner.jpg"
+                            alt="Kentucky Image"
+                            placeholder="blurred"
+                        />
+                        
+                    </div>
+                    <div>
+                        <h3>Kentucky</h3>
+                        <p>When the tornadoes ripped through Kentucky Cypress immediately assembled a small group of four from New Jersey to take on the task of finding where we could be most effective.
+                            On arrival the effect on the surrounding communities from the tornadoes was heartbreaking. Our trip was necessary to lay the future ground work for where Cypress 
+                            would be most effective.
+                            </p> 
+                             <Link to="/proj/kentucky">See More</Link>           
+                    </div>
+                </section>
+                {/* PuertoRico Trip */}
+                <section>
+                    <div> 
                         <StaticImage 
                             src="../../images/puertorico.jpg"
                             alt="Puerto Rico Image"
@@ -197,7 +215,7 @@ const Text = styled.div`
         margin:1rem 0;
         width:100%;
         padding:0 1rem;
-        text-align:center;
+        text-align:left;
     }
     @media ${breakpoints.md}{
         margin:0;
@@ -219,7 +237,6 @@ const ProjectsTitle = styled.div`
         display:grid;
         grid-template-columns:1fr;
         grid-template-rows:1fr;
-        text-align:center;
         align-items:center;
 
         h2{
@@ -227,6 +244,7 @@ const ProjectsTitle = styled.div`
            font-family: flood-std, sans-serif;
            font-weight: 300;
            font-size: clamp(1.6rem,6vw,3rem);
+           text-align:center;
            letter-spacing:2px;
            margin:0;
            color:#199453;
@@ -263,7 +281,7 @@ const ProjectsWrapper = styled.main`
     }
     p{
         font-family: co-text, sans-serif;
-        font-size: clamp(.9rem,2vw, 1.2rem);
+        font-size: clamp(1rem,2vw, 1.2rem);
         line-height:28px;
         color:#5f5f5f;
         margin:0;
@@ -372,7 +390,6 @@ const ProjectsWrapper = styled.main`
         section{
             justify-content:center;
             align-items:center;
-            text-align:center;
             margin:4rem auto;
             overflow:hidden;
             perspective: 1000px;
@@ -386,11 +403,11 @@ const ProjectsWrapper = styled.main`
                 
             }
             a{
-                margin: 0 auto 1rem auto;
+                margin-bottom: 1rem;
             }
 
             div:first-child{
-                width: 90%;
+                width: 100%;
                 
                 margin: 0 auto;
 

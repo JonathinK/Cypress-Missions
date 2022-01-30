@@ -1,5 +1,5 @@
 import React from "react"
-import PrImage from "../../components/ProjectsBanners/PuertoricoBanner"
+import KentuckyImage from "../../components/ProjectsBanners/KentuckyBanner"
 import styled from "styled-components"
 import Layout from "../../components/layout"
 import Brush from "../../svg/assets/brushw.svg"
@@ -17,26 +17,23 @@ const PuertoRico = ({ data }) => {
 
     return(
         <Layout>
-            <Seo title="Puerto Rico" />
+            <Seo title="Kentucky Relief" />
             <BackgroundWrap>
                 <div>
-                  <PrImage />  
+                  <KentuckyImage />  
                 </div>
                 <Overlay />
             </BackgroundWrap>
             <TitleWrap>
                 <div>
                     <StyledBrush />
-                    <h2>Puerto Rico</h2>
+                    <h2>Kentucky</h2>
                 </div>
             </TitleWrap>
             <Info>
-                <h3>
-                    Vega Baja
-                </h3>
-                <p>Puerto Rico has never fully recovered from the devastation left in the wake of hurricane Maria, which claimed over 3,000 lives. Following the storm in September 2017, Cypress began 
-                            cleaning up the neighborhoods around Vega Baja, patching roofs and building friendships with town leaders. Cypress is now focused on education reform on the island, with the goal of 
-                            motivating the next generation of leaders.</p>
+              <p>When the tornadoes ripped through Kentucky Cypress immediately assembled a small group of four from New Jersey to take on the task of finding where we could be most effective.
+                On arrival the effect on the surrounding communities from the tornadoes was heartbreaking. Our trip was necessary to lay the future ground work for where Cypress 
+                would be most effective.</p>
             </Info>
 
             <PhotoGridWrap>
@@ -70,7 +67,7 @@ export default PuertoRico
 
 export const pageQuery = graphql`
     query {
-        gallery: allFile(filter: {relativeDirectory: {eq: "puertorico"}}
+        gallery: allFile(filter: {relativeDirectory: {eq: "Kentucky"}}
         sort: {fields: root, order: DESC}) {
             edges {
               node {
@@ -84,8 +81,7 @@ export const pageQuery = graphql`
                     transformOptions: {fit: COVER, cropFocus: CENTER}
                     placeholder: BLURRED
                     webpOptions: {quality: 70}
-                    quality: 60
-                    
+                    quality: 60 
                   )
                 }
               }
