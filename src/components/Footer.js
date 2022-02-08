@@ -19,6 +19,7 @@ const Footer = () => {
         </Logo>
         <CenterInfo>
             <a href="emailto:info@cypressmissions.com">info@cypressmissions.com</a>
+            <p>We are a 501(c)(3) nonprofit organization</p>
             <p>© {new Date().getFullYear()}, CypressMissions</p>
         </CenterInfo>
         <FooterSocialsWrap>
@@ -155,6 +156,10 @@ const CenterInfo = styled.div`
         font-family: co-text, sans-serif;
         margin:0;
         color:#5f5f5f;
+        text-align:center;
+    }
+    p:nth-child(2){
+        margin:1rem 0;
     }
 
     a{

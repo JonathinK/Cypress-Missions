@@ -45,8 +45,8 @@ const ProjectsSpotlight = () => {
              </div>
              <div>
                 <StaticImage 
-                    src="../images/kentuckybanner.jpg"
-                    alt="bulgaria image"
+                    src="../images/KentuckyBanner.jpg"
+                    alt="Kentucky image"
                     quality={50}
 
                 />
