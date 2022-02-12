@@ -4,6 +4,8 @@ import { breakpoints } from "../utils/breakpoints";
 export const EventWrapper = styled.main`
     width:100%;
     min-height:100vh;
+    padding-top: 20vh;
+    padding-bottom:20vh;
     display:flex;
     flex-flow:column;
     justify-content:center;
@@ -18,6 +20,7 @@ export const EventWrapper = styled.main`
         text-shadow: 5px 5px 10px grey;
         text-align:center;
         margin:0 1rem;
+        display:none;
     }
 
     @media ${breakpoints.sm}{
@@ -36,6 +39,7 @@ export const EventElement = styled.div`
     border-radius:10px;
     box-shadow: 20px 20px 10px hsla(0,0%,0%,.3);
     position:relative;
+    margin: 3rem 0;
 
    
     @media ${breakpoints.aux}{
@@ -46,7 +50,7 @@ export const EventElement = styled.div`
         width:80%;
         max-width:500px;
         height:auto;
-        margin: 0 auto;
+        margin: 5rem auto;
     } 
     @media ${breakpoints.md}{
         margin-top:4rem;
@@ -81,7 +85,8 @@ export const InfoWrapper = styled.div`
     align-items: flex-start;
     grid-column: 4 / 9;
     overflow:hidden;
-    text-overflow: ellipes;
+    text-overflow:ellipsis;
+    padding-left:1.5rem;
 
    
      h3{
@@ -100,10 +105,12 @@ export const InfoWrapper = styled.div`
        overflow:hidden;
        font-family: co-text, sans-serif;
        color:#5f5f5f;
+       font-size: clamp(1rem, 5vw, 1.125rem)
     }
 
     @media ${breakpoints.aux}{
         align-items:center;
+        padding:0;
         p{
             width:90%
         }

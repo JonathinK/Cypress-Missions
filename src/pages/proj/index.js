@@ -1,10 +1,6 @@
 import React from "react"
 import Layout from "../../components/layout"
-import * as BannerStyle from "../../styles/projects.module.css"
 import { breakpoints } from "../../utils/breakpoints"
-import { BgImage } from "gbimage-bridge"
-import { graphql, useStaticQuery } from "gatsby"
-import  { getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import ProjectsBrush from "../../svg/assets/brushw.svg"
 import { StaticImage } from "gatsby-plugin-image"
@@ -12,30 +8,18 @@ import { Link } from "gatsby"
 
 
 const Projects = () => {
-    const { placeholderImage } = useStaticQuery(
-        graphql`
-          query {
-            placeholderImage:file(relativePath: {eq: "projects.jpg"}) {
-              childImageSharp {
-                gatsbyImageData(
-                  width: 4000
-                  quality: 60
-                  webpOptions: {quality: 70}
-                  aspectRatio: 1.5
-                  placeholder: BLURRED
-                  formats: AUTO
-                )
-              }
-            }
-          }
-        `
-      );
-      const pluginImage = getImage(placeholderImage);
+    
     return(
         <Layout>
             <ProjectsBackgroundGrid>
                 <Background> 
-                 <BgImage image={pluginImage} className={BannerStyle.projects} />
+                    <StaticImage 
+                        src="../../images/projects.jpg"
+                        alt=""
+                        style={{position:"absolute"}}
+                        className="projectsbanner"
+                        loading="eager"
+                    /> 
                  </Background>
                  <Overlay />
                     <Text>
@@ -189,6 +173,14 @@ const ProjectsBackgroundGrid = styled.div`
 `
 const Background = styled.div`
     grid-area: 1 / 1 / 4 / 3;
+    width:100%;
+    height:50vh;
+    position: relative;
+    
+    .projectsbanner{
+        width:100%;
+        height:100%;
+    }
 `
 const Overlay = styled.div`
     grid-area: 1 / 1 / 4 / 3;

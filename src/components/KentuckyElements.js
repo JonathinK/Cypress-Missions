@@ -89,13 +89,13 @@ export const InfoContainer = styled.div`
 export const PageEventTitle = styled. h2`
     color:hsl(148,83%,38%);
     font-family: flood-std, sans-serif;
-    font-size:clamp(1.1rem, 5vw, 2.2rem);
+    font-size:clamp(2rem, 5vw, 3rem);
 
 `
 export const Date = styled.h3`
     color:hsl(148,83%,38%);
     font-family: flood-std, sans-serif;
-    font-size:clamp(1rem, 4.5vw, 2.2rem);
+    font-size:clamp(1.5rem, 4.5vw, 2rem);
 `
 export const Summary = styled.p`
     max-width:40rem;
@@ -104,8 +104,15 @@ export const Summary = styled.p`
     font-family: co-text, sans-serif;
     letter-spacing:1px;
     padding-bottom:1rem;
-    font-size:clamp(.9rem , 3vw, 1rem);
-
+    font-size:clamp(1rem , 3vw, 1.125rem);
+    margin-top:1rem;
+    
+    a{
+        text-decoration:none;
+        color: black;
+        font-weight: bold;
+        
+    }
     @media ${breakpoints.sm}{
         line-height:27px;
     }
