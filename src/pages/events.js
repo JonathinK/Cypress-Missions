@@ -9,7 +9,7 @@ const Events = () => {
       <Layout>
         <EventWrapper>
           <h1>Check Back Soon For More Events</h1>
-            <EventElement>
+            {/* <EventElement>
               <ImageWrapper>
                 <ImageContainer>
                   <StaticImage
@@ -38,10 +38,10 @@ const Events = () => {
                   <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
                 </ButtonWrapper>
               </InfoWrapper>
-            </EventElement>
+            </EventElement> */}
 
             <EventElement>
-              <ImageWrapper>
+              {/* <ImageWrapper>
                 <ImageContainer>
                   <StaticImage
                     src="../images/pennsylvania.jpg"
@@ -52,22 +52,25 @@ const Events = () => {
                     alt=""
                   />
                 </ImageContainer>  
-              </ImageWrapper>
+              </ImageWrapper> */}
               <WrapDiv>
                <EventTitle>Lebanon, Pa</EventTitle>
               </WrapDiv>
               <InfoWrapper>
                 <h3>April 18th - April 23rd</h3>
                 <p> 
-                  Cypress will be organizing a team trip to Lebanon, Pennsylvania to support Gretna Glen Retreat Center and a Youth
+                  We would like to let all of those whom were interested in attending this trip know that it has been postponed to a future date this summer to be announced and will be posted here. 
+                  <br/>
+                  Thank you
+                  {/* Cypress will be organizing a team trip to Lebanon, Pennsylvania to support Gretna Glen Retreat Center and a Youth
                   Crisis Center. Much like our first trip in 2019 which left us with a great feeling of gratitude and appreciation for being
                   part of something unique, this trip will be no different. We will do as much as we can to help the community and leave a warming 
-                  impact on the youth.    
+                  impact on the youth.  */}   
                 </p>
-                <ButtonWrapper>
+                {/* <ButtonWrapper>
                   <Button><Link to="/Lebanon-Pa">Read More</Link></Button> 
                   <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
-                </ButtonWrapper>
+                </ButtonWrapper> */}
               </InfoWrapper>
             </EventElement>
             
@@ -91,7 +94,7 @@ const Events = () => {
                 <h3>May 7th - May 15th</h3>
                 <p> 
                   This project will primarily focus on helping to rebuild and finish homes that were devastated by the recent tornadoes in Cayce and surrounding areas. It will be one of 
-                  several trips over the next few months and into the following year. We are looking to fly into Nashville, TN and drive about 3 hours down to Bardwell, Kentucky, a town 
+                  several trips over the next few months and into the following year. We are looking to fly into Nashville, TN and driv about 3 hours down to Bardwell, Kentucky, a town 
                   just outside of Cayce.
                 </p>
                 <ButtonWrapper>
