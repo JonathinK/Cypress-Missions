@@ -41,7 +41,7 @@ const Events = () => {
             </EventElement> */}
 
             <EventElement>
-              {/* <ImageWrapper>
+             <ImageWrapper>
                 <ImageContainer>
                   <StaticImage
                     src="../images/pennsylvania.jpg"
@@ -52,12 +52,12 @@ const Events = () => {
                     alt=""
                   />
                 </ImageContainer>  
-              </ImageWrapper> */}
-              {/* <WrapDiv>
+              </ImageWrapper>
+              <WrapDiv>
                <EventTitle>Lebanon, Pa</EventTitle>
-              </WrapDiv> */}
+              </WrapDiv>
               <InfoWrapper>
-                <h3>Lebanon, Pa - Postponed</h3>
+                <h3>Postponed</h3>
                 <p> 
                   We would like to let all of those whom were interested in attending this trip know that it has been postponed to a future date this summer to be announced and will be posted here. 
                   <br/>
