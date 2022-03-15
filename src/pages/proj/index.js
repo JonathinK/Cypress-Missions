@@ -118,7 +118,7 @@ const Projects = () => {
                     </div> 
                     <div>
                         <h3>London</h3>
-                        <p>Cypress partnered with the community group <strong>Welcome Syrian Families</strong> to provide affordable housing for refugee families fleeing worn-torn Syria.</p>
+                        <p>Cypress partnered with the community group <strong>Welcome Syrian Families</strong> to provide affordable housing for refugee families fleeing war-torn Syria.</p>
                         <Link to="/proj/london">See More</Link>  
                     </div>
                 </section>{
