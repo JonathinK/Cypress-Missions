@@ -25,12 +25,11 @@ const Asbury = () => {
                      Asbury Park, NJ
                     </PageEventTitle>
                     <Date>
-                      May 1st
+                      May 7th
                     </Date>
                 
                 <Summary>
                   We are continuing are work with Bethel AME and The Ford Center in Asbury Park from 10:00am to 12:00pm. Cypress would love to have some extra hands to help.
-
                 </Summary>
                 <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
                 </InfoContainer>
