@@ -42,7 +42,7 @@ const JoinUs = () => {
                 </MakeImpact>
                 <FormWrap>
                     <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-                        <input type="hidden" name="form-name" value="contact" / >
+                        <input type="hidden" name="form-name" value="contact"/>
                         <h2>Join Our Team</h2>
                         <label>
                             <input type="text" name="name" placeholder="Full Name"/>
