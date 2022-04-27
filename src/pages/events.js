@@ -9,42 +9,13 @@ const Events = () => {
       <Layout>
         <EventWrapper>
           <h1>Check Back Soon For More Events</h1>
-            {/* <EventElement>
-              <ImageWrapper>
-                <ImageContainer>
-                  <StaticImage
-                    src="../images/bahamasbanner.jpg"
-                    layout="fullWidth"
-                    placeholder="blurred"
-                    aspectRatio={2 / 2}
-                    transformOptions={{fit: "cover", cropFocus:"center"}}
-                    alt=""
-                  />
-                </ImageContainer>  
-              </ImageWrapper>
-              <WrapDiv>
-               <EventTitle>GTC, Bahamas</EventTitle>
-              </WrapDiv>
-              <InfoWrapper>
-                <h3>Feb 21st - Feb 28th</h3>
-                <p> 
-                  Cypress will be returning to Green Turtle Cay, Bahamas to help rebuild a house for a woman and daughter who lost their homes to hurricane Dorian. We also
-                  will have continued support for the local school, bringing supplies and fixing whatever we can to give the youth the necessary environment they need to keep 
-                  learning. Green Turtle Cay is currently our most visited area. We have many ongoing projects here and still continue to build lasting relationships. Cypress is 
-                  excited to show you the progress and impact we've made in the lives of the community.
-                </p>
-                <ButtonWrapper>
-                  <Button><Link to="/Gtc-Bahamas-21st-28th">Read More</Link></Button> 
-                  <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
-                </ButtonWrapper>
-              </InfoWrapper>
-            </EventElement> */}
 
+            {/* //The Clothing Closet,Asbury Park,NJ */}
             <EventElement>
              <ImageWrapper>
                 <ImageContainer>
                   <StaticImage
-                    src="../images/pennsylvania.jpg"
+                    src="../images/newjersey/Asbury-Park-13.jpg"
                     layout="fullWidth"
                     placeholder="blurred"
                     aspectRatio={2 / 2}
@@ -54,26 +25,51 @@ const Events = () => {
                 </ImageContainer>  
               </ImageWrapper>
               <WrapDiv>
-               <EventTitle>Lebanon, Pa</EventTitle>
+               <EventTitle>May 1st</EventTitle>
               </WrapDiv>
               <InfoWrapper>
-                <h3>Postponed</h3>
+                <h3>Asbury Park, NJ</h3>
                 <p> 
-                  We would like to let all of those whom were interested in attending this trip know that it has been postponed to a future date this summer to be announced and will be posted here. 
-                  <br/>
-                  Thank you
-                  {/* Cypress will be organizing a team trip to Lebanon, Pennsylvania to support Gretna Glen Retreat Center and a Youth
-                  Crisis Center. Much like our first trip in 2019 which left us with a great feeling of gratitude and appreciation for being
-                  part of something unique, this trip will be no different. We will do as much as we can to help the community and leave a warming 
-                  impact on the youth.  */}   
+                   We are continuing are work with Bethel AME and The Ford Center in Asbury Park from 10:00am to 12:00pm. Cypress would love to have some extra hands to help.
                 </p>
-                {/* <ButtonWrapper>
-                  <Button><Link to="/Lebanon-Pa">Read More</Link></Button> 
+                <ButtonWrapper>
+                  <Button><Link to="/asbury-park">Read More</Link></Button> 
                   <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
-                </ButtonWrapper> */}
+                </ButtonWrapper>
               </InfoWrapper>
             </EventElement>
-            
+
+           {/*  //SpotsWood RCA, NJ */}
+            <EventElement>
+             <ImageWrapper>
+                <ImageContainer>
+                  <StaticImage
+                    src="../images/pixie.jpg"
+                    layout="fullWidth"
+                    placeholder="blurred"
+                    aspectRatio={2 / 2}
+                    transformOptions={{fit: "cover", cropFocus:"center"}}
+                    alt=""
+                  />
+                </ImageContainer>  
+              </ImageWrapper>
+              <WrapDiv>
+               <EventTitle>May 21st</EventTitle>
+              </WrapDiv>
+              <InfoWrapper>
+                <h3>SpotsWood RCA, NJ</h3>
+                <p> 
+                  We're working with the Pixie Preschool to help with projects on the property. This will include replacing windows and painting, while continuing our work with The CUP Food Pantry. 
+                  The day will begin at 9:00am and lunch will be provided. The address is 429 Main Street, SpotsWood, NJ
+                </p>
+                <ButtonWrapper>
+                  <Button><Link to="/spotswood-nj">Read More</Link></Button> 
+                  <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
+                </ButtonWrapper>
+              </InfoWrapper>
+            </EventElement>
+
+        {/*     //Cayce, Kentucky */}
             <EventElement>
               <ImageWrapper>
                 <ImageContainer>
@@ -88,17 +84,76 @@ const Events = () => {
                 </ImageContainer>  
               </ImageWrapper>
               <WrapDiv>
-               <EventTitle>Cayce, Kentucky</EventTitle>
+               <EventTitle>June 13 - 20th</EventTitle>
               </WrapDiv>
               <InfoWrapper>
-                <h3>May 7th - May 15th</h3>
+                <h3>Cayce, Kentucky</h3>
                 <p> 
-                  This project will primarily focus on helping to rebuild and finish homes that were devastated by the recent tornadoes in Cayce and surrounding areas. It will be one of 
-                  several trips over the next few months and into the following year. We are looking to fly into Nashville, TN and driv about 3 hours down to Bardwell, Kentucky, a town 
-                  just outside of Cayce.
+                 Based on our recent trip, Cypress will be helping two families return to some kind of "norm". This will include demolition, framing and general clean up. We're planning to stay at a hotel
+                 in Union City. This will help with logistics and close proximity to supplies as well as supporting local businesses. The cost of this trip will be $285.00 including food, plus your travel expenses. More details on this trip will be sent after our next meeting with the Cayce Recovery Team.
                 </p>
                 <ButtonWrapper>
-                  <Button><Link to="/Cayce-Kentucky-march-10th">Read More</Link></Button> 
+                  <Button><Link to="/Cayce-Kentucky">Read More</Link></Button> 
+                  <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
+                </ButtonWrapper>
+              </InfoWrapper>
+            </EventElement>
+
+           {/*  //Gretna Glen,Pa */}
+            <EventElement>
+              <ImageWrapper>
+                <ImageContainer>
+                  <StaticImage
+                    src="../images/gretnaglen.png"
+                    layout="fullWidth"
+                    placeholder="blurred"
+                    aspectRatio={2 / 2}
+                    transformOptions={{fit: "cover", cropFocus:"center"}}
+                    alt=""
+                  />
+                </ImageContainer>  
+              </ImageWrapper>
+              <WrapDiv>
+               <EventTitle>Aug 22nd - 27th</EventTitle>
+              </WrapDiv>
+              <InfoWrapper>
+                <h3>Lebanon, PA</h3>
+                <p> 
+                  We will be heading to the Gretna Glen Camp after prior postponement. The focus will be on repairing cabins with painting, as well as serving the community, specifically the Youth In Crisis Center. There will be a meeting on this trip May 4th at 6:15 in Brielle. The address is 821 Riverview Dr. 
+                </p>
+                <ButtonWrapper>
+                  <Button><Link to="/gretna-glen">Read More</Link></Button> 
+                  <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
+                </ButtonWrapper>
+              </InfoWrapper>
+            </EventElement> 
+
+       {/*      //Gtc Bahamas */}
+            <EventElement>
+              <ImageWrapper>
+                <ImageContainer>
+                  <StaticImage
+                    src="../images/bahamasbanner.jpg"
+                    layout="fullWidth"
+                    placeholder="blurred"
+                    aspectRatio={2 / 2}
+                    transformOptions={{fit: "cover", cropFocus:"center"}}
+                    alt=""
+                  />
+                </ImageContainer>  
+              </ImageWrapper>
+              <WrapDiv>
+               <EventTitle>Nov 7th - 14th</EventTitle>
+              </WrapDiv>
+              <InfoWrapper>
+                <h3>Gtc, Bahamas</h3>
+                <p> 
+                We continue to see great progress there working with other organizations. 
+                The meeting for this trip will be Friday, September 9th at 6:30.  The address is 416 Philadelphia Ave, Point Pleasant Beach.  We will discuss costs, projects and the second Childrens program we will host on the island.
+
+                </p>
+                <ButtonWrapper>
+                  <Button><Link to="/gtc-bahamas">Read More</Link></Button> 
                   <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
                 </ButtonWrapper>
               </InfoWrapper>

@@ -1,18 +1,16 @@
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
-import { DonateButton } from '../components/Eventselements'
-import { DropShadow, EventBackground, PageEventTitle, FullPageEventWrapper, PictureElementWrap, InfoContainer, Date, Summary } from '../components/KentuckyElements'
-import Layout from '../components/layout'
+import { DonateButton } from '../components/Eventselements';
+import { DropShadow, EventBackground, PageEventTitle, FullPageEventWrapper, PictureElementWrap, InfoContainer, Date, Summary } from '../components/eventPageElements';
+import Layout from '../components/layout';
 
 const Kentucky = () => {
 
     return(
         <Layout>
             <FullPageEventWrapper>
-              <EventBackground>
-                <h2><Link to="/events">Back</Link></h2>
-              </EventBackground>
+              <EventBackground/>
               <PictureElementWrap>
                  <StaticImage
                     src="../images/kentucky.jpg"
@@ -27,13 +25,13 @@ const Kentucky = () => {
                      Cayce, Kentucky
                     </PageEventTitle>
                     <Date>
-                        May 7th - May 15th
+                      June 13th - 20th 
                     </Date>
                 
                 <Summary>
-                  This project will primarily focus on helping to rebuild and finish homes that were devastated by the recent tornadoes in Cayce and surrounding areas. It will be one of 
-                  several trips over the next few months and into the following year. We are looking at flying into Nashville, TN and driving about 3 hours down to Bardwell, Kentucky, a town 
-                  just outside of Cayce. We encourage you to join us on this trip.
+                  Based on our recent trip, Cypress will be helping two families return to some kind of "norm". This will include demolition, framing and general clean up. We're planning to stay at a hotel
+                  in Union City. This will help with logistics and close proximity to supplies as well as supporting local businesses. The cost of this trip will be $285.00 including food, plus your travel expenses. 
+                  More details on this trip will be sent after our next meeting with the Cayce Recovery Team.
                 </Summary>
                 <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
                 </InfoContainer>

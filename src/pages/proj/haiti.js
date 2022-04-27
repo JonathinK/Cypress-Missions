@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Layout from "../../components/layout"
 import Brush from "../../svg/assets/brushw.svg"
 import { breakpoints } from "../../utils/breakpoints"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Seo from "../../components/seo"
 
 import { GatsbyImage } from "gatsby-plugin-image"

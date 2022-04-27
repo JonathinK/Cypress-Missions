@@ -94,6 +94,7 @@ export const InfoWrapper = styled.div`
         color:#199453;
         margin-top:60px;
         font-size:1.4rem;
+        letter-spacing:2px;
     }
     p{ 
        display:-webkit-box;
@@ -223,6 +224,7 @@ export const EventTitle = styled.div`
     font-size:clamp(1rem, 5.3vw, 1.5rem);
     font-weight:300;
     color:white;
+    letter-spacing:2px;
 
     @media ${breakpoints.sm}{
         font-size:clamp(.9rem, 5vw, 1rem);

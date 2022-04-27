@@ -19,8 +19,7 @@ export const  EventBackground = styled.div`
     flex-flow:column;
     justify-content:flex-start;
     align-items:center;
-
-    
+ 
     h2{
         font-family:flood-std, sans-serif;
        transform:translateY(10rem);
@@ -40,7 +39,7 @@ export const  EventBackground = styled.div`
 export const PictureElementWrap = styled.div`
     width:80%;
     max-width: 50rem;
-    transform:translateY(-17rem);
+    transform:translateY(-15rem);
     border: 10px inset #5f5f5f;
     border-radius:5px;
 
@@ -86,7 +85,7 @@ export const InfoContainer = styled.div`
     }
 
 `
-export const PageEventTitle = styled. h2`
+export const PageEventTitle = styled.h2`
     color:hsl(148,83%,38%);
     font-family: flood-std, sans-serif;
     font-size:clamp(2rem, 5vw, 3rem);
