@@ -29,9 +29,8 @@ const Kentucky = () => {
                     </Date>
                 
                 <Summary>
-                  Based on our recent trip, Cypress will be helping two families return to some kind of "norm". This will include demolition, framing and general clean up. We're planning to stay at a hotel
-                  in Union City. This will help with logistics and close proximity to supplies as well as supporting local businesses. The cost of this trip will be $285.00 including food, plus your travel expenses. 
-                  More details on this trip will be sent after our next meeting with the Cayce Recovery Team.
+                  Based on our recent trip, Cypress will be helping two families return to some kind of "norm". This will include demolition, framing and general clean up.
+                  More details on this trip will be sent after our next meeting with the Cayce Recovery Team. If you would like more information on this trip please reach out to <a href="mailto:freddie@cypressmissions.com" target="_blank" rel="noreferrer">Freddie</a>.
                 </Summary>
                 <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
                 </InfoContainer>

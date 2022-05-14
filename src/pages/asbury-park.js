@@ -25,11 +25,11 @@ const Asbury = () => {
                      Asbury Park, NJ
                     </PageEventTitle>
                     <Date>
-                      May 7th
+                      1st & 3rd Saturday monthly
                     </Date>
                 
                 <Summary>
-                  We are continuing are work with Bethel AME and The Ford Center in Asbury Park from 10:00am to 12:00pm. Cypress would love to have some extra hands to help.
+                  We are continuing are work with Bethel AME and The Ford Center in Asbury Park from 10:00am to 12:00pm. Those of you who wish to serve in a local capacity feel free to join us.
                 </Summary>
                 <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
                 </InfoContainer>

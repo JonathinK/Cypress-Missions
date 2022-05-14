@@ -106,8 +106,15 @@ export const InfoWrapper = styled.div`
        overflow:hidden;
        font-family: co-text, sans-serif;
        color:#5f5f5f;
-       font-size: clamp(1rem, 5vw, 1.125rem)
+       font-size: clamp(1rem, 5vw, 1.125rem);
+
+       
     }
+    a{
+           font-weight:800;
+           text-decoration:none;
+           color:black;
+       }
 
     @media ${breakpoints.aux}{
         align-items:center;
