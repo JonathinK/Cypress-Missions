@@ -85,7 +85,7 @@ const Events = () => {
                 </ImageContainer>  
               </ImageWrapper>
               <WrapDiv>
-               <EventTitle>June 13 - 20th</EventTitle>
+               <EventTitle>June 14th - 22nd</EventTitle>
               </WrapDiv>
               <InfoWrapper>
                 <h3>Cayce, Kentucky</h3>

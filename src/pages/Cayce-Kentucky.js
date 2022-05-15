@@ -25,7 +25,7 @@ const Kentucky = () => {
                      Cayce, Kentucky
                     </PageEventTitle>
                     <Date>
-                      June 13th - 20th 
+                      June 14th - 22nd 
                     </Date>
                 
                 <Summary>
