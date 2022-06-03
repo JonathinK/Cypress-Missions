@@ -22,10 +22,10 @@ const gretna = () => {
                 <DropShadow />
                 <InfoContainer>
                     <PageEventTitle>
-                     SpotsWood, NJ
+                     Lebanon, PA
                     </PageEventTitle>
                     <Date>
-                      May 21st
+                      Aug 22nd - 27th
                     </Date>
                 
                 <Summary>
