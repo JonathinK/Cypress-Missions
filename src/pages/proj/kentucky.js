@@ -13,11 +13,11 @@ import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const PuertoRico = ({ data }) => {
+const Kentucky = ({ data }) => {
 
     return(
         <Layout>
-            <Seo title="Kentucky Relief" />
+            <Seo title="Rebuilding Kentucky" />
             <BackgroundWrap>
                 <div>
                   <KentuckyImage />  
@@ -31,9 +31,9 @@ const PuertoRico = ({ data }) => {
                 </div>
             </TitleWrap>
             <Info>
-              <p>When the tornadoes ripped through Kentucky Cypress immediately assembled a small group of four from New Jersey to take on the task of finding where we could be most effective.
-                On arrival the effect on the surrounding communities from the tornadoes was heartbreaking. Our trip was necessary to lay the future ground work for where Cypress 
-                would be most effective.</p>
+              <p>It's been 6 months since the devastating tornadoes ripped through kentucky. Family's are are still displaced looking for help but, the local Cayce Recovery team has done an amazing job to 
+              organize and expedite the projects focusing on individuals that have the greatest need. We have a team of 6 along with several other volunteers and NGOs. A team from Heart/911 has flown out to
+              assist us with this project. We will be focusing on Don Wright with this project.</p>
             </Info>
 
             <PhotoGridWrap>
@@ -63,7 +63,7 @@ const PuertoRico = ({ data }) => {
     )
 }
 
-export default PuertoRico
+export default Kentucky
 
 export const pageQuery = graphql`
     query {
@@ -81,7 +81,7 @@ export const pageQuery = graphql`
                     transformOptions: {fit: COVER, cropFocus: CENTER}
                     placeholder: BLURRED
                     webpOptions: {quality: 70}
-                    quality: 60 
+                    quality: 50 
                   )
                 }
               }
