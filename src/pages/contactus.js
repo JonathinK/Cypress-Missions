@@ -3,39 +3,19 @@ import React from 'react'
 import Layout from '../components/layout'
 import styled from 'styled-components'
 
-import { graphql, useStaticQuery } from "gatsby"
-import  { getImage } from "gatsby-plugin-image"
-
-import { BgImage } from "gbimage-bridge"
 import * as ContactStyle from "../styles/ContactBackground.module.css"
+import { StaticImage } from 'gatsby-plugin-image'
 
 const Contact = () => {
-   const { placeholderImage } = useStaticQuery(
-       graphql`
-       query{
-        placeholderImage:file(relativePath: {eq: "Donate.jpg"}) {
-            childImageSharp {
-              gatsbyImageData(
-                formats: AUTO
-                placeholder: BLURRED
-                quality: 50
-                width: 4000
-                webpOptions: {quality: 80}
-                layout: FULL_WIDTH
-              )
-            }
-          }
-       }
-       `
-   );
-
-   const pluginImage = getImage(placeholderImage);
-   
-    return(
+  return(
        <Layout> 
         <ContactWrap>
           <Background>
-            <BgImage  image={pluginImage} className={ContactStyle.background}/>
+              <StaticImage
+                src="../images/Donate.jpg"
+                quality={50}
+                placeholder='blurred'
+              />
           </Background>
           <Overlay />
               <ContactElement>
@@ -72,10 +52,16 @@ const ContactWrap = styled.main`
   grid-template-columns:auto;
   grid-template-rows:auto;
 `
-const Background= styled.div`
+const Background = styled.div`
   grid-area: 1 / 1 / 2 / 2;
   height:100%;
   width:100%;
+  
+  .donateBackground{
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
 `
 const Overlay = styled.div`
   width:100%;

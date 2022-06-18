@@ -31,9 +31,15 @@ const Kentucky = ({ data }) => {
                 </div>
             </TitleWrap>
             <Info>
+            <h3>Cayce Rebuilding</h3>
               <p>It's been 6 months since the devastating tornadoes ripped through kentucky. Family's are are still displaced looking for help but, the local Cayce Recovery team has done an amazing job to 
               organize and expedite the projects focusing on individuals that have the greatest need. We have a team of 6 along with several other volunteers and NGOs. A team from Heart/911 has flown out to
               assist us with this project. We will be focusing on Don Wright with this project.</p>
+            </Info>
+            <Info>
+            <h3>First Visit</h3>
+              <p>When the tornadoes ripped through Kentucky Cypress immediately assembled a small group of four from New Jersey to take on the task of finding where we could be most effective.
+                On arrival the effect on the surrounding communities from the tornadoes was heartbreaking. </p>
             </Info>
 
             <PhotoGridWrap>
@@ -137,14 +143,14 @@ const StyledBrush = styled(Brush)`
 `
 
 const Info = styled.div`
-    max-width:60rem;
+    max-width:70rem;
     margin:2rem auto;
     width:90%;
 
     h3{
-        font-family:flood-std, sans-serif;
+        font-family:co-text, sans-serif;
         font-weight:300;
-        font-size:clamp(1.4rem, 4vw, 2.5rem);
+        font-size:clamp(1.4rem, 4vw, 2rem);
         letter-spacing:2px;
         color:#199534;
         margin:0 0 1rem 0;

@@ -1,42 +1,34 @@
 import React from "react"
 import styled from "styled-components"
 
-import { graphql, useStaticQuery } from "gatsby"
-import  { getImage } from "gatsby-plugin-image"
 
-import { BgImage } from "gbimage-bridge"
-import * as BannerStyle from "../../styles/puertorico.module.css"
+import  { StaticImage } from "gatsby-plugin-image"
 
+const PrBannerWrap = styled.div`
+        width:100%;
+        height:100%;
 
-const PuertoRicoBanner = () => {
-  const { placeholderImage } = useStaticQuery(
-    graphql`
-      query {
-        placeholderImage:file(relativePath: {eq: "puertorico.jpg"}) {
-          childImageSharp {
-            gatsbyImageData(
-              width: 4000
-              quality: 50
-              webpOptions: {quality: 70}
-              aspectRatio: 1.5
-              placeholder: BLURRED
-              formats: AUTO
-            )
-          }
+        .bahamasbanner{
+          width:100%;
+          height:100%;
         }
-      }
     `
-  );
-  const pluginImage = getImage(placeholderImage);
+
+const PrBanner = () => {
 
       return(
         <PrBannerWrap>
-            <BgImage image={pluginImage} className={BannerStyle.puertorico} />
+           <StaticImage 
+             src="../../images/puertorico.jpg"
+             style={{position:"absolute"}}
+             className="bahamasbanner"
+             placholder="blurred"
+             loading="eager"
+             quality={50}
+           />
         </PrBannerWrap>
       )
     }
-    export default PuertoRicoBanner
-    const PrBannerWrap = styled.div`
-        width:100%;
-        height:100%;
-    `
+    export default PrBanner
+    
+    

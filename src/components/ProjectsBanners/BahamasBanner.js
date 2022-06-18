@@ -1,7 +1,5 @@
 import React from "react"
-import styled from "styled-components"
-
-
+import styled from "styled-components";
 import  { StaticImage } from "gatsby-plugin-image"
 
 const BahamasBannerWrap = styled.div`
@@ -22,7 +20,7 @@ const BahamasBanner = () => {
              src="../../images/bahamas.jpg"
              style={{position:"absolute"}}
              className="bahamasbanner"
-             placholder="blurred"
+             placeholder="blurred"
              loading="eager"
              quality={80}
            />

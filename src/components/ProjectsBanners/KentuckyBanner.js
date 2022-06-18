@@ -1,43 +1,34 @@
 import React from "react"
 import styled from "styled-components"
 
-import { graphql, useStaticQuery } from "gatsby"
-import  { getImage } from "gatsby-plugin-image"
 
-import { BgImage } from "gbimage-bridge"
-import * as BannerStyle from "../../styles/haiti.module.css"
+import  { StaticImage } from "gatsby-plugin-image"
 
-
-
-const KentuckyBanner = () => {
-  const { placeholderImage } = useStaticQuery(
-    graphql`
-      query {
-        placeholderImage:file(relativePath: {eq: "KentuckyBanner.jpg"}) {
-          childImageSharp {
-            gatsbyImageData(
-              width: 4000
-              quality: 50
-              webpOptions: {quality: 70}
-            
-              placeholder: BLURRED
-              formats: AUTO
-            )
-          }
-        }
-      }
-    `
-  );
-  const pluginImage = getImage(placeholderImage);
-
-      return(
-        <PrBannerWrap>
-            <BgImage image={pluginImage} className={BannerStyle.haiti} />
-        </PrBannerWrap>
-      )
-    }
-    export default KentuckyBanner
-    const PrBannerWrap = styled.div`
+const BahamasBannerWrap = styled.div`
         width:100%;
         height:100%;
+
+        .kentuckybanner{
+          width:100%;
+          height:100%;
+        }
     `
+
+const BahamasBanner = () => {
+
+      return(
+        <BahamasBannerWrap>
+           <StaticImage 
+             src="../../images/kentucky.jpg"
+             style={{position:"absolute"}}
+             className="kentuckybanner"
+             placholder="blurred"
+             loading="eager"
+             quality={80}
+           />
+        </BahamasBannerWrap>
+      )
+    }
+    export default BahamasBanner
+    
+    

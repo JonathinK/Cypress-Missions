@@ -1,42 +1,34 @@
 import React from "react"
 import styled from "styled-components"
 
-import { graphql, useStaticQuery } from "gatsby"
-import  { getImage } from "gatsby-plugin-image"
 
-import { BgImage } from "gbimage-bridge"
-import * as BannerStyle from "../../styles/bulgaria.module.css"
+import  { StaticImage } from "gatsby-plugin-image"
 
+const BulgariaBannerWrap = styled.div`
+        width:100%;
+        height:100%;
+
+        .bulgariabanner{
+          width:100%;
+          height:100%;
+        }
+    `
 
 const BulgariaBanner = () => {
-  const { placeholderImage } = useStaticQuery(
-    graphql`
-      query {
-        placeholderImage:file(relativePath: {eq: "bulgaria.jpg"}) {
-          childImageSharp {
-            gatsbyImageData(
-              width: 4000
-              quality: 50
-              webpOptions: {quality: 70}
-              aspectRatio: 1.5
-              placeholder: BLURRED
-              formats: AUTO
-            )
-          }
-        }
-      }
-    `
-  );
-  const pluginImage = getImage(placeholderImage);
 
       return(
         <BulgariaBannerWrap>
-            <BgImage image={pluginImage} className={BannerStyle.bulgaria} />
+           <StaticImage 
+             src="../../images/bulgaria.jpg"
+             style={{position:"absolute"}}
+             className="bulgariabanner"
+             placholder="blurred"
+             loading="eager"
+             quality={50}
+           />
         </BulgariaBannerWrap>
       )
     }
     export default BulgariaBanner
-    const BulgariaBannerWrap = styled.div`
-        width:100%;
-        height:100%;
-    `
+    
+    

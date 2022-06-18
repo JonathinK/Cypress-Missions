@@ -1,39 +1,25 @@
+
+import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import styled, { keyframes } from "styled-components"
 
-import { graphql, useStaticQuery } from "gatsby"
-import  { getImage } from "gatsby-plugin-image"
-
-import { BgImage } from "gbimage-bridge"
 import { breakpoints } from "../utils/breakpoints"
 
 
 
 const HeroImage = () =>{
-  const { placeholderImage } = useStaticQuery(
-    graphql`
-      query {
-        placeholderImage:file(relativePath: {eq: "Background.jpg"}) {
-          childImageSharp {
-            gatsbyImageData(
-              width: 4000
-              quality: 50
-              webpOptions: {quality: 70}
-              aspectRatio: 1.5
-              placeholder: BLURRED
-              formats: AUTO
-            )
-          }
-        }
-      }
-    `
-  );
-  const pluginImage = getImage(placeholderImage);
-
+ 
   return(
     <HeroGrid>
       <HeroWrap>
-        <StyledBgImage image={pluginImage} />
+        <HeroBackground>
+          <StaticImage
+            src="../images/Background.jpg"
+            quality={50}
+            placeholder="blurred"
+            className="heroBackground"
+          />
+        </HeroBackground>
       </HeroWrap>
       <HeroOverlay />
       <HeroInfo>
@@ -60,12 +46,17 @@ const HeroGrid = styled.div`
    min-height:100%;
   }
 `
-const StyledBgImage = styled(BgImage)`
-  height:100%;
-  width:100%;
-`
+
 const HeroWrap = styled.div`
   grid-area: 1 / 1 / 2 / 2;
+`
+const HeroBackground = styled.div`
+  grid-area: 1 / 1 / 2 / 2;
+  .heroBackground{
+    position:absolute;
+    height:100%;
+    width:100%;
+  }
 `
 const HeroOverlay = styled.div`
   grid-area: 1 / 1 / 2 / 2;
