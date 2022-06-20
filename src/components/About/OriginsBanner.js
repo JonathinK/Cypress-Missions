@@ -13,6 +13,8 @@ const VisionBanner = () => {
                 <StaticImage
                     src="../../images/banner-2.jpg"
                     quality={50}
+                    alt=""
+                    layout="fullWidth"
                     className="originsBackground"
                 />
             </BackgroundImage>

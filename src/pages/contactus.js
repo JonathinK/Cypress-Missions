@@ -13,7 +13,9 @@ const Contact = () => {
           <Background>
               <StaticImage
                 src="../images/Donate.jpg"
+                alt=""
                 quality={50}
+                layout="fullWidth"
                 placeholder='blurred'
               />
           </Background>

@@ -1,17 +1,14 @@
 import React from "react"
-import HaitiImage from "../../components/ProjectsBanners/HaitiBanner"
+import HaitiImage from "../../components/ProjectsBanners/HaitiBanner";
 import styled from "styled-components"
 import Layout from "../../components/layout"
 import Brush from "../../svg/assets/brushw.svg"
 import { breakpoints } from "../../utils/breakpoints"
 import { graphql } from "gatsby"
-import Seo from "../../components/seo"
+import Seo from "../../components/seo";
+import { GatsbyImage } from "gatsby-plugin-image";
+import { ImageGrid,ImageWrapper } from "../../Elements/kentuckyElements";
 
-import { GatsbyImage } from "gatsby-plugin-image"
-import { Container, Row, Col } from 'react-bootstrap';
-import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
-
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Haiti = ({ data }) => {
 
@@ -35,30 +32,17 @@ const Haiti = ({ data }) => {
                 <p>The poorest country in the Western Hemisphere, Haiti has been ground zero for American non-profits. Unfourtunately so much of the humanitarian aid brought to the island is spoiled or wasted, but Cypress remains committed 
                     to finding unique ways of making a lasting impact.</p>
             </Info>
-
-            <PhotoGridWrap>
-                <Container> 
-                    <SimpleReactLightbox>
-                        <SRLWrapper>
-                            <Row>
-                                {data.gallery.edges.map(({node}) => (
-                                <Col  lg={2} md={4} sm={4} xsm={6} key={node.id} className="py-3"> 
-                                <a href={node.publicURL}>
-                                    <GatsbyImage 
-                                    image={node.childImageSharp.gatsbyImageData} 
-                                    alt=""
-                                    style={{
-                                        boxShadow:`10px 10px 10px rgba(0,0,0,.3)`,
-                                        borderRadius: `5px`}}
-                                    />
-                                    </a>
-                                </Col>
-                                ))} 
-                            </Row>
-                        </SRLWrapper>
-                    </SimpleReactLightbox>    
-                </Container> 
-            </PhotoGridWrap>
+        <ImageGrid>
+            {data.gallery.edges.map(({node,id}) => (
+            <ImageWrapper key={node.id}>
+                <GatsbyImage
+                    image={node.childImageSharp.gatsbyImageData}
+                    alt=""
+                    className="imageStyles"      
+                />
+            </ImageWrapper>
+            ))}
+        </ImageGrid>
         </Layout>
     )
 }
@@ -96,7 +80,7 @@ const BackgroundWrap = styled.div`
     grid-template-rows: repeat(3,1fr);
     grid-template-columns: repeat(2,1fr);
     position:relative;
-    height:50vh;
+    height:70vh;
     width:100%;
 
     div{

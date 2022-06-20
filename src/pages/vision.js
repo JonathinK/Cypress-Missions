@@ -57,7 +57,7 @@ export default VisionPage
 
 const Banner = styled.div`
     width:100%;
-    height:50vh;
+    height:70vh;
     display:grid; 
     grid-template-rows:1fr;
     grid-template-columns:1fr;

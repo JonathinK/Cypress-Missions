@@ -15,6 +15,7 @@ const EventOne = () => {
                  <StaticImage
                     src="../images/bahamasbanner.jpg"
                     layout="fullWidth"
+                    quality={50}
                     placeholder="blurred"
                     alt=""
                   />

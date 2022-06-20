@@ -18,6 +18,7 @@ const HeroImage = () =>{
             quality={50}
             placeholder="blurred"
             className="heroBackground"
+            layout="fullWidth"
           />
         </HeroBackground>
       </HeroWrap>

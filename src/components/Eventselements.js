@@ -199,7 +199,7 @@ export const WrapDiv = styled.div`
        width:15px;
        height:30px;
        background:hsl(148, 10%, 50%);
-       top:68px;
+       top:60px;
        border-top-left-radius:20px;
        border-bottom-left-radius:20px;
        z-index:2;
@@ -210,17 +210,17 @@ export const WrapDiv = styled.div`
        width:15px;
        height:15px;
        background:hsl(148, 10%, 60%);
-       top:68px;
+       top:60px;
     }
 
     @media ${breakpoints.sm}{
      
         &:before{
-            top:55px;
+            top:50px;
         }
 
         &:after{
-            top:55px;
+            top:50px;
         }
     }
 ` 

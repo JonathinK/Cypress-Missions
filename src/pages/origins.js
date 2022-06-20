@@ -3,7 +3,8 @@ import React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import styled from "styled-components"
-import OriginsBanner from "../components/About/OriginsBanner"
+import OriginsBanner from "../components/About/OriginsBanner";
+import { ImageGrid,ImageWrapper } from "../Elements/kentuckyElements";
 
 
 import { breakpoints } from "../utils/breakpoints"
@@ -11,10 +12,6 @@ import { breakpoints } from "../utils/breakpoints"
 import { Link, graphql } from "gatsby"
 
 import { StaticImage, GatsbyImage } from "gatsby-plugin-image"
-import { Container, Row, Col } from 'react-bootstrap';
-import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
-
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Brush from "../svg/assets/brushw.svg"
 
@@ -80,6 +77,7 @@ const OriginsPage = ({data}) => {
                  <StaticImage 
                         src="../images/f1-page-001.jpg"
                         quality= {50}
+                        alt=""
                         layout="fullWidth"
                         loading='lazy'
                         formats={["auto"]}
@@ -102,9 +100,10 @@ const OriginsPage = ({data}) => {
                  <div>
                  <StaticImage 
                         src="../images/inthenews.jpg"
-                        quality= {50}
+                        quality={60}
+                        alt=""
                         layout="fullWidth"
-                        loading='lazy'
+                        loading='eager'
                         formats={["auto"]}
                         style={{
                             boxShadow:`10px 10px 20px rgba(0,0,0,.5)`,
@@ -115,31 +114,18 @@ const OriginsPage = ({data}) => {
              </InTheNews>
              <BeforeCypress>
                  <h2>Before Cypress</h2>
-           
-             <Container> 
-                        
-                <SimpleReactLightbox>
-                    <SRLWrapper>
-                        <Row>
-                         {data.gallery.edges.map(({node}) => (
-                            <Col  lg={4} md={6} key={node.id} className="py-3"> 
-                            <a href={node.publicURL}>
-                                <GatsbyImage 
-                                image={node.childImageSharp.gatsbyImageData} 
-                                alt={node.base.split('-').join(' ').split('.')[0]}
-                                style={{
-                                    boxShadow:`10px 10px 10px rgba(0,0,0,.3)`,
-                                    borderRadius: `5px`}}
-                                />
-                                </a>
-                            </Col>
-                         ))} 
-                     </Row>
-                    </SRLWrapper>
-                </SimpleReactLightbox>
-                     
-                 </Container> 
-            </BeforeCypress>  
+            </BeforeCypress> 
+             <ImageGrid>
+                   {data.gallery.edges.map(({node,id}) => (
+                    <ImageWrapper key={node.id}>
+                        <GatsbyImage
+                            image={node.childImageSharp.gatsbyImageData}
+                            alt=""
+                            className="imageStyles"      
+                      />
+                    </ImageWrapper>
+                   ))}
+            </ImageGrid>  
          </Layout>
      )
 }
@@ -148,7 +134,7 @@ export default OriginsPage
 
 export const pageQuery = graphql`
     query {
-        gallery: allFile(filter: {relativeDirectory: {eq: "beforecypress"}}) {
+        gallery: allFile(filter: {relativeDirectory: {eq: "beforeCypress"}}) {
             edges {
               node {
                 id
@@ -173,7 +159,7 @@ export const pageQuery = graphql`
 
 const Banner = styled.div`
     width:100%;
-    height:50vh;
+    height:70vh;
     display:grid; 
     grid-template-rows:1fr;
     grid-template-columns:1fr;

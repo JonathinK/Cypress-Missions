@@ -4,14 +4,13 @@ import styled from "styled-components"
 import Layout from "../../components/layout"
 import Brush from "../../svg/assets/brushw.svg"
 import { breakpoints } from "../../utils/breakpoints"
-import { graphql } from "gatsby"
 import Seo from "../../components/seo"
+import { GatsbyImage } from "gatsby-plugin-image";
+import { ImageGrid, ImageWrapper } from "../../Elements/kentuckyElements";
+import { graphql } from "gatsby"
 
-import {  GatsbyImage } from "gatsby-plugin-image"
-import { Container, Row, Col } from 'react-bootstrap';
-import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const PuertoRico = ({ data }) => {
 
@@ -37,41 +36,27 @@ const PuertoRico = ({ data }) => {
                 <p>Puerto Rico has never fully recovered from the devastation left in the wake of hurricane Maria, which claimed over 3,000 lives. Following the storm in September 2017, Cypress began 
                             cleaning up the neighborhoods around Vega Baja, patching roofs and building friendships with town leaders. Cypress is now focused on education reform on the island, with the goal of 
                             motivating the next generation of leaders.</p>
-            </Info>
-
-            <PhotoGridWrap>
-                <Container> 
-                    <SimpleReactLightbox>
-                        <SRLWrapper>
-                            <Row>
-                                {data.gallery.edges.map(({node}) => (
-                                <Col  lg={3} md={4} sm={6}  key={node.id} className="py-3"> 
-                                <a href={node.publicURL}>
-                                    <GatsbyImage 
-                                    image={node.childImageSharp.gatsbyImageData} 
-                                    alt=""
-                                    style={{
-                                        boxShadow:`10px 10px 10px rgba(0,0,0,.3)`,
-                                        borderRadius: `5px`}}
-                                    />
-                                    </a>
-                                </Col>
-                                ))} 
-                            </Row>
-                        </SRLWrapper>
-                    </SimpleReactLightbox>    
-                </Container> 
-            </PhotoGridWrap>
+            </Info> 
+                <ImageGrid>
+                {data.gallery.edges.map(({node,id}) => (
+                <ImageWrapper key={node.id}>
+                    <GatsbyImage
+                        image={node.childImageSharp.gatsbyImageData}
+                        alt=""
+                        className="imageStyles"      
+                    />
+                </ImageWrapper>
+                ))}
+                </ImageGrid>   
         </Layout>
     )
 }
 
 export default PuertoRico
-
 export const pageQuery = graphql`
     query {
         gallery: allFile(filter: {relativeDirectory: {eq: "puertorico"}}
-        sort: {fields: root, order: DESC}) {
+        sort: {fields: root, order: ASC}) {
             edges {
               node {
                 id
@@ -93,13 +78,12 @@ export const pageQuery = graphql`
           }
     }
 `
-
 const BackgroundWrap = styled.div`
     display:grid;
     grid-template-rows: repeat(3,1fr);
     grid-template-columns: repeat(2,1fr);
     position:relative;
-    height:50vh;
+    height:70vh;
     width:100%;
 
     div{
@@ -169,8 +153,4 @@ const Info = styled.div`
     @media ${breakpoints.sm}{
         text-align:center;
     }
-    `
-    const PhotoGridWrap = styled.div`
-        max-width:80rem;
-        margin: 2rem auto;
     `

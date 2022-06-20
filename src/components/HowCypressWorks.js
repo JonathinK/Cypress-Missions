@@ -3,13 +3,8 @@ import styled from "styled-components"
 
 import  { StaticImage } from "gatsby-plugin-image"
 
-import HurricaneIcon from "../svg/assets/hurricane.svg"
+
 import Brush from "../svg/assets/brush.svg"
-import Cross from "../svg/assets/cross.svg"
-import Hammer from "../svg/assets/hammer.svg"
-import Community from "../svg/assets/community.svg"
-import Humanitarian from "../svg/assets/humanitarian.svg"
-import Jersey from "../svg/assets/jersey.svg"
 
 
 
@@ -38,9 +33,9 @@ const HowCypressWorksHome = () => {
                     <StaticImage 
                         src="../images/hcwPhotos/disasterrelief.jpg"
                         alt="disaster relief photo"
-                        quality= {40}
+                        quality= {50}
                         layout="fullWidth"
-                        loading='lazy'
+                        loading='eager'
                         formats={["auto"]}
                         style={{
                             boxShadow:`10px 10px 20px rgba(0,0,0,.5)`,
@@ -63,9 +58,9 @@ const HowCypressWorksHome = () => {
                     <StaticImage 
                             src="../images/hcwPhotos/buildingback.jpg"
                             alt="building back communities photo"
-                            quality= {40}
+                            quality={50}
                             layout="fullWidth"
-                            loading="lazy"
+                            loading="eager"
                             formats={["auto"]}
                             style={{
                                 boxShadow:`10px 10px 20px rgba(0,0,0,.5)`,
@@ -85,9 +80,9 @@ const HowCypressWorksHome = () => {
                     <StaticImage 
                             src="../images/hcwPhotos/localoutreach.jpg"
                             alt="local outreach photo"
-                            quality= {40}
+                            quality={50}
                             layout="fullWidth"
-                            loading="lazy"
+                            loading="eager"
                             formats={["auto"]}
                             style={{
                                 boxShadow:`10px 10px 20px rgba(0,0,0,.5)`,
@@ -148,6 +143,7 @@ const HowCypressWorksHome = () => {
             font-size: clamp(.9rem, 3.5vw, 1.2rem);
             color:#5f5f5f;
             padding:1rem 0;
+            line-height:1.3;
         }
             section{
                 max-width:1700px;

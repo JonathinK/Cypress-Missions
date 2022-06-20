@@ -19,6 +19,7 @@ const VisionBanner = () => {
                 style={{position:"absolute"}}
                 className="visionbanner"
                 quality={50}
+                layout="fullWidth"
             />
         </VisionBannerWrap>   
     )

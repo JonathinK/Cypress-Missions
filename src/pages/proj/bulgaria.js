@@ -6,12 +6,10 @@ import Brush from "../../svg/assets/brushw.svg"
 import { breakpoints } from "../../utils/breakpoints"
 import { graphql } from "gatsby"
 import Seo from "../../components/seo"
+import { ImageGrid,ImageWrapper } from "../../Elements/kentuckyElements"
 
 import { GatsbyImage } from "gatsby-plugin-image"
-import { Container, Row, Col } from 'react-bootstrap';
-import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Bulgaria = ({ data }) => {
 
@@ -38,30 +36,17 @@ const Bulgaria = ({ data }) => {
                     homes as well, including making a baby room for an expecting mother. The town of Malomir has many needs.
                 </p>
             </Info>
-
-            <PhotoGridWrap>
-                <Container> 
-                    <SimpleReactLightbox>
-                        <SRLWrapper>
-                            <Row>
-                                {data.gallery.edges.map(({node}) => (
-                                <Col  lg={2} md={4} sm={4} xsm={6} key={node.id} className="py-3"> 
-                                <a href={node.publicURL}>
-                                    <GatsbyImage 
-                                    image={node.childImageSharp.gatsbyImageData} 
-                                    alt={node.base.split('-').join(' ').split('.')[0]}
-                                    style={{
-                                        boxShadow:`10px 10px 10px rgba(0,0,0,.3)`,
-                                        borderRadius: `5px`}}
-                                    />
-                                    </a>
-                                </Col>
-                                ))} 
-                            </Row>
-                        </SRLWrapper>
-                    </SimpleReactLightbox>    
-                </Container> 
-            </PhotoGridWrap>
+            <ImageGrid>
+                   {data.gallery.edges.map(({node,id}) => (
+                    <ImageWrapper key={node.id}>
+                        <GatsbyImage
+                            image={node.childImageSharp.gatsbyImageData}
+                            alt=""
+                            className="imageStyles"      
+                      />
+                    </ImageWrapper>
+                   ))}
+            </ImageGrid>
         </Layout>
     )
 }
@@ -99,7 +84,7 @@ const BackgroundWrap = styled.div`
     grid-template-rows: repeat(3,1fr);
     grid-template-columns: repeat(2,1fr);
     position:relative;
-    height:50vh;
+    height:70vh;
     width:100%;
 
     div{

@@ -1,14 +1,12 @@
 {
-  "name": "Cypress-Missions",
+  "name": "gatsby-starter-default",
   "private": true,
-  "description": "Non-Profit Org that helps communities recover from natural disasters and harsh levels of poverty",
+  "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Jonathin Kish <Jonathin.kish@gmail.com>",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.7",
-    "bootstrap": "^5.1.3",
     "gatsby": "^4.16.0",
-    "gatsby-background-image": "^1.6.0",
     "gatsby-plugin-gatsby-cloud": "^4.16.0",
     "gatsby-plugin-image": "^2.16.1",
     "gatsby-plugin-manifest": "^4.16.0",
@@ -19,16 +17,15 @@
     "gatsby-plugin-styled-components": "^5.16.0",
     "gatsby-source-filesystem": "^4.16.0",
     "gatsby-transformer-sharp": "^4.16.0",
+    "lightgallery": "^2.5.0",
     "prop-types": "^15.8.1",
-    "react": "^17.0.2",
-    "react-bootstrap": "^2.4.0",
-    "react-dom": "^18.0.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
-    "simple-react-lightbox": "^3.6.9-0",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
-    "prettier": "2.5.1"
+    "prettier": "^2.6.2"
   },
   "keywords": [
     "gatsby"
@@ -37,8 +34,8 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
+    "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"

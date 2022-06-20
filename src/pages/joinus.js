@@ -35,8 +35,9 @@ const JoinUs = () => {
                         <StaticImage 
                             src="../images/joinus2.jpg"
                             layout="fullWidth"
-                            alt="Join Us Photo"
+                            alt=""
                             placeholder="blurred"
+                            quality={50}
                         />
                     </div>
                 </MakeImpact>

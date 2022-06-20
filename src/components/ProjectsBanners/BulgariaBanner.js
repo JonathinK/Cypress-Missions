@@ -23,6 +23,7 @@ const BulgariaBanner = () => {
              style={{position:"absolute"}}
              className="bulgariabanner"
              placholder="blurred"
+             layout="fullWidth"
              loading="eager"
              quality={50}
            />

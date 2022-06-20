@@ -1,19 +1,24 @@
-import React from "react"
-import KentuckyImage from "../../components/ProjectsBanners/KentuckyBanner"
-import styled from "styled-components"
-import Layout from "../../components/layout"
-import Brush from "../../svg/assets/brushw.svg"
-import { breakpoints } from "../../utils/breakpoints"
-import { graphql } from "gatsby"
+import React,{useState} from "react";
+//Banner Import
+import KentuckyImage from "../../components/ProjectsBanners/KentuckyBanner";
+//Styled Components
+import styled from "styled-components";
+//Layout
+import Layout from "../../components/layout";
+//Svg
+import Brush from "../../svg/assets/brushw.svg";
+//Seo
 import Seo from "../../components/seo"
+//Breakpoints
+import { breakpoints } from "../../utils/breakpoints";
+//Component Elements
+import { ImageGrid, ImageWrapper } from "../../Elements/kentuckyElements";
+//Gatsby Image
+import { GatsbyImage } from "gatsby-plugin-image";
+//Graphql
+import { graphql } from "gatsby";
 
-import {  GatsbyImage } from "gatsby-plugin-image"
-import { Container, Row, Col } from 'react-bootstrap';
-import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-const Kentucky = ({ data }) => {
+const Kentucky = ({data}) => {
 
     return(
         <Layout>
@@ -32,76 +37,99 @@ const Kentucky = ({ data }) => {
             </TitleWrap>
             <Info>
             <h3>Cayce Rebuilding</h3>
-              <p>It's been 6 months since the devastating tornadoes ripped through kentucky. Family's are are still displaced looking for help but, the local Cayce Recovery team has done an amazing job to 
+              <p>It's been 6 months since the devastating tornado's ripped through kentucky. Family's are are still displaced looking for help but, the local Cayce Recovery team has done an amazing job to 
               organize and expedite the projects focusing on individuals that have the greatest need. We have a team of 6 along with several other volunteers and NGOs. A team from Heart/911 has flown out to
               assist us with this project. We will be focusing on Don Wright with this project.</p>
             </Info>
+            <ImageGrid secondTrip>
+                   {data.secondtrip.edges.map(({node,id}) => (
+                    <ImageWrapper key={node.id}>
+                        <GatsbyImage
+                            image={node.childImageSharp.gatsbyImageData}
+                            alt=""
+                            className="imageStyles"
+                      />
+                    </ImageWrapper>
+                   ))}
+            </ImageGrid>
+            
             <Info>
             <h3>First Visit</h3>
               <p>When the tornadoes ripped through Kentucky Cypress immediately assembled a small group of four from New Jersey to take on the task of finding where we could be most effective.
                 On arrival the effect on the surrounding communities from the tornadoes was heartbreaking. </p>
             </Info>
-
-            <PhotoGridWrap>
-                <Container> 
-                    <SimpleReactLightbox>
-                        <SRLWrapper>
-                            <Row>
-                                {data.gallery.edges.map(({node}) => (
-                                <Col  lg={3} md={4} sm={6}  key={node.id} className="py-3"> 
-                                <a href={node.publicURL}>
-                                    <GatsbyImage 
-                                    image={node.childImageSharp.gatsbyImageData} 
-                                    alt=""
-                                    style={{
-                                        boxShadow:`10px 10px 10px rgba(0,0,0,.3)`,
-                                        borderRadius: `5px`}}
-                                    />
-                                    </a>
-                                </Col>
-                                ))} 
-                            </Row>
-                        </SRLWrapper>
-                    </SimpleReactLightbox>    
-                </Container> 
-            </PhotoGridWrap>
+            <ImageGrid firstTrip>
+                   {data.firsttrip.edges.map(({node,id}) => (
+                    <ImageWrapper key={node.id}>
+                        <GatsbyImage
+                            image={node.childImageSharp.gatsbyImageData}
+                            alt=""
+                            className="imageStyles"      
+                      />
+                    </ImageWrapper>
+                   ))}
+            </ImageGrid>
         </Layout>
-    )
+    );
 }
-
+export const query = graphql`
+  {
+    secondtrip:allFile(
+      filter: {relativeDirectory: {eq: "KentuckySecondTrip"}}
+      sort: {fields: sourceInstanceName, order: DESC}
+    ) {
+      edges {
+        node {
+          id
+          publicURL
+          childImageSharp {
+            gatsbyImageData(
+              height: 600
+              width: 800
+              transformOptions: {fit: COVER, cropFocus: CENTER}
+              placeholder: BLURRED
+              webpOptions: {quality: 70}
+              quality: 50
+            )
+          }
+        }
+      }
+    }
+     firsttrip:allFile(
+      filter: {relativeDirectory: {eq: "KentuckyTripFirst"}}
+      sort: {fields: sourceInstanceName, order: DESC}
+    ) {
+      edges {
+        node {
+          id
+          publicURL
+          childImageSharp {
+            gatsbyImageData(
+              height: 600
+              width: 800
+              transformOptions: {fit: COVER, cropFocus: CENTER}
+              placeholder: BLURRED
+              webpOptions: {quality: 70}
+              quality: 50
+            )
+          }
+        }
+      }
+    }
+  }
+`
 export default Kentucky
 
-export const pageQuery = graphql`
-    query {
-        gallery: allFile(filter: {relativeDirectory: {eq: "Kentucky"}}
-        sort: {fields: root, order: DESC}) {
-            edges {
-              node {
-                id
-                base
-                publicURL
-                childImageSharp {
-                  gatsbyImageData(
-                    height:500
-                    width: 800
-                    transformOptions: {fit: COVER, cropFocus: CENTER}
-                    placeholder: BLURRED
-                    webpOptions: {quality: 70}
-                    quality: 50 
-                  )
-                }
-              }
-            }
-          }
-    }
-`
+
+
+
 
 const BackgroundWrap = styled.div`
     display:grid;
     grid-template-rows: repeat(3,1fr);
     grid-template-columns: repeat(2,1fr);
     position:relative;
-    height:50vh;
+    min-height:80vh;
     width:100%;
 
     div{
@@ -144,7 +172,7 @@ const StyledBrush = styled(Brush)`
 
 const Info = styled.div`
     max-width:70rem;
-    margin:2rem auto;
+    margin:5rem auto;
     width:90%;
 
     h3{
@@ -171,8 +199,4 @@ const Info = styled.div`
     @media ${breakpoints.sm}{
         text-align:center;
     }
-    `
-    const PhotoGridWrap = styled.div`
-        max-width:80rem;
-        margin: 2rem auto;
     `

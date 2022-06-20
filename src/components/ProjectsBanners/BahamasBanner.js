@@ -18,11 +18,12 @@ const BahamasBanner = () => {
         <BahamasBannerWrap>
            <StaticImage 
              src="../../images/bahamas.jpg"
+             layout="fullWidth"
              style={{position:"absolute"}}
              className="bahamasbanner"
              placeholder="blurred"
              loading="eager"
-             quality={80}
+             quality={50}
            />
         </BahamasBannerWrap>
       )

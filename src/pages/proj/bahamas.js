@@ -6,12 +6,9 @@ import Brush from "../../svg/assets/brush.svg"
 import { breakpoints } from "../../utils/breakpoints"
 import { graphql } from "gatsby"
 import Seo from "../../components/seo"
-
+import { ImageGrid,ImageWrapper } from "../../Elements/kentuckyElements" 
 import { GatsbyImage } from "gatsby-plugin-image"
-import { Container, Row, Col } from 'react-bootstrap';
-import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Bahamas = ({ data }) => {
 
@@ -37,30 +34,17 @@ const Bahamas = ({ data }) => {
                 <p>Hurricane Dorian was considered the worst natural disaster in the history of the Bahamas. Known as a "Category Hell" storm, the Abaco islands were in complete ruin when Cypress took it's first trip to Marsh Harbour and Green Turtle 
                     Cay in October 2019. Since then, Cypress has returned over a dozen times, getting people back into their homes and rebuilding the island chain's compromised infrastructure.</p>
             </Info>
-
-            <PhotoGridWrap>
-                <Container> 
-                    <SimpleReactLightbox>
-                        <SRLWrapper>
-                            <Row>
-                                {data.gallery.edges.map(({node}) => (
-                                <Col  lg={2} md={4} sm={4} xsm={6} key={node.id} className="py-3"> 
-                                <a href={node.publicURL}>
-                                    <GatsbyImage 
-                                    image={node.childImageSharp.gatsbyImageData} 
-                                    alt=""
-                                    style={{
-                                        boxShadow:`10px 10px 10px rgba(0,0,0,.3)`,
-                                        borderRadius: `5px`}}
-                                    />
-                                    </a>
-                                </Col>
-                                ))} 
-                            </Row>
-                        </SRLWrapper>
-                    </SimpleReactLightbox>    
-                </Container> 
-            </PhotoGridWrap>
+            <ImageGrid firstTrip>
+                   {data.gallery.edges.map(({node,id}) => (
+                    <ImageWrapper key={node.id}>
+                        <GatsbyImage
+                            image={node.childImageSharp.gatsbyImageData}
+                            alt=""
+                            className="imageStyles"      
+                      />
+                    </ImageWrapper>
+                   ))}
+            </ImageGrid> 
         </Layout>
     )
 }
@@ -98,7 +82,7 @@ const BackgroundWrap = styled.div`
     grid-template-rows: repeat(3,1fr);
     grid-template-columns: repeat(2,1fr);
     position:relative;
-    height:50vh;
+    height:70vh;
     width:100%;
 
     div{

@@ -15,6 +15,7 @@ const Kentucky = () => {
                  <StaticImage
                     src="../images/kentucky.jpg"
                     layout="fullWidth"
+                    quality={50}
                     placeholder="blurred"
                     alt="A U.S. flag is tied to a fallen tree in front of a destroyed residence in the aftermath of a tornado in Mayfield, Kentucky. Photo credit: Reuters/Adrees Latif"
                   />

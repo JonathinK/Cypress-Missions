@@ -24,7 +24,8 @@ const HaitiBanner = () => {
              className="haitibanner"
              placholder="blurred"
              loading="eager"
-             quality={80}
+             layout="fullWidth"
+             quality={50}
            />
         </HaitiBannerWrap>
       )

@@ -2,16 +2,14 @@ import React from "react"
 import LonImage from "../../components/ProjectsBanners/LondonBanner"
 import styled from "styled-components"
 import Layout from "../../components/layout"
+import { graphql } from "gatsby"
 import Brush from "../../svg/assets/brushw.svg"
 import { breakpoints } from "../../utils/breakpoints"
-import { graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image";
+import { ImageGrid,ImageWrapper } from "../../Elements/kentuckyElements"
 import Seo from "../../components/seo"
 
-import { GatsbyImage } from "gatsby-plugin-image"
-import { Container, Row, Col } from 'react-bootstrap';
-import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const London = ({ data }) => {
 
@@ -36,36 +34,22 @@ const London = ({ data }) => {
                 </h3>
                 <p>Cypress partnered with the community group <strong>Welcome Syrian Families</strong> to provide affordable housing for refugee families fleeing worn-torn Syria.</p>
             </Info>
-
-            <PhotoGridWrap>
-                <Container> 
-                    <SimpleReactLightbox>
-                        <SRLWrapper>
-                            <Row>
-                                {data.gallery.edges.map(({node}) => (
-                                <Col  lg={2} md={4} sm={4} xsm={6} key={node.id} className="py-3"> 
-                                <a href={node.publicURL}>
-                                    <GatsbyImage 
-                                    image={node.childImageSharp.gatsbyImageData} 
-                                    alt=""
-                                    style={{
-                                        boxShadow:`10px 10px 10px rgba(0,0,0,.3)`,
-                                        borderRadius: `5px`}}
-                                    />
-                                    </a>
-                                </Col>
-                                ))} 
-                            </Row>
-                        </SRLWrapper>
-                    </SimpleReactLightbox>    
-                </Container> 
-            </PhotoGridWrap>
+            <ImageGrid>
+            {data.gallery.edges.map(({node,id}) => (
+            <ImageWrapper key={node.id}>
+                <GatsbyImage
+                    image={node.childImageSharp.gatsbyImageData}
+                    alt=""
+                    className="imageStyles"      
+                />
+            </ImageWrapper>
+            ))}
+        </ImageGrid>
         </Layout>
     )
 }
 
 export default London
-
 export const pageQuery = graphql`
     query {
         gallery: allFile(filter: {relativeDirectory: {eq: "london"}}
@@ -97,7 +81,7 @@ const BackgroundWrap = styled.div`
     grid-template-rows: repeat(3,1fr);
     grid-template-columns: repeat(2,1fr);
     position:relative;
-    height:50vh;
+    height:70vh;
     width:100%;
 
     div{
@@ -168,7 +152,4 @@ const Info = styled.div`
         text-align:center;
     }
     `
-    const PhotoGridWrap = styled.div`
-        max-width:80rem;
-        margin: 2rem auto;
-    `
+  

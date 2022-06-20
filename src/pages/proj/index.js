@@ -19,6 +19,8 @@ const Projects = () => {
                         style={{position:"absolute"}}
                         className="projectsbanner"
                         loading="eager"
+                        layout="fullWidth"
+                        quality={50}
                     /> 
                  </Background>
                  <Overlay />
@@ -44,6 +46,8 @@ const Projects = () => {
                             src="../../images/KentuckyBanner.jpg"
                             alt="Kentucky Image"
                             placeholder="blurred"
+                            quality={50}
+                            layout="fullWidth"
                         />
                         
                     </div>
@@ -63,6 +67,8 @@ const Projects = () => {
                             src="../../images/puertorico.jpg"
                             alt="Puerto Rico Image"
                             placeholder="blurred"
+                            layout="fullWidth"
+                            quality={50}
                         />
                         
                     </div>
@@ -81,6 +87,8 @@ const Projects = () => {
                             src="../../images/bahamas.jpg"
                             alt="Bahamas Image"
                             aspectRatio={1.5}
+                            quality={50}
+                            layout="fullWidth"
                         />
                     </div>
                     <div>
@@ -97,6 +105,8 @@ const Projects = () => {
                             src="../../images/haiti.jpg"
                             alt="Haiti Image"
                             placeholder="blurred"
+                            quality={50}
+                            layout="fullWidth"
                         />
                     </div>
                     <div>
@@ -114,6 +124,8 @@ const Projects = () => {
                             src="../../images/london.jpg"
                             alt="Puerto Rico Image"
                             placeholder="blurred"
+                            layout="fullWidth"
+                            quality={50}
                         />
                     </div> 
                     <div>
@@ -129,6 +141,8 @@ const Projects = () => {
                             src="../../images/bulgaria.jpg"
                             alt="Puerto Rico Image"
                             placeholder="blurred"
+                            layout="fullWidth"
+                            quality={50}
                         />
                         
                     </div>
@@ -147,7 +161,8 @@ const Projects = () => {
                             src="../../images/greetings.jpg"
                             alt="Puerto Rico Image"
                             placeholder="blurred"
-                            quality={60}
+                            quality={50}
+                            layout="fullWidth"
                         />
                         
                     </div>
@@ -174,7 +189,7 @@ const ProjectsBackgroundGrid = styled.div`
 const Background = styled.div`
     grid-area: 1 / 1 / 4 / 3;
     width:100%;
-    height:50vh;
+    height:80vh;
     position: relative;
     
     .projectsbanner{
@@ -199,23 +214,23 @@ const Text = styled.div`
     bottom:0;
     right:0;
     max-width:40rem;
+    width:80%;
     margin: 0 2rem 2rem 0;
+    padding: 0 1rem;
 
     p{
         font-family: co-text, sans-serif;
-        font-size:clamp(.8rem,3.5vw,1.5rem);
-        margin:1rem 0;
+        font-size:clamp(1rem,3.5vw,1.5rem);
         width:100%;
-        padding:0 1rem;
-        text-align:left;
+        text-align:center;
+        line-height:1.5;
     }
     @media ${breakpoints.md}{
-        margin:0;
-        margin-left:auto;
-        margin-right:auto;
-        margin-bottom:2rem;
-        width:90%;
         left:0;
+        right:0;
+        margin: 0 auto;
+        margin-bottom:2rem;
+        width:80%;
     }
 `
 const ProjectsTitle = styled.div`
@@ -313,7 +328,7 @@ const ProjectsWrapper = styled.main`
             margin:5rem auto;
             max-width:1920px;
             height:auto;
-            overflow:hidden;  
+            
             padding:1rem 0;
             
             
@@ -383,7 +398,7 @@ const ProjectsWrapper = styled.main`
             justify-content:center;
             align-items:center;
             margin:4rem auto;
-            overflow:hidden;
+            
             perspective: 1000px;
 
             h3{

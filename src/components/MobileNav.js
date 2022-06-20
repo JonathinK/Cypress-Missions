@@ -41,7 +41,7 @@ const MobileNav = () => {
                     src="../images/CypressLogo2.png"
                     layout="constrained"
                     width={150}
-                    quality={100}
+                    quality={50}
                     placeholder="blurred"
                 />
                 </Link>

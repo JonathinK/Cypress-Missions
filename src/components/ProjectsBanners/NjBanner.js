@@ -24,7 +24,8 @@ const BahamasBanner = () => {
              className="bahamasbanner"
              placholder="blurred"
              loading="eager"
-             quality={80}
+             quality={40}
+             layout="fullWidth"
            />
         </BahamasBannerWrap>
       )

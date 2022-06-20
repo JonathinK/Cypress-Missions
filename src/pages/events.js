@@ -21,6 +21,7 @@ const Events = () => {
                     aspectRatio={2 / 2}
                     transformOptions={{fit: "cover", cropFocus:"center"}}
                     alt=""
+                    quality={50}
                   />
                 </ImageContainer>  
               </ImageWrapper>
@@ -80,6 +81,7 @@ const Events = () => {
                     placeholder="blurred"
                     aspectRatio={2 / 2}
                     transformOptions={{fit: "cover", cropFocus:"center"}}
+                    quality={50}
                     alt="A U.S. flag is tied to a fallen tree in front of a destroyed residence in the aftermath of a tornado in Mayfield, Kentucky. Photo credit: Reuters/Adrees Latif"
                   />
                 </ImageContainer>  
@@ -109,6 +111,7 @@ const Events = () => {
                     src="../images/gretnaglen.png"
                     layout="fullWidth"
                     placeholder="blurred"
+                    quality={50}
                     aspectRatio={2 / 2}
                     transformOptions={{fit: "cover", cropFocus:"center"}}
                     alt=""
@@ -139,6 +142,7 @@ const Events = () => {
                     layout="fullWidth"
                     placeholder="blurred"
                     aspectRatio={2 / 2}
+                    quality={50}
                     transformOptions={{fit: "cover", cropFocus:"center"}}
                     alt=""
                   />

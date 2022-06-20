@@ -24,7 +24,8 @@ const LondonBanner = () => {
              className="londonbanner"
              placholder="blurred"
              loading="eager"
-             quality={80}
+             quality={50}
+             layout="fullWidth"
            />
         </BahamasBannerWrap>
       )

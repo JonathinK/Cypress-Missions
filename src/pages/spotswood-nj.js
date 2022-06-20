@@ -15,6 +15,7 @@ const spotswood = () => {
                  <StaticImage
                     src="../images/pixie.jpg"
                     layout="fullWidth"
+                    quality={50}
                     placeholder="blurred"
                     alt=""
                   />

@@ -16,6 +16,7 @@ const Asbury = () => {
                     src="../images/newjersey/Asbury-Park-13.jpg"
                     layout="fullWidth"
                     placeholder="blurred"
+                    quality={50}
                     alt=""
                   />
               </PictureElementWrap>

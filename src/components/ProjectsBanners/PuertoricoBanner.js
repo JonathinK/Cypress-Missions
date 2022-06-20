@@ -25,6 +25,7 @@ const PrBanner = () => {
              placholder="blurred"
              loading="eager"
              quality={50}
+             layout="fullWidth"
            />
         </PrBannerWrap>
       )

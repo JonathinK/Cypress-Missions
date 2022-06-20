@@ -15,6 +15,7 @@ const gretna = () => {
                  <StaticImage
                     src="../images/gretnaglen.png"
                     layout="fullWidth"
+                    quality={50}
                     placeholder="blurred"
                     alt=""
                   />
