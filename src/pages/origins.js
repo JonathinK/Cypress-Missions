@@ -134,7 +134,7 @@ export default OriginsPage
 
 export const pageQuery = graphql`
     query {
-        gallery: allFile(filter: {relativeDirectory: {eq: "beforeCypress"}}) {
+        gallery: allFile(filter: {relativeDirectory: {eq: "beforecypress"}}) {
             edges {
               node {
                 id
@@ -147,7 +147,7 @@ export const pageQuery = graphql`
                     transformOptions: {fit: COVER, cropFocus: CENTER}
                     placeholder: BLURRED
                     webpOptions: {quality: 70}
-                    quality: 60
+                    quality: 50
                     
                   )
                 }
@@ -289,7 +289,7 @@ const HowWeStarted = styled.div`
             grid-area: 1 / 1 / 2 / 2;
             display:flex;
             flex-flow:column;
-            justify-content:flex-startf;
+            justify-content:flex-start;
             align-items:flex-start;
 
            
