@@ -69,7 +69,7 @@ export const DropShadow = styled.div`
 
 `
 export const InfoContainer = styled.div`
-    max-width: 40rem;
+    max-width: 48rem;
     width:80%;
     height:auto;
     display:flex;
@@ -97,7 +97,7 @@ export const Date = styled.h3`
     font-size:clamp(1.5rem, 4.5vw, 2rem);
 `
 export const Summary = styled.p`
-    max-width:40rem;
+    max-width:48rem;
     width:100%;
     line-height:30px;
     font-family: co-text, sans-serif;
