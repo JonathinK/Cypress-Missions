@@ -98,11 +98,11 @@ export const InfoWrapper = styled.div`
     }
     p{ 
        display:-webkit-box;
-       -webkit-line-clamp: 5;
+       -webkit-line-clamp: 4;
        -webkit-box-orient: vertical;
        line-height:35px;
        width:95%;   
-       height:45%;
+       height:35%;
        overflow:hidden;
        font-family: co-text, sans-serif;
        color:#5f5f5f;
