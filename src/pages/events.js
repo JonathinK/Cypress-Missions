@@ -161,7 +161,7 @@ const Events = () => {
 
                 </p>
                 <ButtonWrapper>
-                  <Button><Link to="/gtc-bahamas">Read More</Link></Button> 
+                  <Button><Link to="/green-turtle-cay-bahamas">Read More</Link></Button> 
                   <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
                 </ButtonWrapper>
               </InfoWrapper>
