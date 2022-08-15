@@ -31,7 +31,7 @@ const Events = () => {
               <InfoWrapper>
                 <h3>Asbury Park, NJ</h3>
                 <p> 
-                   We are continuing are work with Bethel AME and The Ford Center in Asbury Park from 10:00am to 12:00pm. Those of you who wish to serve in a local capacity feel free to join us.
+                   We are continuing our work with Bethel AME and The Ford Center in Asbury Park from 10:00am to 12:00pm. Those of you who wish to serve in a local capacity feel free to join us.
                    This will be the 1st and 3rd Saturday of every month.
                 </p>
                 <ButtonWrapper>
