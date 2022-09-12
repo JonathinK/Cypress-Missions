@@ -17,6 +17,7 @@ const Contact = () => {
                 quality={50}
                 layout="fullWidth"
                 placeholder='blurred'
+                className='donateBackground'
               />
           </Background>
           <Overlay />

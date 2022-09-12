@@ -33,16 +33,18 @@ export default HeroImage
 
 const HeroGrid = styled.div`
   display:grid;
-  grid-template-columns: 3fr;
-  grid-auto-rows:100vh;
+  grid-template-columns: auto;
+  grid-template-rows:auto;
   min-height:100vh;
   height:100vh;
+  width:100%;
 `
 const HeroBackground = styled.div`
   grid-row: 1 / 2;
   grid-column: 1 / 2;
-  height:100vh;
-  min-height:100vh;
+  height:100%;
+  width:100%;
+  position:relative;
   
   .heroBackground{
     position:absolute;
@@ -59,7 +61,6 @@ const HeroOverlay = styled.div`
   grid-column: 1 / 2;
   width:100%;
   height:100%;
-  min-height:100vh;
   background:rgba(0,0,0, .4);
   position:relative;
 `
