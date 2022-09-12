@@ -6,7 +6,6 @@ import styled, { keyframes } from "styled-components"
 import { breakpoints } from "../utils/breakpoints"
 
 
-
 const HeroImage = () =>{
  
   return(
@@ -36,15 +35,17 @@ const HeroImage = () =>{
     
   )
 }
+export default HeroImage
 
 const HeroGrid = styled.div`
   display:grid;
-  grid-template-columns: 100%;
-  grid-template-rows:100%;
+  grid-template-columns: 3fr;
+  grid-auto-rows:auto;
   min-height:100vh;
   height:100vh;
+  
   @media ${breakpoints.sm}{
-   min-height:100%;
+   min-height:100vh;
   }
 `
 
@@ -53,6 +54,7 @@ const HeroWrap = styled.div`
 `
 const HeroBackground = styled.div`
   grid-area: 1 / 1 / 2 / 2;
+  
   .heroBackground{
     position:absolute;
     height:100%;
@@ -167,7 +169,7 @@ const ArrowWrap = styled.div`
     margin-bottom:35vh;
   }
 `
-export default HeroImage
+
 
 
 

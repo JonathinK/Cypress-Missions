@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import HeroSection from "../components/Hero"
+import HeroImage from "../components/Hero"
 import HowCypressWorks from "../components/HowCypressWorks"
 import ProjectsSpotlight from "../components/ProjectsSpotlight"
 
@@ -12,7 +12,7 @@ const Home = () => {
  return(
    <Layout>
      <Seo title="Home"/>
-      <HeroSection />
+      <HeroImage />
       <HowCypressWorks />
       <ProjectsSpotlight />
    </Layout>
