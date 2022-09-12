@@ -30,7 +30,7 @@ const Kentucky = () => {
                     </Date>
                 
                 <Summary>
-                  Cypress is heading back to Cayce, Kentucky to finish the work on Don Wright's home and to finish the work on another families home.
+                  Cypress is heading back to Cayce, Kentucky to finish the work on Don Wright's home and to finish helping another family in need.
                   We have made incredible progress on getting these two back into their homes with the hope of a return to a normal life.
                   If you would like more information on this trip please reach out to <a href="mailto:freddie@cypressmissions.com" target="_blank" rel="noreferrer">Freddie</a>.                  
                 </Summary>
