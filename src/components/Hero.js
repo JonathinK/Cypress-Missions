@@ -1,7 +1,7 @@
 
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 
 import { breakpoints } from "../utils/breakpoints"
 
@@ -26,10 +26,6 @@ const HeroImage = () =>{
         <h1>One Goal</h1>
         <h1>One Mission</h1>
         <p>Building Back communities one relationship at a time</p>
-        <ArrowWrap>
-          <div />
-          <div />
-        </ArrowWrap>
       </HeroInfo>
     </HeroGrid>
     
@@ -43,14 +39,13 @@ const HeroGrid = styled.div`
   grid-auto-rows:auto;
   min-height:100vh;
   height:100vh;
-  
-  @media ${breakpoints.sm}{
-   min-height:100vh;
-  }
 `
 
 const HeroWrap = styled.div`
-  grid-area: 1 / 1 / 2 / 2;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  height:100vh;
+  min-height:100vh;
 `
 const HeroBackground = styled.div`
   grid-area: 1 / 1 / 2 / 2;
@@ -118,55 +113,6 @@ const HeroInfo = styled.div`
       p{
         margin: 1rem 1rem 0 1rem;
       }
-  }
-`
-const arrowmovement = keyframes`
-  0%{
-    transform: translateY(0)
-  }
-  50%{
-    transform: translateY(1rem)
-  }
-
-  100%{
-    transform: translateY(0)
-  }
-`
-const ArrowWrap = styled.div`
-  position:absolute; 
-  max-height:3rem;
-  height:10vw;
-  min-height:2rem;
-  max-width:5rem;
-  width:13vw;
-  min-width:2rem;
-  bottom:0;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  margin-bottom:5vh;
-  animation: ${arrowmovement} 2s linear infinite;
-  
-    div{
-    background:white;
-    border-radius:10px;
-    position:relative;
-    height:100%;
-    width:15%;
-  }
-  div:first-child{
-    transform:translate(-5px) rotate(-30deg);
-  }
-  div:last-child{
-    transform: translate(5px) rotate(30deg);
-  }
-
- @media ${breakpoints.md}{
-    margin-bottom:30vh;
- }
-
-  @media ${breakpoints.sm}{
-    margin-bottom:35vh;
   }
 `
 
