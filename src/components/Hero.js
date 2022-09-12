@@ -36,7 +36,7 @@ export default HeroImage
 const HeroGrid = styled.div`
   display:grid;
   grid-template-columns: 3fr;
-  grid-auto-rows:auto;
+  grid-auto-rows:100vh;
   min-height:100vh;
   height:100vh;
 `
