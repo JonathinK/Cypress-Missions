@@ -26,12 +26,11 @@ const gretna = () => {
                      Lebanon, PA
                     </PageEventTitle>
                     <Date>
-                      Aug 22nd - 27th
+                      Apr 10th - 14th
                     </Date>
                 
                 <Summary>
-                   We will be heading to the Gretna Glen Camp after prior postponement. The focus will be on repairing cabins with painting, as well as serving the community, 
-                   specifically the Youth In Crisis Center. There will be a meeting on this trip May 4th at 6:15 in Brielle. The address is 821 Riverview Dr.
+                   Cypress is heading back to the Gretna Glen Camp in Lebanon,Pa to help prepare for the summer camp.
                 </Summary>
                 <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
                 </InfoContainer>

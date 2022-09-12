@@ -26,12 +26,13 @@ const Kentucky = () => {
                      Cayce, Kentucky
                     </PageEventTitle>
                     <Date>
-                      June 14th - 22nd 
+                      Sept 26th - 30th
                     </Date>
                 
                 <Summary>
-                  Based on our recent trip, Cypress will be helping two families return to some kind of "norm". This will include demolition, framing and general clean up.
-                  More details on this trip will be sent after our next meeting with the Cayce Recovery Team. If you would like more information on this trip please reach out to <a href="mailto:freddie@cypressmissions.com" target="_blank" rel="noreferrer">Freddie</a>.
+                  Cypress is heading back to Cayce, Kentucky to finish the work on Don Wright's home and to finish the work on another families home.
+                  We have made incredible progress on getting these two back into their homes with the hope of a return to a normal life.
+                  If you would like more information on this trip please reach out to <a href="mailto:freddie@cypressmissions.com" target="_blank" rel="noreferrer">Freddie</a>.                  
                 </Summary>
                 <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
                 </InfoContainer>

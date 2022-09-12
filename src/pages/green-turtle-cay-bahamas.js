@@ -26,14 +26,12 @@ const EventOne = () => {
                       Green Turtle Cay, Bahamas
                     </PageEventTitle>
                     <Date>
-                        Nov 7th - Nov 14th
+                        Nov 15th - Nov 27th
                     </Date>
                 
                 <Summary>
-                    The second week of November Cypress will be returning to Green Turtle Cay, a Barrier island off the mainland Great Abaco, in the Bahamas.  
-                    Cypress continues to see great progress in working with organizations, our efforts with school supplies, repairs to schools and getting the 
-                    communities back on their feet by getting them into their homes. The meeting for this trip will be Friday, September 9th at 6:30.  The address 
-                    is 416 Philadelphia Ave, Point Pleasant Beach.  We will discuss costs, projects and the second Children's program we will host on the island.
+                    More work is to be done in Green Turtle Cay Bahamas.
+                    Details to arrive soon.
                 </Summary>
                 <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
                 </InfoContainer>

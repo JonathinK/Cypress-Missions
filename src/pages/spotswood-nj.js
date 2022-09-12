@@ -26,12 +26,12 @@ const spotswood = () => {
                      SpotsWood, NJ
                     </PageEventTitle>
                     <Date>
-                      May 21st
+                      Oct 1st
                     </Date>
                 
                 <Summary>
-                  We're working with the Pixie Preschool to help with projects on the property. This will include replacing windows and painting, while continuing our work with The CUP Food Pantry. 
-                  The day will begin at 9:00am and lunch will be provided. The address is 429 Main Street, SpotsWood, NJ
+                  On October 1st Cypress will be heading to Spotswood. We will be working with the community to complete work at The Pixie Preschool from 
+                  9 am  to 12:30 pm. Lunch will be provided. 
                 </Summary>
                 <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
                 </InfoContainer>
