@@ -38,16 +38,11 @@ const VisionPage = () => {
              </ButtonWrap>
              <Vision>
                  <h3>Our Vision</h3>
-                <p>Our Vision is simple, to help communities recover one person at a time.
-                    Whether it's from an unexpected natural disaster or systemic poverty, 
-                    Cypress offers ways for families to bounce back.</p>
+                <p>We help rebuild in communities that are in need due to natural disasters or systemic poverty. Our projects are both local and global. Our network includes other NGOs and community leaders.</p>
              </Vision>
              <CoreValues>
-                 <h3>Core Values</h3>
-                 <p>Cypress welcomes all walks of life. When you donate your time, 
-                     not only are you helping others, you are also adding purpose to 
-                     your life. Cypress's goal is to provide tangible help for those 
-                     in need by motivating people to help their neighbor.</p>
+                 <h3>Values</h3>
+                 <p>Our convictions are valuing others, respecting differences, and serving the common good.</p>
              </CoreValues>
          </Layout>
      )

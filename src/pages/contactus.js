@@ -32,8 +32,7 @@ const Contact = () => {
                    <a href="tel:732-278-3797">732-278-3797</a>
                    <h2>Donate To Cypress</h2>
                    <h3>Changing lives through service</h3>
-                   <p>Your financial donations are used to support humanitarian needs both home and abroad. 
-                     Our goal is to support communities who are stuck in systemic poverty, or recovering from natural disasters get back on their feet. Your support is greatly appreciated.</p>
+                   <p>Your financial donation helps expedite the humanitarian needs to rebuild distressed or impoverished areas. </p>
                   <a href="https://www.aplos.com/aws/give/CypressMissions/general" target="_blank" rel="noreferrer"><button>Donate</button></a>
                 </div>
                 

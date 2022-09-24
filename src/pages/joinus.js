@@ -28,8 +28,8 @@ const JoinUs = () => {
             </JoinSvgWrap>
                 <MakeImpact>
                     <h2>Ready To Make An Impact?</h2>
-                    <p>We are always looking for for new volunteers to join our teams, locally and abroad. If you are interested in changing lives through giving back, then
-                        fill out the form below, and someone will reach out to you with more information.
+                    <p>We are always looking for volunteers to join our team, locally and abroad. If you are interested in changing lives through giving back, please
+                        fill out the form below.
                     </p>
                     <div>
                         <StaticImage 
