@@ -116,18 +116,19 @@ const MakeImpact = styled.div`
         color:#5f5f5f;
     }
     div{
-      width:100%;
+      width:95%;
       max-width:60rem;
       max-height:30rem;
-      height:60vw;
+      height:100vw;
       display:flex;
       flex-flow:column;
       justify-content:center;
       align-items:center;
       margin-top: 3rem;
-      padding: 0 2rem;
+
       filter: drop-shadow( 10px 10px 8px hsla(0,0%,0%,.3));
       border-radius:10px;
+    
     }
 `
 const FormWrap = styled.div`
