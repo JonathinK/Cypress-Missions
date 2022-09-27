@@ -42,7 +42,7 @@ const VisionPage = () => {
              </Vision>
              <CoreValues>
                  <h3>Values</h3>
-                 <p>Our convictions are valuing others, respecting differences, and serving the common good.</p>
+                 <p>Our convictions are valuing others, respecting differences, and serving the common good. Our vision is for these leaders, to then reach out to others in need and serve as a base for the community.</p>
              </CoreValues>
          </Layout>
      )
