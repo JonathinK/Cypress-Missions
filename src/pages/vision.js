@@ -38,11 +38,11 @@ const VisionPage = () => {
              </ButtonWrap>
              <Vision>
                  <h3>Our Vision</h3>
-                <p>We help rebuild in communities that are in need due to natural disasters or systemic poverty. Our projects are both local and global. Our network includes other NGOs and community leaders.</p>
+                <p>We help rebuild in communities that are in need due to natural disasters or systemic poverty. Our projects are both local and global. Our network includes other NGOs and community leaders. Our vision is for these leaders, to then reach out to others in need and serve as a base for the community.</p>
              </Vision>
              <CoreValues>
                  <h3>Values</h3>
-                 <p>Our convictions are valuing others, respecting differences, and serving the common good. Our vision is for these leaders, to then reach out to others in need and serve as a base for the community.</p>
+                 <p>Our convictions are valuing others, respecting differences, and serving the common good.</p>
              </CoreValues>
          </Layout>
      )
