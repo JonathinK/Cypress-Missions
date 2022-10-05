@@ -42,7 +42,7 @@ const Events = () => {
             </EventElement>
 
         {/*Cayce, Kentucky */}
-            <EventElement>
+            {/* <EventElement>
               <ImageWrapper>
                 <ImageContainer>
                   <StaticImage
@@ -71,10 +71,10 @@ const Events = () => {
                   <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
                 </ButtonWrapper>
               </InfoWrapper>
-            </EventElement>
+            </EventElement> */}
             
              {/*  //SpotsWood RCA, NJ */}
-            <EventElement>
+           {/*  <EventElement>
              <ImageWrapper>
                 <ImageContainer>
                   <StaticImage
@@ -98,6 +98,35 @@ const Events = () => {
                 </p>
                 <ButtonWrapper>
                   <Button><Link to="/spotswood-nj">Read More</Link></Button> 
+                  <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
+                </ButtonWrapper>
+              </InfoWrapper>
+            </EventElement> */} 
+            
+            {/*  //SpotsWood RCA, NJ */}
+            <EventElement>
+             <ImageWrapper>
+                <ImageContainer>
+                  <StaticImage
+                    src="../images/Ian-Damage.jpeg"
+                    layout="fullWidth"
+                    placeholder="blurred"
+                    aspectRatio={2 / 2}
+                    transformOptions={{fit: "cover", cropFocus:"center"}}
+                    alt=""
+                  />
+                </ImageContainer>  
+              </ImageWrapper>
+              <WrapDiv>
+               <EventTitle>Oct 11th-15th</EventTitle>
+              </WrapDiv>
+              <InfoWrapper>
+                <h3>Florida</h3>
+                <p> 
+                  We've all seen the devastating impact Hurricane Ian has had on floridians. Many are left homeless or trapped after the cat 4 hurricane battered the western shore area of florida and ripped across the state causing massive amounts of damage. The damage is astounding, the death toll is rising, rescue crews are working around the clock to find those missing and most have no idea what's next for them. Cypress is heading down to florida to see where we can be of assistance to aid those in need. More information will be available once we have it, as this is an ongoing situation.
+                </p>
+                <ButtonWrapper>
+                  <Button><Link to="/florida-hurricane-ian">Read More</Link></Button> 
                   <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
                 </ButtonWrapper>
               </InfoWrapper>
