@@ -104,7 +104,7 @@ const Events = () => {
             </EventElement> */} 
             
             {/*  //SpotsWood RCA, NJ */}
-            <EventElement>
+            {/* <EventElement>
              <ImageWrapper>
                 <ImageContainer>
                   <StaticImage
@@ -130,7 +130,7 @@ const Events = () => {
                   <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
                 </ButtonWrapper>
               </InfoWrapper>
-            </EventElement>
+            </EventElement> */}
 
          {/*Gtc Bahamas */}
            <EventElement>
