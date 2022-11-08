@@ -30,7 +30,7 @@ const Asbury = () => {
                     </Date>
                 
                 <Summary>
-                  We continue our work with The Bethel Clothing Closet in Asbury Park, from 10:00 am to 12:00 pm. This is every 1st and 3rd saturday of every month.
+                  We continue our work with The Bethel Clothing Closet in Asbury Park, from 10:00 am to 12:00 pm. This is every 1st and 3rd saturday of each month.
                   Please feel free to join us to serve the local community.
                 </Summary>
                 <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
