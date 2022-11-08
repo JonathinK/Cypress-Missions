@@ -152,7 +152,7 @@ const Events = () => {
                <EventTitle>March 4th - 11th</EventTitle>
               </WrapDiv>
               <InfoWrapper>
-                <h3>Harlem Heights, Fort Meyers, Fl</h3>
+                <h3>Harlem Heights, Fort Myers, Fl</h3>
                 <p> 
                   In our initial recovery efforts from Hurricane Ian, we found our purpose in this community. We will be helping with the recovery of the home of Virginia Rosado and her daughter Lynn.
                 </p>
