@@ -14,7 +14,7 @@ const Florida = () => {
               <EventBackground/>
               <PictureElementWrap>
                  <StaticImage
-                    src="../images/HarlemFl.jpg"
+                    src="../images/HarlemFL.jpg"
                     layout="fullWidth"
                     quality={50}
                     placeholder="blurred"
