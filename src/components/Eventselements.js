@@ -37,7 +37,7 @@ export const EventElement = styled.div`
     height:24.1875em;
     background:white;
     border-radius:10px;
-    box-shadow: 20px 20px 10px hsla(0,0%,0%,.3);
+    box-shadow: 0px 20px 10px -10px hsla(0,0%,0%,.3);
     position:relative;
     margin: 3rem 0;
 
@@ -67,10 +67,17 @@ export const ImageWrapper = styled.div`
     @media ${breakpoints.aux}{
         grid-column:none;
         border-radius:10px 10px 0 0;
+        height:350px;
+        .ImageHeight{
+            transform:translateY(-10rem);
+        }
     }
 
     @media ${breakpoints.sm}{
         height:250px;
+        .ImageHeight{
+            transform:translateY(0rem);
+        }
     }
 
 
@@ -81,32 +88,35 @@ export const ImageContainer = styled.div`
 export const InfoWrapper = styled.div`
     display:flex;
     flex-flow: column nowrap;
-    justify-content:flex-start;
+    justify-content:center;
     align-items: flex-start;
     grid-column: 4 / 9;
     overflow:hidden;
     text-overflow:ellipsis;
-    padding-left:1.5rem;
+    padding-left:1.8rem;
+    
 
    
      h3{
         font-family:flood-std, sans-serif;
         color:#199453;
-        margin-top:60px;
+        margin-top:20px;
         font-size:1.4rem;
         letter-spacing:2px;
+        margin-bottom:0rem;
     }
     p{ 
        display:-webkit-box;
-       -webkit-line-clamp: 4;
+       -webkit-line-clamp:3;
        -webkit-box-orient: vertical;
-       line-height:35px;
+       line-height:23px;
        width:95%;   
-       height:35%;
+       height:18%;
        overflow:hidden;
        font-family: co-text, sans-serif;
        color:#5f5f5f;
        font-size: clamp(1rem, 5vw, 1.125rem);
+       margin-top:.2rem;
 
        
     }
@@ -117,37 +127,47 @@ export const InfoWrapper = styled.div`
        }
 
     @media ${breakpoints.aux}{
-        align-items:center;
-        padding:0;
+        align-items:start;
+        padding:0rem 2rem;
         p{
-            width:90%
+            width:100%
         }
     }
     
     @media ${breakpoints.sm}{
-        align-items:center;
-        
+        align-items:start;
         h3{
-            margin-top:1rem;
-            font-size:clamp(1rem, 4vw, 1.1rem);
+            margin-top:0;
+            font-size:1.3rem;
+            padding:0rem;
         }
         p{
-            width:90%;
-            -webkit-line-clamp:3;
-            font-size:clamp(.7rem, 5vw, .9rem);
+            width:100%;
+            -webkit-line-clamp:5;
+            font-size:1rem;
+            line-height:1.6rem;
         }
     }
 `
 export const ButtonWrapper = styled.div`
    display:flex;
-   flex-flow:row nowrap;
-   justify-content:space-between;
+   flex-flow:row wrap;
+   justify-content:start;
    margin-top: 1rem;
+   gap:0rem 1rem;
+   width:100%;
    
    @media ${breakpoints.aux}{
-        width:100%;
+        padding-bottom:1rem;
         justify-content:space-evenly;
-        margin-top:.5rem;
+        flex-flow:column wrap;
+        gap:1rem;
+    }
+    @media ${breakpoints.sm}{
+        padding-bottom:1rem;
+        justify-content:space-evenly;
+        flex-flow:column wrap;
+        gap:1rem;
     }
 `
 export const Button = styled.div`
@@ -155,27 +175,29 @@ export const Button = styled.div`
     font-size: 1.2rem;
     background:#A6B9AF;
     color:white;
-    margin: .5rem 2rem 1rem 0;
     width:183px;
-    padding:.5rem 0;
     text-align:center;
-    box-shadow:10px 10px 10px hsla(0,0%,0%,.3);
+    box-shadow:0px 10px 10px -5px hsla(0,0%,0%,.3);
     border-radius: 5px;
     cursor:pointer;
+    padding:1rem 0rem;
+   
 
     a{
         text-decoration:none;
-        color:inherit;
+        color:inherit;   
     }
 
     @media ${breakpoints.aux}{
-        margin: 1rem 0;
-        width:40%
+        width:100%;
+        padding:1rem 0;
+        margin:0;
     }
     @media ${breakpoints.sm}{
         font-size: clamp(.8rem, 4vw, 1rem);
         margin:0;
-        margin-bottom:1rem;
+        width:100%;
+        padding:1rem 0;
     }
 `
 export const DonateButton = styled(Button)`
@@ -235,6 +257,5 @@ export const EventTitle = styled.div`
 
     @media ${breakpoints.sm}{
         font-size:clamp(.9rem, 5vw, 1rem);
-
     }
 `
