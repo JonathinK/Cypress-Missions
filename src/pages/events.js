@@ -33,7 +33,7 @@ const Events = () => {
                 <h3>Asbury Park, NJ</h3>
                 <p> 
                 We continue our work with The Bethel Clothing Closet in Asbury Park, from 10:00 am to 12:00 pm. This is every 1st and 3rd Saturday of every month.
-                Please feel free to join us to serve locally.
+                Please feel free to join us to serve the local community.
                 </p>
                 <ButtonWrapper>
                   <Button><Link to="/asbury-park">Read More</Link></Button> 
