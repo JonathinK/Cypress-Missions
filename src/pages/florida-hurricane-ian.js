@@ -24,14 +24,13 @@ const Florida = () => {
                 <DropShadow />
                 <InfoContainer>
                     <PageEventTitle>
-                     Harlem Heights, Fl
+                     Harlem Heights,Fort Meyers, Fl
                     </PageEventTitle>
                     <Date>
                         March 4th - 11th
                     </Date>
                 <Summary>
-                    After seeing the devastation from Hurricane Ian, we were lead by the workings of fate to a small community in Fort Meyers called Harlem Heights.
-                    Here we have found our purpose with helping Virgina Rosado and her daughter Lynn. Virgina's son in law, Pete Saez will also be assisting.
+                    In our initial recovery efforts from Hurricane Ian, we found our purpose in this community. We will be helping with the recovery of the home of Virginia Rosado and her daughter Lynn.
                 </Summary>
                 <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
                 </InfoContainer>

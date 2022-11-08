@@ -15,7 +15,7 @@ const Events = () => {
              <ImageWrapper>
                 <ImageContainer>
                   <StaticImage
-                    src="../images/newjersey/Asbury-Park-13.jpg"
+                    src="../images/ClothingCloset.jpg"
                     layout="fullWidth"
                     placeholder="blurred"
                     aspectRatio={2 / 2}
@@ -31,8 +31,8 @@ const Events = () => {
               <InfoWrapper>
                 <h3>Asbury Park, NJ</h3>
                 <p> 
-                   We are continuing our work with Bethel AME and The Ford Center in Asbury Park from 10:00am to 12:00pm. Those of you who wish to serve in a local capacity feel free to join us.
-                   This will be the 1st and 3rd Saturday of every month.
+                We continue our work with The Bethel Clothing Closet in Asbury Park, from 10:00 am to 12:00 pm. This is every 1st and 3rd saturday of every month.
+                Please feel free to join us to serve locally.
                 </p>
                 <ButtonWrapper>
                   <Button><Link to="/asbury-park">Read More</Link></Button> 
@@ -151,10 +151,9 @@ const Events = () => {
                <EventTitle>March 4th - 11th</EventTitle>
               </WrapDiv>
               <InfoWrapper>
-                <h3>Harlem Heights, Fl</h3>
+                <h3>Harlem Heights, Fort Meyers, Fl</h3>
                 <p> 
-                  After seeing the devastation from Hurricane Ian, we were lead by the workings of fate to a small community in Fort Meyers called Harlem Heights.
-                  Here we have found our purpose with helping Virgina Rosado and her daughter Lynn. Virgina's son in law, Pete Saez will also be assisting.
+                  In our initial recovery efforts from Hurricane Ian, we found our purpose in this community. We will be helping with the recovery of the home of Virginia Rosado and her daughter Lynn.
                 </p>
                 <ButtonWrapper>
                   <Button><Link to="/florida-hurricane-ian">Read More</Link></Button> 

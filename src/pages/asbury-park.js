@@ -6,18 +6,18 @@ import { DropShadow, EventBackground, PageEventTitle, FullPageEventWrapper, Pict
 import Layout from '../components/layout';
 
 const Asbury = () => {
-
     return(
         <Layout>
             <FullPageEventWrapper>
               <EventBackground/>
-              <PictureElementWrap>
+              <PictureElementWrap ImageHeight >
                  <StaticImage
-                    src="../images/newjersey/Asbury-Park-13.jpg"
+                    src="../images/ClothingCloset.jpg"
                     layout="fullWidth"
                     placeholder="blurred"
                     quality={50}
                     alt=""
+                    className='ImagePosition'
                   />
               </PictureElementWrap>
                 <DropShadow />
@@ -30,7 +30,8 @@ const Asbury = () => {
                     </Date>
                 
                 <Summary>
-                  We are continuing our work with Bethel AME and The Ford Center in Asbury Park from 10:00am to 12:00pm. Those of you who wish to serve in a local capacity feel free to join us.
+                  We continue our work with The Bethel Clothing Closet in Asbury Park, from 10:00 am to 12:00 pm. This is every 1st and 3rd saturday of every month.
+                  Please feel free to join us to serve locally.
                 </Summary>
                 <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
                 </InfoContainer>

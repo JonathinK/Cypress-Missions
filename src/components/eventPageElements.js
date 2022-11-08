@@ -53,7 +53,10 @@ export const PictureElementWrap = styled.div`
     ${props => props.ImageHeight && css`
         height:clamp(16rem,50vw,31.25rem);
         overflow:hidden;
-
+        
+        .ImagePosition{
+            transform:translateY(-10rem);
+        }
     `}
 `
 
