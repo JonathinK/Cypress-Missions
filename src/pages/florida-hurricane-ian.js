@@ -24,7 +24,7 @@ const Florida = () => {
                 <DropShadow />
                 <InfoContainer>
                     <PageEventTitle>
-                     Harlem Heights,Fort Meyers, Fl
+                     Harlem Heights, Fort Meyers, Fl
                     </PageEventTitle>
                     <Date>
                         March 4th - 11th
