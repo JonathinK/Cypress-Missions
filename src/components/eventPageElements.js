@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled,{css} from "styled-components";
 import { breakpoints } from "../utils/breakpoints";
 
 export const FullPageEventWrapper = styled.div`
@@ -49,6 +49,12 @@ export const PictureElementWrap = styled.div`
     @media ${breakpoints.xsm}{
         transform:translateY(-6rem);
     }
+
+    ${props => props.ImageHeight && css`
+        height:clamp(16rem,50vw,31.25rem);
+        overflow:hidden;
+
+    `}
 `
 
 export const DropShadow = styled.div`

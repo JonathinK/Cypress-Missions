@@ -102,42 +102,13 @@ const Events = () => {
                 </ButtonWrapper>
               </InfoWrapper>
             </EventElement> */} 
-            
-            {/*  //SpotsWood RCA, NJ */}
-            {/* <EventElement>
-             <ImageWrapper>
-                <ImageContainer>
-                  <StaticImage
-                    src="../images/Ian-Damage.jpeg"
-                    layout="fullWidth"
-                    placeholder="blurred"
-                    aspectRatio={2 / 2}
-                    transformOptions={{fit: "cover", cropFocus:"center"}}
-                    alt=""
-                  />
-                </ImageContainer>  
-              </ImageWrapper>
-              <WrapDiv>
-               <EventTitle>Oct 11th-15th</EventTitle>
-              </WrapDiv>
-              <InfoWrapper>
-                <h3>Florida</h3>
-                <p> 
-                  We've all seen the devastating impact Hurricane Ian has had on floridians. Many are left homeless or trapped after the cat 4 hurricane battered the western shore area of florida and ripped across the state causing massive amounts of damage. The damage is astounding, the death toll is rising, rescue crews are working around the clock to find those missing and most have no idea what's next for them. Cypress is heading down to florida to see where we can be of assistance to aid those in need. More information will be available once we have it, as this is an ongoing situation.
-                </p>
-                <ButtonWrapper>
-                  <Button><Link to="/florida-hurricane-ian">Read More</Link></Button> 
-                  <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
-                </ButtonWrapper>
-              </InfoWrapper>
-            </EventElement> */}
 
          {/*Gtc Bahamas */}
            <EventElement>
               <ImageWrapper>
                 <ImageContainer>
                   <StaticImage
-                    src="../images/bahamasbanner.jpg"
+                    src="../images/Charles.jpg"
                     layout="fullWidth"
                     placeholder="blurred"
                     aspectRatio={2 / 2}
@@ -148,13 +119,12 @@ const Events = () => {
                 </ImageContainer>  
               </ImageWrapper>
               <WrapDiv>
-               <EventTitle>Nov 7th - 14th</EventTitle>
+               <EventTitle>Nov 15th - 21st</EventTitle>
               </WrapDiv>
               <InfoWrapper>
                 <h3>Gtc, Bahamas</h3>
                 <p> 
-                  More work is to be done in Green Turtle Cay Bahamas.
-                  Details to arrive soon.
+                  We will be moving Charles Williams, 81, back into his home. We met Charles on our very first trip. He has become a very dear friend. For over three years, he was living in a neighbor's attic.  On November 20th, the community will be hosting a ceremony to hand him the key to his home.  We look forward to this, as well as closing in on the final phases of the home of Leslie and Seanna Dames.
                 </p>
                 <ButtonWrapper>
                   <Button><Link to="/green-turtle-cay-bahamas">Read More</Link></Button> 
@@ -163,8 +133,38 @@ const Events = () => {
               </InfoWrapper>
             </EventElement>
 
-            {/*  //Gretna Glen,Pa */}
+            {/* Florida,NJ */}
             <EventElement>
+             <ImageWrapper>
+                <ImageContainer>
+                  <StaticImage
+                    src="../images/HarlemFl.jpg"
+                    layout="fullWidth"
+                    placeholder="blurred"
+                    aspectRatio={2 / 2}
+                    transformOptions={{fit: "cover", cropFocus:"center"}}
+                    alt=""
+                  />
+                </ImageContainer>  
+              </ImageWrapper>
+              <WrapDiv>
+               <EventTitle>March 4th - 11th</EventTitle>
+              </WrapDiv>
+              <InfoWrapper>
+                <h3>Harlem Heights, Fl</h3>
+                <p> 
+                  After seeing the devastation from Hurricane Ian, we were lead by the workings of fate to a small community in Fort Meyers called Harlem Heights.
+                  Here we have found our purpose with helping Virgina Rosado and her daughter Lynn. Virgina's son in law, Pete Saez will also be assisting.
+                </p>
+                <ButtonWrapper>
+                  <Button><Link to="/florida-hurricane-ian">Read More</Link></Button> 
+                  <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
+                </ButtonWrapper>
+              </InfoWrapper>
+            </EventElement>
+
+            {/*  //Gretna Glen,Pa */}
+            {/* <EventElement>
               <ImageWrapper>
                 <ImageContainer>
                   <StaticImage
@@ -191,7 +191,7 @@ const Events = () => {
                   <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
                 </ButtonWrapper>
               </InfoWrapper>
-            </EventElement> 
+            </EventElement>  */}
         </EventWrapper>
       </Layout>
   )

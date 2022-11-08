@@ -11,9 +11,9 @@ const EventOne = () => {
         <Layout>
             <FullPageEventWrapper>
               <EventBackground/>
-              <PictureElementWrap>
+              <PictureElementWrap ImageHeight>
                  <StaticImage
-                    src="../images/bahamasbanner.jpg"
+                    src="../images/Charles.jpg"
                     layout="fullWidth"
                     quality={50}
                     placeholder="blurred"
@@ -26,12 +26,11 @@ const EventOne = () => {
                       Green Turtle Cay, Bahamas
                     </PageEventTitle>
                     <Date>
-                        Nov 15th - Nov 27th
+                        Nov 15th - Nov 21st
                     </Date>
                 
                 <Summary>
-                    More work is to be done in Green Turtle Cay Bahamas.
-                    Details to arrive soon.
+                    We will be moving Charles Williams, 81, back into his home. We met Charles on our very first trip. He has become a very dear friend. For over three years, he was living in a neighbor's attic.  On November 20th, the community will be hosting a ceremony to hand him the key to his home.  We look forward to this, as well as closing in on the final phases of the home of Leslie and Seanna Dames.
                 </Summary>
                 <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
                 </InfoContainer>
