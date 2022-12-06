@@ -105,7 +105,7 @@ const Events = () => {
             </EventElement> */} 
 
          {/*Gtc Bahamas */}
-           <EventElement>
+          {/*  <EventElement>
               <ImageWrapper>
                 <ImageContainer>
                   <StaticImage
@@ -132,7 +132,7 @@ const Events = () => {
                   <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
                 </ButtonWrapper>
               </InfoWrapper>
-            </EventElement>
+            </EventElement> */}
 
             {/* Florida,NJ */}
             <EventElement>
