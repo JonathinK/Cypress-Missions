@@ -24,6 +24,7 @@ const BahamasBanner = () => {
              placeholder="blurred"
              loading="eager"
              quality={50}
+             webpOptions={{quality:100}}
            />
         </BahamasBannerWrap>
       )

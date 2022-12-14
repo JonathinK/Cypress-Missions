@@ -93,8 +93,7 @@ const Projects = () => {
                     </div>
                     <div>
                         <h3>Bahamas</h3>
-                        <p>Hurricane Dorian was considered the worst natural disaster in the history of the Bahamas. Known as a <strong>"Category Hell"</strong> storm, the Abaco islands were in complete ruin when Cypress took 
-                        it's first trip to Marsh Harbour and Green Turtle Cay in October 2019. Since then, Cypress has returned over a dozen times, getting people back into their homes and rebuilding the island chain's compromised infrastructure.</p>
+                        <p>Our latest trip to Green Turtle Cay, Bahamas 3 years after hurricane Dorian. Working wth the local residents as well as other NGO's, we have seen much progress. Charles Williams now has a place he can call home, instead of the attic he's lived in for the past 3 years. Bringing Leslie & Sienna Dames one step closer to completing their house. Gathering children  together for Cay Kids Day for a time of music, crafts and games. Cypress is thankful to be involved with such a great community!</p>
                         <Link to="/proj/bahamas">See More</Link>  
                     </div>
                 </section>
