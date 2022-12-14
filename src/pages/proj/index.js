@@ -93,7 +93,7 @@ const Projects = () => {
                     </div>
                     <div>
                         <h3>Bahamas</h3>
-                        <p>Our latest trip to Green Turtle Cay, Bahamas 3 years after hurricane Dorian. Working wth the local residents as well as other NGO's, we have seen much progress. Charles Williams now has a place he can call home, instead of the attic he's lived in for the past 3 years. Bringing Leslie & Sienna Dames one step closer to completing their house. Gathering children  together for Cay Kids Day for a time of music, crafts and games. Cypress is thankful to be involved with such a great community!</p>
+                        <p>Our latest trip to Green Turtle Cay, Bahamas, three years after Hurricane Dorian working with local residents as well as other NGO’s, we have seen much progress. Charles Williams, now able to move out of the attic he has lived  in for the past three years into a place he can now call home. Leslie and Seanna Dames, pictured here, are now one step closer to completing their house. Gathering the children together for Cay Kids Day, was a celebration time music, crafts and games. Cypress is thankful to be involved which such a great community.</p>
                         <Link to="/proj/bahamas">See More</Link>  
                     </div>
                 </section>
