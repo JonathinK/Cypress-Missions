@@ -133,7 +133,6 @@ const Events = () => {
                 </ButtonWrapper>
               </InfoWrapper>
             </EventElement> */}
-
             {/* Florida,NJ */}
             <EventElement>
              <ImageWrapper>
@@ -149,7 +148,35 @@ const Events = () => {
                 </ImageContainer>  
               </ImageWrapper>
               <WrapDiv>
-               <EventTitle>March 4th - 11th</EventTitle>
+               <EventTitle>Dec 31st - Jan 7th</EventTitle>
+              </WrapDiv>
+              <InfoWrapper>
+                <h3>Harlem Heights, Fort Myers, Fl</h3>
+                <p> 
+                Cypress has mobilized once again into the new year, heading down to Florida to help the Rosado family. This trip is one that will lay the ground work for subsequent trips to Harlem Heights / Fort Meyers, FL. Cypress is grateful to be able to help Virginia and Lynn Rosado find some normalcy and comfort in their life. Check back as we update the situation with changes and new trip details. 
+                </p>
+                <ButtonWrapper>
+                  <Button><Link to="/fort-myers-florida">Read More</Link></Button> 
+                  <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
+                </ButtonWrapper>
+              </InfoWrapper>
+            </EventElement>
+            {/* Florida,NJ */}
+            <EventElement>
+             <ImageWrapper>
+                <ImageContainer>
+                  <StaticImage
+                    src="../images/HarlemFL.jpg"
+                    layout="fullWidth"
+                    placeholder="blurred"
+                    aspectRatio={2 / 2}
+                    transformOptions={{fit: "cover", cropFocus:"center"}}
+                    alt=""
+                  />
+                </ImageContainer>  
+              </ImageWrapper>
+              <WrapDiv>
+               <EventTitle>Mar 4th - 11th</EventTitle>
               </WrapDiv>
               <InfoWrapper>
                 <h3>Harlem Heights, Fort Myers, Fl</h3>
