@@ -30,7 +30,7 @@ const FortMyersFlorida = () => {
                       Dec 31st, 2022 - January 7th, 2023 
                     </Date>
                 <Summary>
-                    Cypress has mobilized once again into the new year, heading down to Florida to help the Rosado family. This trip is one that will lay the ground work for subsequent trips to Harlem Heights / Fort Meyers, FL. Cypress is grateful to be able to help Virginia and Lynn Rosado find some normalcy and comfort in their life. Check back as we update the situation with changes and new trip details.
+                Cypress has mobilized once again into the new year, heading down to Florida to help the Rosado family. This trip is one that will lay the ground work for subsequent trips to Harlem Heights / Fort Meyers, FL. A tentative date of Jan 23rd - 28th has been planned and a short trip mid Feb is in play. Cypress is grateful to be able to help Virginia and Lynn Rosado find some normalcy and comfort in their life. Check back for more updates on the next involvement opportunities available. More details to come soon.
                 </Summary>
                 <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
                 </InfoContainer>
