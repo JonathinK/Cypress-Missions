@@ -43,6 +43,26 @@ const Projects = () => {
                 <section>
                     <div>
                         <StaticImage 
+                            src="../../images/Florida/Florida-Banner.jpg"
+                            alt="Kentucky Image"
+                            placeholder="blurred"
+                            quality={50}
+                            layout="fullWidth"
+                        />
+                        
+                    </div>
+                    <div>
+                        <h3>Florida</h3>
+                        <p>
+                            On September 28th, hurricane Ian would make landfall on the west coast of Florida causing massive amounts of damage to Fort Meyers Beach, Naples, and numerous other areas would feel the power of the strongest hurricane to hit Florida since 1935. Our founder would take a solo flight down to see the destruction and see how Cypress can mobilize to aid. Cypress has, since that trip, started to help the Rosado family and will seek to help as many as we can in the Harlem Heights area.
+                        </p> 
+                        <Link to="/proj/florida">See More</Link>           
+                    </div>
+                </section>  
+                {/* Kentucky Trip */}
+                <section>
+                    <div>
+                        <StaticImage 
                             src="../../images/KentuckyBanner.jpg"
                             alt="Kentucky Image"
                             placeholder="blurred"
