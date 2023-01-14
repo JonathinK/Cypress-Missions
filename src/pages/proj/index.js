@@ -167,7 +167,7 @@ const Projects = () => {
                     </div>
                     <div>
                         <h3>Bulgaria</h3>
-                        <p>In Bulgaria, Cypress was able to puchase much needed school supplies for village schools in one of Europe's poorest regions. Additionally, Cypress made repairs and upgrades to not only educational buildings but personal
+                        <p>In Bulgaria, Cypress was able to purchase much needed school supplies for village schools in one of Europe's poorest regions. Additionally, Cypress made repairs and upgrades to not only educational buildings but personal
                     homes as well, including making a baby room for an expecting mother. The town of Malomir has many needs.
                          </p>
                          <Link to="/proj/bulgaria">See More</Link>
