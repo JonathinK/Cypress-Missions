@@ -12,13 +12,14 @@ const Florida = () => {
         <Layout>
             <FullPageEventWrapper>
               <EventBackground/>
-              <PictureElementWrap>
+              <PictureElementWrap ImageHeight >
                  <StaticImage
-                    src="../images/HarlemFL.jpg"
+                    src="../images/Harlem-Photo.jpg"
                     layout="fullWidth"
                     quality={50}
                     placeholder="blurred"
                     alt=""
+                    className="ImagePosition"
                   />
               </PictureElementWrap>
                 <DropShadow />

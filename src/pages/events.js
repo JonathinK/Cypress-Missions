@@ -166,7 +166,7 @@ const Events = () => {
              <ImageWrapper>
                 <ImageContainer>
                   <StaticImage
-                    src="../images/HarlemFL.jpg"
+                    src="../images/Harlem-Photo.jpg"
                     layout="fullWidth"
                     placeholder="blurred"
                     aspectRatio={2 / 2}

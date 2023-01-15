@@ -43,7 +43,7 @@ const Projects = () => {
                 <section>
                     <div>
                         <StaticImage 
-                            src="../../images/Florida/Florida-Banner.jpg"
+                            src="../../images/Florida-Banner.jpg"
                             alt="Kentucky Image"
                             placeholder="blurred"
                             quality={50}
@@ -54,7 +54,7 @@ const Projects = () => {
                     <div>
                         <h3>Florida</h3>
                         <p>
-                            On September 28th, hurricane Ian would make landfall on the west coast of Florida causing massive amounts of damage to Fort Meyers Beach, Naples, and numerous other areas would feel the power of the strongest hurricane to hit Florida since 1935. Our founder would take a solo flight down to see the destruction and see how Cypress can mobilize to aid. Cypress has, since that trip, started to help the Rosado family and will seek to help as many as we can in the Harlem Heights area.
+                            In September, the strongest hurricane since 1935 hit the west coast of Florida; devastating Ft. Myers, and the small community of Harlem Heights.  A week later Cypress was on the ground to determine the best use of resources.  This led us to the home of Virginia and Lynn Rosado, a mother and daughter, who were trapped in their home but managed to get out to a nearby raft. We will continue to help them and others in the rebuilding process.
                         </p> 
                         <Link to="/proj/florida">See More</Link>           
                     </div>

@@ -36,7 +36,7 @@ const Florida = ({data}) => {
                 </div>
             </TitleWrap>
             <Info>
-            <h3>Harlem Heights, Fort Meyers, Fl</h3>
+            <h3>Harlem Heights, Fort Myers, Fl</h3>
               <p>Wrapping up our initial trip, having met our objectives. This lays the ground work for the next trip in completing this rebuild.</p>
             </Info>
             <ImageGrid secondTrip>

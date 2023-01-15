@@ -7,14 +7,14 @@ import Layout from '../components/layout';
 import Seo from "../components/seo";
 
 const FortMyersFlorida = () => {
-    <Seo title='Fort Myers Florida Recovery' description="Cypress has mobilized to lay the ground work in helping Virginia and Lynn Rosado rebuild their home in the Harlem Heights section of Fort Myers,FL. There is much work to be done and this is one of 3 trips before a larger trip planned to take place in march. Cypress is dedicated to helping Floridians get back in their homes."/>
+    <Seo title='Fort Meyers Florida Recovery' description="Cypress has mobilized to lay the ground work in helping Virginia and Lynn Rosado rebuild their home in the Harlem Heights section of Fort Meyers,FL. There is much work to be done and this is one of 3 trips before a larger trip planned to take place in march. Cypress is dedicated to helping Floridians get back in their homes."/>
     return(
         <Layout>
             <FullPageEventWrapper>
               <EventBackground/>
               <PictureElementWrap>
                  <StaticImage
-                    src="../images/HarlemFL.jpg"
+                    src="../images/Harlem-Photo.jpg"
                     layout="fullWidth"
                     quality={50}
                     placeholder="blurred"
