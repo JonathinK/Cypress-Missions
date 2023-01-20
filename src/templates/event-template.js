@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import { DropShadow, EventBackground, FullPageEventWrapper, InfoContainer, PageEventTitle, PictureElementWrap, Date, Location, Summary } from '../components/eventPageElements';
-import { DonateButton } from '../components/Eventselements';
+import { DonateButton } from '../components/EventElements';
 
 const EventTemplate = ({ data: {event} }) => {
 const EventImage = getImage(event.image);

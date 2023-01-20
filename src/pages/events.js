@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import { EventWrapper } from "../components/Eventselements"
+import { EventWrapper } from "../components/EventElements"
 import { EventCard } from "../components/EventCard" 
 
 const Events = ({ data }) => {
