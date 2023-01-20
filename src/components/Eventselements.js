@@ -14,6 +14,7 @@ export const EventWrapper = styled.main`
         hsl(148, 10%, 78%),
         hsl(0,0%,90%) 
     );
+    
     h1{
         font-family:flood-std, sans-serif;
         color:white;
@@ -32,7 +33,7 @@ export const EventWrapper = styled.main`
 export const EventElement = styled.div`
     display:grid;
     grid-template-columns: repeat(8,1fr);
-    grid-gap:10px;
+    grid-gap:1.5rem;
     width:68em;
     height:24.1875em;
     background:white;
@@ -40,6 +41,7 @@ export const EventElement = styled.div`
     box-shadow: 0px 20px 10px -10px hsla(0,0%,0%,.3);
     position:relative;
     margin: 3rem 0;
+    padding-right:1.5rem;
 
    
     @media ${breakpoints.aux}{
@@ -51,6 +53,7 @@ export const EventElement = styled.div`
         max-width:500px;
         height:auto;
         margin: 5rem auto;
+        padding:0;
     } 
     @media ${breakpoints.md}{
         margin-top:4rem;
@@ -63,18 +66,27 @@ export const ImageWrapper = styled.div`
     width:100%;
     grid-column: 1 / 4;
     border-radius: 10px 0 0 10px;
+    position:relative;
+
+    .image_fit{
+        position:absolute;
+        width:100%;
+        height:100%;
+    }
 
     @media ${breakpoints.aux}{
         grid-column:none;
         border-radius:10px 10px 0 0;
         height:350px;
+        
         .ImageHeight{
-            transform:translateY(-10rem);
+            transform:translateY(-7rem);
         }
     }
 
     @media ${breakpoints.sm}{
         height:250px;
+        
         .ImageHeight{
             transform:translateY(0rem);
         }
@@ -82,43 +94,47 @@ export const ImageWrapper = styled.div`
 
 
 `
-export const ImageContainer = styled.div`
-    overflow:hidden;
-`
+
 export const InfoWrapper = styled.div`
     display:flex;
     flex-flow: column nowrap;
     justify-content:center;
     align-items: flex-start;
+    gap:.5rem 0rem;
     grid-column: 4 / 9;
     overflow:hidden;
     text-overflow:ellipsis;
-    padding-left:1.8rem;
+    width:100%;
     
-
-   
+    
      h3{
         font-family:flood-std, sans-serif;
         color:#199453;
-        margin-top:20px;
-        font-size:1.4rem;
-        letter-spacing:2px;
-        margin-bottom:0rem;
+        font-size:1.5rem;
+        letter-spacing:3px;
+        line-height:1.3;
+        margin:0;
     }
+    h4{
+        margin:0;
+        font-family: co-text, sans-serif;
+        font-size:1.3rem;
+        line-height:1.3;
+        color:#2F4644;
+    }
+
     p{ 
        display:-webkit-box;
        -webkit-line-clamp:3;
        -webkit-box-orient: vertical;
-       line-height:23px;
-       width:95%;   
-       height:18%;
+       line-height:1.5;
+       width:100%;   
+       height:auto;
        overflow:hidden;
        font-family: co-text, sans-serif;
        color:#5f5f5f;
        font-size: clamp(1rem, 5vw, 1.125rem);
-       margin-top:.2rem;
-
-       
+       margin:0;       
     }
     a{
            font-weight:800;
@@ -128,7 +144,7 @@ export const InfoWrapper = styled.div`
 
     @media ${breakpoints.aux}{
         align-items:start;
-        padding:0rem 2rem;
+        width:90%;
         p{
             width:100%
         }
@@ -136,6 +152,7 @@ export const InfoWrapper = styled.div`
     
     @media ${breakpoints.sm}{
         align-items:start;
+        
         h3{
             margin-top:0;
             font-size:1.3rem;
@@ -145,7 +162,7 @@ export const InfoWrapper = styled.div`
             width:100%;
             -webkit-line-clamp:5;
             font-size:1rem;
-            line-height:1.6rem;
+            line-height:1.5;
         }
     }
 `
@@ -205,15 +222,15 @@ export const DonateButton = styled(Button)`
 `
 
 export const WrapDiv = styled.div`
-    grid-column: 1 / 4;
+    grid-column: 1 / 9;
     width:100%;
     height:auto;
     background:hsl(148, 10%, 60%);
     position:absolute;
-    margin-top:1rem;
     border-radius: 30px 30px 30px 0;
     transform: translateX(-15px);
     box-shadow: 10px 10px 10px hsla(0,0%,0%,.3);
+    
 
     &:before{
        content:'';
@@ -234,9 +251,12 @@ export const WrapDiv = styled.div`
        background:hsl(148, 10%, 60%);
        top:60px;
     }
-
+    @media ${breakpoints.aux}{
+       
+    }
     @media ${breakpoints.sm}{
-     
+       
+       
         &:before{
             top:50px;
         }
@@ -247,12 +267,12 @@ export const WrapDiv = styled.div`
     }
 ` 
 export const EventTitle = styled.div`
-    padding: 1rem 0;
+    line-height:1.5;
     text-align:center;
-    font-family:flood-std;
-    font-size:clamp(1rem, 5.3vw, 1.5rem);
+    font-family:co-text,sans-serif;
+    font-size:clamp(1.1rem, 4vw, 1.2rem);
     font-weight:300;
-    color:white;
+    color:#2F4644;
     letter-spacing:2px;
 
     @media ${breakpoints.sm}{

@@ -1,8 +1,13 @@
+require("dotenv").config({
+  path:`.env`,
+});
+
+
 module.exports = {
   siteMetadata: {
     title: `Cypress Missions`,
     description: `Cypress offers humanitarian aid to those who have been affected by natural disasters or harsh levels of poverty. We bring resources and use of construction knowledge to build back those communities.`,
-    author: `@NerdLogicDesigns`,
+    author: `@DiamondDigitalServices`,
     siteUrl: `https://www.cypressmissions.com`,
   },
   plugins: [
@@ -39,8 +44,13 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-gatsby-cloud`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve:`gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID || '',
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || '',
+        host: process.env.CONTENTFUL_HOST || 'cdn.contentful.com',
+      }   
+    }   
   ],
 }

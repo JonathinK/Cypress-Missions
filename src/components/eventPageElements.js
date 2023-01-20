@@ -39,12 +39,12 @@ export const  EventBackground = styled.div`
 export const PictureElementWrap = styled.div`
     width:80%;
     max-width: 50rem;
-    transform:translateY(-15rem);
+    transform:translateY(-10rem);
     border: 10px inset #5f5f5f;
     border-radius:5px;
 
     @media ${breakpoints.sm}{
-        transform:translateY(-8rem);
+        transform:translateY(-5rem);
     }
     @media ${breakpoints.xsm}{
         transform:translateY(-6rem);
@@ -55,22 +55,27 @@ export const PictureElementWrap = styled.div`
         overflow:hidden;
         
         .ImagePosition{
-            transform:translateY(-10rem);
+            transform:translateY(-3rem);
         }
+        @media ${breakpoints.sm}{
+            .ImagePosition{
+                transform:translateY(-2em);
+            }
     `}
 `
 
 export const DropShadow = styled.div`
-    width:70%;
+    width:80%;
     max-width:50rem;
     height:1.5rem;
     background-image:linear-gradient(to right, hsla(0,0%,92%) , hsla(0,0%,0%,.3), hsla(0,0%,92%,.1) 100%);
-    transform:translateY(-9rem);
+    transform:translateY(-7rem);
     border-radius:50%;
-    filter:blur(4px);
+    filter:blur(8px);
+    margin:0;
     
     @media ${breakpoints.sm}{
-        transform:translateY(-4rem);
+        transform:translateY(-3rem);
     } 
     @media ${breakpoints.xsm}{
         transform:translateY(-2rem);
@@ -85,8 +90,10 @@ export const InfoContainer = styled.div`
     flex-flow:column nowrap;
     justify-content:flex-start;
     align-items:flex-start;
+    gap:1rem;
     transform:translateY(-5rem);
     padding-bottom:1rem;
+    margin-bottom:5rem;
     
 
     @media ${breakpoints.sm}{
@@ -97,23 +104,37 @@ export const InfoContainer = styled.div`
 export const PageEventTitle = styled.h2`
     color:hsl(148,83%,38%);
     font-family: flood-std, sans-serif;
-    font-size:clamp(2rem, 5vw, 3rem);
-
+    font-size:clamp(1.6rem, 5vw, 2.1rem);
+    line-height:1.5;
+    letter-spacing:.5px;
+    margin:0;
 `
+
+export const Location = styled.h3`
+    font-family:co-text,sans-serif;
+    font-size:clamp(1.3em,3vw,1.5em);
+    line-height:1.5;
+    color:#2f4644;
+    margin:0;
+`
+
 export const Date = styled.h3`
     color:hsl(148,83%,38%);
-    font-family: flood-std, sans-serif;
-    font-size:clamp(1.5rem, 4.5vw, 2rem);
+    font-family: co-text, sans-serif;
+    font-size:1.2em;
+    line-height:1.5;
+    margin:0;
 `
 export const Summary = styled.p`
     max-width:48rem;
     width:100%;
-    line-height:30px;
+    line-height:1.5;
     font-family: co-text, sans-serif;
     letter-spacing:1px;
     padding-bottom:1rem;
     font-size:clamp(1rem , 3vw, 1.125rem);
-    margin-top:1rem;
+    margin:0;
+    color:#5f5f5f;
     
     a{
         text-decoration:none;
@@ -122,7 +143,7 @@ export const Summary = styled.p`
         
     }
     @media ${breakpoints.sm}{
-        line-height:27px;
+        line-height:1.5;
     }
 
 `
