@@ -74,7 +74,7 @@ export const ImageWrapper = styled.div`
         height:100%;
     }
     .Image{
-        border-radius:10px;
+        border-radius:10px 10px 0 0;
     }
 
     @media ${breakpoints.aux}{

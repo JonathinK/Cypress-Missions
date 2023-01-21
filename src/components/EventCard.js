@@ -5,6 +5,8 @@ import { Button,ButtonWrapper, DonateButton, EventElement, EventTitle, ImageWrap
 
 export const EventCard = ({ data }) => {
   const CardImage = getImage(data.image);
+  const dateTo = data.dateTo;
+  console.log(dateTo);
   return(
     <EventElement>
       <ImageWrapper>
@@ -12,7 +14,12 @@ export const EventCard = ({ data }) => {
       </ImageWrapper>
           <InfoWrapper>
             <h3>{data.location}</h3>
-            <EventTitle>{data.dateFrom} - {data.dateTo}</EventTitle>
+            {dateTo.length > 0 && 
+              <EventTitle> {data.dateFrom} - {data.dateTo}</EventTitle>
+            }
+            {dateTo.length <= 0 &&
+              <EventTitle>{data.dateFrom}</EventTitle>
+            }
             <p>{data.body.body}</p>
             <ButtonWrapper>
               <Button>

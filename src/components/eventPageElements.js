@@ -7,7 +7,6 @@ export const FullPageEventWrapper = styled.div`
     justify-content:flex-start;
     align-items:center;
     background: #EAEAEA;
-  
 `
 export const  EventBackground = styled.div`
     width:100%;
@@ -51,16 +50,15 @@ export const PictureElementWrap = styled.div`
     }
 
     ${props => props.ImageHeight && css`
-        height:clamp(16rem,50vw,31.25rem);
+        height:clamp(16rem,50vw,34rem);
         overflow:hidden;
+        position:relative;
         
         .ImagePosition{
-            transform:translateY(-12rem);
+            position:absolute;
+            height:100%;
+            width:100%;
         }
-        @media ${breakpoints.sm}{
-            .ImagePosition{
-                transform:translateY(-2em);
-            }
     `}
 `
 
@@ -80,7 +78,6 @@ export const DropShadow = styled.div`
     @media ${breakpoints.xsm}{
         transform:translateY(-2rem);
     }
-
 `
 export const InfoContainer = styled.div`
     max-width: 48rem;
@@ -99,7 +96,6 @@ export const InfoContainer = styled.div`
     @media ${breakpoints.sm}{
         transform:translateY(0);
     }
-
 `
 export const PageEventTitle = styled.h2`
     color:hsl(148,83%,38%);
@@ -145,6 +141,5 @@ export const Summary = styled.p`
     @media ${breakpoints.sm}{
         line-height:1.5;
     }
-
 `
 

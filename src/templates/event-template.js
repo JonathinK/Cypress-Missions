@@ -8,8 +8,10 @@ import { DonateButton } from '../components/EventElements';
 
 const EventTemplate = ({ data: {event} }) => {
 const EventImage = getImage(event.image);
+const DateTo = event.dateTo;
   return(
     <Layout>
+    <Seo title={event.seo.title} description={event.seo.description.description}/>
       <FullPageEventWrapper>
         <EventBackground/>
         <PictureElementWrap ImageHeight>
@@ -19,7 +21,12 @@ const EventImage = getImage(event.image);
         <InfoContainer>
           <PageEventTitle>{event.headline}</PageEventTitle>
           <Location>{event.location}</Location>
-          <Date>{event.dateFrom} - {event.dateTo}</Date>
+          {DateTo.length > 0 &&
+            <Date>{event.dateFrom} - {event.dateTo}</Date>
+          }
+          {DateTo.length <= 0 &&
+            <Date>{event.dateFrom}</Date>
+          }
           <Summary>{event.body.body}</Summary>
           <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
         </InfoContainer>
@@ -28,8 +35,6 @@ const EventImage = getImage(event.image);
   )
 }
 export default EventTemplate
-
-export const Head = ({data:{event}}) => <Seo title={event.seo.title} description={event.seo.description}/>
 export const query = graphql`
   query($slug: String!) {
     event:contentfulEvent(slug: {eq: $slug}) {
