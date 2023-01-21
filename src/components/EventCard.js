@@ -8,7 +8,7 @@ export const EventCard = ({ data }) => {
   return(
     <EventElement>
       <ImageWrapper>
-       <GatsbyImage image={CardImage} className="image_fit"/>
+       <GatsbyImage image={CardImage} className="image_fit" imgClassName='Image'/>
       </ImageWrapper>
           <InfoWrapper>
             <h3>{data.location}</h3>

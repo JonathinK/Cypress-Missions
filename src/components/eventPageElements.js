@@ -55,7 +55,7 @@ export const PictureElementWrap = styled.div`
         overflow:hidden;
         
         .ImagePosition{
-            transform:translateY(-3rem);
+            transform:translateY(-12rem);
         }
         @media ${breakpoints.sm}{
             .ImagePosition{

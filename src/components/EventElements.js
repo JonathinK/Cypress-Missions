@@ -73,6 +73,9 @@ export const ImageWrapper = styled.div`
         width:100%;
         height:100%;
     }
+    .Image{
+        border-radius:10px;
+    }
 
     @media ${breakpoints.aux}{
         grid-column:none;
