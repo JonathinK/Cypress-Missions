@@ -21,10 +21,10 @@ const DateTo = event.dateTo;
         <InfoContainer>
           <PageEventTitle>{event.headline}</PageEventTitle>
           <Location>{event.location}</Location>
-          {DateTo.length > 0 &&
+          {DateTo.length > null &&
             <Date>{event.dateFrom} - {event.dateTo}</Date>
           }
-          {DateTo.length <= 0 &&
+          {DateTo.length === null &&
             <Date>{event.dateFrom}</Date>
           }
           <Summary>{event.body.body}</Summary>
