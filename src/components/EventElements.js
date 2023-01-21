@@ -65,7 +65,7 @@ export const ImageWrapper = styled.div`
     height:100%;
     width:100%;
     grid-column: 1 / 4;
-    border-radius: 10px 0 0 10px;
+    border-radius: 10px;
     position:relative;
 
     .image_fit{
@@ -74,12 +74,12 @@ export const ImageWrapper = styled.div`
         height:100%;
     }
     .Image{
-        border-radius:10px 10px 0 0;
+        border-radius:10px;
     }
 
     @media ${breakpoints.aux}{
         grid-column:none;
-        border-radius:10px 10px 0 0;
+        border-radius:10px;
         height:350px;
         
         .ImageHeight{
