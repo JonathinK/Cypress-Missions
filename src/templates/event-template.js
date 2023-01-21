@@ -8,7 +8,7 @@ import { DonateButton } from '../components/EventElements';
 
 const EventTemplate = ({ data: {event} }) => {
 const EventImage = getImage(event.image);
-const DateTo = event.dateTo;
+const DateTo = event.dateTo || [];
   return(
     <Layout>
     <Seo title={event.seo.title} description={event.seo.description.description}/>
@@ -21,10 +21,10 @@ const DateTo = event.dateTo;
         <InfoContainer>
           <PageEventTitle>{event.headline}</PageEventTitle>
           <Location>{event.location}</Location>
-          {DateTo.length > null &&
+          {DateTo.length > 0 &&
             <Date>{event.dateFrom} - {event.dateTo}</Date>
           }
-          {DateTo.length === null &&
+          {DateTo.length === 0 &&
             <Date>{event.dateFrom}</Date>
           }
           <Summary>{event.body.body}</Summary>
