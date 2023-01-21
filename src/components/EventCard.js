@@ -5,8 +5,8 @@ import { Button,ButtonWrapper, DonateButton, EventElement, EventTitle, ImageWrap
 
 export const EventCard = ({ data }) => {
   const CardImage = getImage(data.image);
-  const dateTo = data.dateTo;
-  console.log(dateTo);
+  const dateTo = data.dateTo || [];
+ 
   return(
     <EventElement>
       <ImageWrapper>
