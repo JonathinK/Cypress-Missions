@@ -42,6 +42,8 @@ export const ProjectCard = styled.div`
     }
   :hover .img{
     transform:scale(1.1);
+    overflow:hidden;   
+    border-radius: 10px;
   }
 `
 export const ImagesContainer = styled.div`
