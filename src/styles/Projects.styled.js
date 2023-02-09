@@ -30,6 +30,7 @@ export const ProjectCard = styled.div`
     border-radius:10px;
     object-fit:cover;
     overflow:hidden; 
+    -webkit-overflow:hidden;
   }
   .img{
     border-radius: 10px;
