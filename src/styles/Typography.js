@@ -31,6 +31,7 @@ export const Headline = styled.h3`
     padding: .5em 1em;
     background: #199453;
     text-align:center;
+    border-radius: 0 0 10px 10px;
 
 
     @media ${breakpoints.md}{

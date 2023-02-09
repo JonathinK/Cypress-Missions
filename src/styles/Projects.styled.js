@@ -69,6 +69,7 @@ export const ImagesContainer = styled.div`
     height:100%;
     position:relative;
     border-radius: 10px;
+    overflow:hidden;
     object-fit:cover;
     box-shadow: 0px 10px 15px rgba(0,0,0,.2);
     transition: box-shadow .5s ease-in-out;
