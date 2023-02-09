@@ -17,23 +17,24 @@ export const ProjectsContainer = styled.div`
 export const ProjectCard = styled.div`
   width:100%;
   position: relative;
-  border-radius: 10px;
-  overflow:hidden;
   box-shadow: 0px 10px 15px rgba(0,0,0,.2);
   transition: box-shadow .5s ease-in-out;
   cursor:pointer;
+  border-radius: 10px;
+  overflow:hidden;
 
   .img_fit{
     position:absolute;
     width:100%;
     height:100%;
-    border-radius:inherit;
+    border-radius:10px;
     object-fit:cover;
     overflow:hidden; 
   }
   .img{
-    border-radius: inherit;
+    border-radius: 10px;
     transition: all .5s ease-in-out;
+    overflow:hidden;
   }
   :hover{
       box-shadow: 0px 10px 15px rgba(0,0,0,.3);
