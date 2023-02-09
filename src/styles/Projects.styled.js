@@ -36,15 +36,7 @@ export const ProjectCard = styled.div`
     border-radius: 10px;
     transition: all .5s ease-in-out;
     overflow:hidden;
-  }
-  :hover{
-      box-shadow: 0px 10px 15px rgba(0,0,0,.3);
-    }
-  :hover .img{
-    transform:scale(1.1);
-    overflow:hidden;   
-    border-radius: 10px;
-  }
+  }  
 `
 export const ImagesContainer = styled.div`
   grid-row: 2/3;
@@ -90,12 +82,6 @@ export const ImagesContainer = styled.div`
     .img{
       border-radius: inherit;
       transition: all .5s ease-in-out;
-    }
-    :hover{
-      box-shadow: 0px 10px 15px rgba(0,0,0,.3);
-    }
-    :hover .img{
-      transform:scale(1.1);
     }
   }
 `
