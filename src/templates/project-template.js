@@ -5,7 +5,7 @@ import Layout from '../components/layout';
 import { Flex, Headline, HeroContainer, PageContainer, Section, Text, ImagesContainer } from '../styles';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import  Seo  from '../components/seo';
-import Lightbox from '../components/lightbox';
+import Lightbox from './lightbox.js';
 
 const ProjectTemplate = ({ data }) => {
   const {title, text, images,seo} = data.contentfulProject;
