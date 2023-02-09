@@ -23,7 +23,7 @@ const ProjectsSpotlight = () => {
                     layout="fullWidth"
 
                 />
-                <Link to="/proj/puertorico">Puerto Rico</Link>
+                <Link to="/projects/puertorico">Puerto Rico</Link>
              </div>
              <div>
              <StaticImage 
@@ -34,7 +34,7 @@ const ProjectsSpotlight = () => {
                     layout="fullWidth"
 
                 />
-                <Link to="/proj/bahamas">Bahamas</Link>
+                <Link to="/projects/bahamas">Bahamas</Link>
              </div>
              <div>
                 <StaticImage 
@@ -43,7 +43,7 @@ const ProjectsSpotlight = () => {
                         quality={50}
                         layout="fullWidth"
                     />
-                <Link to="/proj/haiti">Haiti</Link>
+                <Link to="/projects/haiti">Haiti</Link>
              </div>
              <div>
                 <StaticImage 
@@ -53,7 +53,7 @@ const ProjectsSpotlight = () => {
                     layout="fullWidth"
 
                 />
-                <Link to="/proj/kentucky">Kentucky</Link>
+                <Link to="/projects/kentucky">Kentucky</Link>
              </div>
              <div>
                  <StaticImage 
@@ -63,7 +63,7 @@ const ProjectsSpotlight = () => {
                     quality={50}
                     layout="fullWidth"
                 />
-                <Link to="/proj/newjersey">New Jersey</Link>
+                <Link to="/projects">New Jersey</Link>
              </div>
              </section>
          </PsWrapper>

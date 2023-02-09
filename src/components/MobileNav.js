@@ -55,7 +55,7 @@ const MobileNav = () => {
             </MenuBarWrap>
             <MobileMenu menuOpen={menuOpen} onClick={ () => toggleMenuOpen(!menuOpen)}>
                 <Link to="/origins">About</Link>
-                <Link to="/proj">Projects</Link>
+                <Link to="/projects">Projects</Link>
                 <Link to="/events">Events</Link>
                 <Link to="/joinus">Join Us</Link>
                 <Link to="/contactus">Contact</Link>

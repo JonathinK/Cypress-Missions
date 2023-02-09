@@ -36,7 +36,7 @@ const DesktopNav = () => {
             <LinksWrapper>
             <LeftLinks color={color}>
                 <Link to="/origins">Origins</Link>
-                <Link to="/proj">Projects</Link>
+                <Link to="/projects">Projects</Link>
                 <Link to="/events">Events</Link>
             </LeftLinks>
             <NavLogo> 
@@ -108,7 +108,7 @@ const LeftLinks = styled.div`
         text-decoration:none;
         color: ${({ color }) => (color ? "#5f5f5f" : "white")};
         transition: color 400ms ease-in-out;
-        // text-shadow: 4px 4px 4px rgba(0,0,0,.5);
+        text-shadow: 0px 0px 4px rgba(0,0,0,.5);
   
 `
 const NavLogo = styled.div`
@@ -134,6 +134,6 @@ const RightLinks = styled.div`
         text-decoration:none;
         color:${({ color }) => (color ? "#5f5f5f" : "white")};
         transition:color 400ms ease-in-out;
-        // text-shadow: 4px 4px 4px rgba(0,0,0,.5);
+        text-shadow: 0px 0px 4px rgba(0,0,0,.5);
     }
 `

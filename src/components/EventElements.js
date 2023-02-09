@@ -10,9 +10,7 @@ export const EventWrapper = styled.main`
     flex-flow:column;
     justify-content:center;
     align-items:center;
-    background-image:linear-gradient(
-        hsl(148, 10%, 78%),
-        hsl(0,0%,90%) 
+    background-image:linear-gradient(to bottom ,hsl(148, 10%, 78%),hsl(0,0%,100%) 
     );
     
     h1{
