@@ -11,6 +11,7 @@ const ProjectTemplate = ({ data }) => {
   const {title, text, images,seo} = data.contentfulProject;
   const Hero = getImage(data.contentfulProject.featureImg);
   const [selectedImage, setSelectedImage] = useState(null);
+  const TextChecker = data.text || [null];
   
   const handleImageClick = (image) => {
     setSelectedImage(image);
@@ -36,7 +37,11 @@ const ProjectTemplate = ({ data }) => {
       <Section>
         <Flex row="1/2" col="1/4">
           <Headline>{title}</Headline>
-          <Text>{text.text}</Text>
+          {text && text.text ? (
+            <Text>{text.text}</Text>
+          ) : null}
+          
+          
         </Flex>
         <ImagesContainer>
          {images

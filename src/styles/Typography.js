@@ -49,6 +49,9 @@ export const Text = styled.p`
   flex:70%;
   text-align:left;
   
+  .display{
+    display:none;
+  }
   
   @media ${breakpoints.md} {
     
