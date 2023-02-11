@@ -23,7 +23,7 @@ const ProjectsSpotlight = () => {
                     layout="fullWidth"
 
                 />
-                <Link to="/projects/puertorico">Puerto Rico</Link>
+                <Link to="/projects/puerto-rico">Puerto Rico</Link>
              </div>
              <div>
              <StaticImage 
