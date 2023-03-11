@@ -6,12 +6,21 @@ import { Flex, Headline, HeroContainer, PageContainer, Section, Text, ImagesCont
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import  Seo  from '../components/seo';
 import Lightbox from './lightbox.js';
+import { MARKS } from '@contentful/rich-text-types';
+import { renderRichText } from "gatsby-source-contentful/rich-text";
 
 const ProjectTemplate = ({ data }) => {
   const {title, text, images,seo} = data.contentfulProject;
   const Hero = getImage(data.contentfulProject.featureImg);
   const [selectedImage, setSelectedImage] = useState(null);
-  const TextChecker = data.text || [null];
+  const richText = data.contentfulProject.richText;
+  
+  const options = {
+    renderMark: {
+      [MARKS.BOLD]: text => <bold>{text}</bold>,
+      [MARKS.ITALIC]: text => <em>{text}</em>,
+    },
+  }
   
   const handleImageClick = (image) => {
     setSelectedImage(image);
@@ -37,12 +46,10 @@ const ProjectTemplate = ({ data }) => {
       <Section>
         <Flex row="1/2" col="1/4">
           <Headline>{title}</Headline>
-          {text && text.text ? (
-            <Text>{text.text}</Text>
-          ) : null}
-          
-          
-        </Flex>
+          {text && richText ? (
+            <Text>{richText && renderRichText(richText, options)}</Text>
+          ) : null}          
+      </Flex>
         <ImagesContainer>
          {images
          .filter(image => image.title)
@@ -86,8 +93,8 @@ export const query = graphql`
         publicUrl
         gatsbyImageData(placeholder: BLURRED, quality: 60, layout: CONSTRAINED, width: 1000,  cropFocus: CENTER, resizingBehavior: SCALE, )
       }
-      text {
-        text
+      richText{
+        raw
       }
     }
   }
