@@ -14,6 +14,7 @@ const ProjectTemplate = ({ data }) => {
   const Hero = getImage(data.contentfulProject.featureImg);
   const [selectedImage, setSelectedImage] = useState(null);
   const richText = data.contentfulProject.richText;
+  console.log(richText);
   
   const options = {
     renderMark: {
@@ -46,7 +47,7 @@ const ProjectTemplate = ({ data }) => {
       <Section>
         <Flex row="1/2" col="1/4">
           <Headline>{title}</Headline>
-          {text && richText ? (
+          {richText && richText ? (
             <Text>{richText && renderRichText(richText, options)}</Text>
           ) : null}          
       </Flex>
