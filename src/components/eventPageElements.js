@@ -134,9 +134,11 @@ export const Summary = styled.p`
     
     a{
         text-decoration:none;
-        color: black;
+        color: green;
         font-weight: bold;
-        
+        :hover{
+            color: blue;
+        }
     }
     @media ${breakpoints.sm}{
         line-height:1.5;

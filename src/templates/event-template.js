@@ -5,10 +5,26 @@ import Layout from '../components/layout';
 import Seo from '../components/seo';
 import { DropShadow, EventBackground, FullPageEventWrapper, InfoContainer, PageEventTitle, PictureElementWrap, Date, Location, Summary } from '../components/eventPageElements';
 import { DonateButton } from '../components/EventElements';
+import { MARKS } from '@contentful/rich-text-types';
+import { renderRichText } from "gatsby-source-contentful/rich-text";
 
-const EventTemplate = ({ data: {event} }) => {
+
+const EventTemplate = ({ data: {event}}) => {
 const EventImage = getImage(event.image);
 const DateTo = event.dateTo || [];
+const richText = event.richText;
+
+const options = {
+  renderMark: {
+    [MARKS.BOLD]: text => <bold>{text}</bold>,
+    [MARKS.ITALIC]: text => <em>{text}</em>,
+    [MARKS.HYPERLINK]: (text, {data}) => (
+      <a href={data.url} target="_blank" rel='noopener noreferrer'>
+        {text}
+      </a>
+    ),
+  },
+}
   return(
     <Layout>
     <Seo title={event.seo.title} description={event.seo.description.description}/>
@@ -27,7 +43,7 @@ const DateTo = event.dateTo || [];
           {DateTo.length === 0 &&
             <Date>{event.dateFrom}</Date>
           }
-          <Summary>{event.body.body}</Summary>
+          <Summary>{renderRichText(richText,options)}</Summary>
           <DonateButton><Link to="/contactus">Donate</Link></DonateButton>
         </InfoContainer>
       </FullPageEventWrapper>
@@ -47,6 +63,9 @@ export const query = graphql`
       dateTo(formatString: "MMMM, DD")
       body {
         body
+      }
+      richText{
+        raw
       }
       image {
         gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, quality: 60)

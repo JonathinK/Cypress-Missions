@@ -29,8 +29,8 @@ export const query = graphql`
         location
         dateFrom(formatString: "MMM DD")
         dateTo(formatString: "MMM DD")
-        body{
-          body
+        richText{
+          raw
         }
         image {
         gatsbyImageData(placeholder: BLURRED, quality: 100, layout: FULL_WIDTH)

@@ -10,11 +10,11 @@ import { MARKS } from '@contentful/rich-text-types';
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 
 const ProjectTemplate = ({ data }) => {
-  const {title, text, images,seo} = data.contentfulProject;
+  const {title,images, seo} = data.contentfulProject;
   const Hero = getImage(data.contentfulProject.featureImg);
   const [selectedImage, setSelectedImage] = useState(null);
   const richText = data.contentfulProject.richText;
-  console.log(richText);
+
   
   const options = {
     renderMark: {
