@@ -38,7 +38,7 @@ export const EventCard = ({ data }) => {
             {dateFrom === dateTo &&
               <EventTitle>{data.dateFrom}</EventTitle>
             }
-            <p>{renderRichText(richText, options)}</p>
+            <p>{richText && renderRichText(richText, options)}</p>
             <ButtonWrapper>
               <Button>
                 <Link to={`${data.slug}`}>See More</Link>

@@ -61,9 +61,6 @@ export const query = graphql`
       location
       dateFrom(formatString: "MMMM, DD")
       dateTo(formatString: "MMMM, DD")
-      body {
-        body
-      }
       richText{
         raw
       }
