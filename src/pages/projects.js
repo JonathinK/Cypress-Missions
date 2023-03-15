@@ -28,7 +28,7 @@ const Projects = () => {
     <ProjectLocation>
     <Flex row="1/2" col="1/2">
         <Headline>Local</Headline>
-        <Text>Our local efforts are community based. We collaborate with other Nonprofits and organizations. We support retired military vets, food banks, churches, preschools, an other community volunteers and residents.
+        <Text>Our local efforts are community based. We collaborate with other Nonprofits and organizations. We support retired military vets, food banks, churches, preschools, and other community volunteers and residents.
         </Text>
     </Flex>
     <Local/>  
