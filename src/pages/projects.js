@@ -42,8 +42,8 @@ const Projects = () => {
       </ProjectLocation>  
       <ProjectLocation>
       <Flex>
-        <Headline>International</Headline>
-        <Text>Natural disasters, systemic poverty, poor living conditions, bad water systems and child education are just a sample size of the tasks faced.</Text>
+        <Headline>Global</Headline>
+        <Text>Tackling poverty, harsh conditions and inequality.</Text>
       </Flex>
       <International/>
       </ProjectLocation>
