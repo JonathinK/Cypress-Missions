@@ -48,7 +48,7 @@ const Footer = () => {
                     </a>
                 </div>
                 
-                <div>
+{/*                 <div>
                     <a href="https://twitter.com/cypressmission1">
                 <svg xmlns="http://www.w3.org/2000/svg"  width="53.347" height="46.671" viewBox="0 0 53.347 46.671">
                     <defs>
@@ -69,7 +69,7 @@ const Footer = () => {
                     </g>
                 </svg>
                 </a>
-                </div>
+                </div> */}
                 
                 <div>
                     <a href="https://www.instagram.com/cypressmissions/">
