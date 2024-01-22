@@ -12,7 +12,7 @@ const HeroImage = () =>{
     <HeroGrid>
         <HeroBackground>
           <StaticImage
-            src="../images/Background.jpg"
+            src="../images/Homepage-Hero.jpg"
             quality={50}
             placeholder="blurred"
             className="heroBackground"
