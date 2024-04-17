@@ -1,23 +1,34 @@
-import * as React from "react"
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import HeroImage from "../components/Hero"
-import HowCypressWorks from "../components/HowCypressWorks"
-import ProjectsSpotlight from "../components/ProjectsSpotlight"
-
-
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-
-const Home = () => { 
- return(
-   <Layout>
-     <Seo title="Home"/>
-      <HeroImage />
-      <HowCypressWorks />
-      <ProjectsSpotlight />
-   </Layout>
- ) 
+const Homepage = ({ data }) => {
+  return(
+    <React.Fragment>
+      
+    </React.Fragment>
+  )
 }
-
-export default Home
-
+export const query = graphql`
+  query {
+    allContentfulPage(filter: {codeId: {eq: "home"}}) {
+      nodes {
+        codeId
+        contentful_id
+        externalName
+        sections {
+          codeId
+          contentful_id
+          externalName
+          content {
+            ... on ContentfulContentContainer {
+              codeId
+              contentful_id
+              externalName
+            }
+          }
+        }
+      }
+    }
+  }
+`
+export default Homepage

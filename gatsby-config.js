@@ -1,56 +1,54 @@
-require("dotenv").config({
-  path:`.env`,
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
 });
-
 
 module.exports = {
   siteMetadata: {
-    title: `Cypress Missions`,
-    description: `Cypress offers humanitarian aid to those who have been affected by natural disasters or harsh levels of poverty. We bring resources and use of construction knowledge to build back those communities.`,
-    author: `@DiamondDigitalServices`,
-    siteUrl: `https://www.cypressmissions.com`,
+    title: `Foodinis Catering`,
+    description: `Catering to...`,
+    author: `@gatsbyjs`,
+    siteUrl: `https://foodiniscatering.com`,
+  },
+  flags: {
+    FAST_DEV: false,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
-    {
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    { /*Gatsby Source Filesystem*/
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
+    {/*Gatsby Plugin Manifest */
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Cypress Missions`,
-        short_name: `cypress`,
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
-        theme_color: `#663399`,
+        // This will impact how browsers show your PWA/website
+        // https://css-tricks.com/meta-theme-color-and-trickery/
+        // theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/CypressLogo2.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: 'gatsby-plugin-react-svg',
-      options: {
-        rule: {
-          include: /assets/
-        }
-      }
-    },
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-gatsby-cloud`,
-    {
+    {/*Gatsby Plugin Contentful*/
       resolve:`gatsby-source-contentful`,
-      options: {
+      options:{
         spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         host: process.env.CONTENTFUL_HOST || 'cdn.contentful.com',
-      }   
-    }   
+        downloadLocal: false,
+        environment:"production",
+
+      }
+
+    }
   ],
 }
+    

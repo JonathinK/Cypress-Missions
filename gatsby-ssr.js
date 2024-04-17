@@ -1,7 +1,5 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/ssr-apis/
- */
+import { Provider } from "./src/context/Provider";
+import { Layout } from "./src/layout/layout";
 
-// You can delete this file if you're not using it
+export const wrapRootElement = Provider;
+export const wrapPageElement = Layout;
