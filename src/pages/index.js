@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 const Homepage = ({ data }) => {
   return(
     <React.Fragment>
-      
+      sections
     </React.Fragment>
   )
 }

@@ -4,6 +4,10 @@ export { Button, ButtonLink, ButtonPageLink } from "./button.styled";
 export { ContentContainer } from "./contentContainer.styled";
 export { LogoContainer } from "./logo.styled";
 export { HeroContainer } from "./hero.styled";
+export { IframeContainer, Iframe } from "./iframe.styled"; 
+export { Video } from "./video.styled";
+export { Section } from "./section.styled";
+export { Accordion } from "./accordion.styled";
 
 //Heading Export *Includes Navigation Items*
 export { 
@@ -33,3 +37,25 @@ export {
   OList,
   LItem, 
   Overline } from "./typography.styled";
+
+  //Form Exports
+  export { 
+    Form, 
+    TextInput, 
+    CheckboxInput, 
+    RadioInput, 
+    SubmitInput, 
+    ResetInput, 
+    EmailInput, 
+    PhoneInput, 
+    RangeInput, 
+    NumberInput, 
+    DateInput, 
+    TimeInput, 
+    FileInput, 
+    Label, 
+    Option, 
+    FieldSet, 
+    Legend, 
+    DataList, 
+    TextArea } from "./form.styled";
