@@ -4,10 +4,10 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Foodinis Catering`,
-    description: `Catering to...`,
+    title: `Cypress Missions`,
+    description: `Cypress Missions is a non-profit organization that helps rebuild communities in need.`,
     author: `@gatsbyjs`,
-    siteUrl: `https://foodiniscatering.com`,
+    siteUrl: `https://cypressmissions.com`,
   },
   flags: {
     FAST_DEV: false,
@@ -47,8 +47,15 @@ module.exports = {
         environment:"production",
 
       }
-
+    },
+    {/*Gatsby Svg Loader*/
+    resolve: "gatsby-plugin-react-svg",
+    options:{
+      rule: {
+        include: /assets/
+      }
     }
+    },
   ],
 }
     

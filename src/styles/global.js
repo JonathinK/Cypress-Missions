@@ -4,6 +4,7 @@ export const Global = createGlobalStyle`
 *{
   margin:0;
   padding:0;
+  box-sizing: border-box;
 }
 html{
   -webkit-text-size-adjust: 100%;
@@ -19,5 +20,11 @@ ${'' /*   font-family: ${({theme}) => theme.fonts.main_font}; */}
   word-wrap: break-word;
   height: 100%;
   background-color: ${({theme}) => theme.shades._50};
-}
+  box-sizing: border-box;
+  
+  &.no-scroll{
+    position: fixed;
+  }
+} 
+  
 `

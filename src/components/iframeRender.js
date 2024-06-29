@@ -22,7 +22,7 @@ export const IframeRender = ({ content }) => {
   )
 }
 export const query = graphql`
-  fragment IframeRender on ContentfulLink{
+  fragment iframeRender on ContentfulLink{
     id
     contentful_id
     ctaExternalUrl

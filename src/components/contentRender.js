@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
-import { MARKS, BLOCKS } from "@contentful/rich-text-types"
-import { BlockQuote, BoldText, Heading1, Heading2, Heading3, Heading4, Heading5, Heading6, Paragraph, StrikeThroughText, UnderlineText, OList, UList, LItem, ItalicText } from '../styles';
+import { MARKS, BLOCKS, INLINES } from "@contentful/rich-text-types"
+import { BlockQuote, BoldText, Heading1, Heading2, Heading3, Heading4, Heading5, Heading6, Paragraph, StrikeThroughText, UnderlineText, OList, UList, LItem, ItalicText, MediaContainer,  NavLink } from '../styles';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 
-export const RichTextRender = ({ content }) => {
+
+export const RichTextRender = ({ content, references }) => {
   // Gets the rich Text no matter what the input from data is.
   const richTextData = content || null;
+  console.log("References", references);
 
   //Variables For Rich Text
   const Headline1 = ({ children }) => <Heading1 $BlogHeading1>{children}</Heading1>;
@@ -30,19 +33,46 @@ export const RichTextRender = ({ content }) => {
       {children}
     </a>
   );
-  const EmbeddedAsset = ({ node }) => {
+  const EntryHyperlink = ({ children, node }) => {
+    // Log the entire node to inspect its structure
+    console.log("EntryHyperlink - Node Data:", node);
+
+    // Validate node structure and retrieve entryId
+    if (!node.data || !node.data.target || !node.data.target.sys) {
+      console.error("EntryHyperlink - Invalid node structure:", node);
+      return <span style={{ color: 'red' }}>Invalid node structure</span>;
+    }
+
+    const entryId = node.data.target.sys.id || '';
+    // Log the entryId to ensure it is retrieved correctly
+    console.log("EntryHyperlink - Entry ID:", entryId);
+
+    // Find the corresponding reference entry
+    const entry = references.find(ref => ref.contentful_id === entryId) || '';
+
+    // Log the found entry for debugging
+    console.log("EntryHyperlink - Found Entry:", entry);
+
+    if (!entry) {
+      console.error("EntryHyperlink - Entry not found for ID:", entryId);
+      return <span style={{ color: 'red' }}>Entry not found for ID: {entryId}</span>;
+    }
+
+    const entryUrl = `/news-and-stories/${entry.slug}` || ''; // Adjust the URL based on your routing structure
     return (
-      <>
-        <h2>Embedded Asset</h2>
-        <pre>
-          <code>{JSON.stringify(node, null, 2)}</code>
-        </pre>
-      </>
+      <NavLink className="entry_link" to={entryUrl}>
+        {children}
+      </NavLink>
     );
+  };
+
+  const EmbeddedAsset = ({ node }) => {
+
   };
   const Table = ({ children }) => <table>{children}</table>;
   const TableRow = ({ children }) => <tr>{children}</tr>;
   const TableCell = ({ children }) => <td>{children}</td>;
+  
   
   //Options for rich Text Rendering
   const options = {
@@ -54,7 +84,10 @@ export const RichTextRender = ({ content }) => {
       [MARKS.CODE]: text => <Code>{text}</Code>,
     },
     renderNode: {
-      [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+      [BLOCKS.PARAGRAPH]: (node, children) => { 
+        const isListItem = node.parent && node.parent.nodeType === 'list-item';
+        return isListItem ? <Fragment>{children}</Fragment> : <p>{children}</p>;
+      },
       [BLOCKS.HEADING_1]: (node, children) => <Headline1>{children}</Headline1>,
       [BLOCKS.HEADING_2]: (node, children) => <Headline2>{children}</Headline2>,
       [BLOCKS.HEADING_3]: (node, children) => <Headline3>{children}</Headline3>,
@@ -64,13 +97,44 @@ export const RichTextRender = ({ content }) => {
       [BLOCKS.QUOTE]: (node, children) => <Blockquote>{children}</Blockquote>,
       [BLOCKS.OL]: (node, children) => <OrderedList>{children}</OrderedList>,
       [BLOCKS.UL]: (node, children) => <UnorderedList>{children}</UnorderedList>,
-      [BLOCKS.LIST_ITEM]: (node, children) => <ListItem>{children}</ListItem>,
+      [BLOCKS.LIST_ITEM]: (node, children) => {
+        return (
+          <ListItem>
+            {children.map((child, index) => {
+              // Flatten nested paragraph nodes within list items
+              if (child.type === 'p') {
+                return <Fragment key={index}>{child.props.children}</Fragment>;
+              }
+              return child;
+            })}
+          </ListItem>
+        );
+      }/* <ListItem>{children}</ListItem> */,
       [BLOCKS.HYPERLINK]: Hyperlink,
+      [INLINES.ENTRY_HYPERLINK]: (node, children) => <EntryHyperlink node={node}>{children}</EntryHyperlink>,
       [BLOCKS.EMBEDDED_ASSET]: EmbeddedAsset,
       [BLOCKS.TABLE]: (node, children) => <Table>{children}</Table>,
       [BLOCKS.TABLE_ROW]: (node, children) => <TableRow>{children}</TableRow>,
       [BLOCKS.TABLE_CELL]: (node, children) => <TableCell>{children}</TableCell>,
       [BLOCKS.HR]: () => <hr />,
+      'text': (node) => {
+        // Render text nodes directly
+        return node.value;
+      },
+      "embedded-asset-block": node => {
+        const { gatsbyImageData } = node.data.target
+        if (!gatsbyImageData) {
+          // asset is not an image
+          return null
+        }
+        return <MediaContainer className='rich_text_image'>
+                <GatsbyImage 
+                  image={gatsbyImageData} 
+                  alt='' 
+                  className=""  
+                />
+              </MediaContainer>
+      },
     },
   };
   return (

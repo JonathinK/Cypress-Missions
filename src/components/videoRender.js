@@ -4,10 +4,10 @@ import {graphql} from "gatsby";
 
 export const VideoRender = ({ content }) => {
   const VideoClassName = content.externalName;
-  const Video = content.content[1].ctaExternalUrl;
+  const Video = content.content[0].ctaExternalUrl;
   console.log(Video)
   return(
-    <IframeContainer $BackgroundVideo className={VideoClassName}>
+    <IframeContainer className={VideoClassName}>
       <Iframe
         src={Video}
         height="100%"

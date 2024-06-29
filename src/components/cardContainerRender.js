@@ -1,30 +1,30 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { ContentContainer } from '../styles';
-import { Card } from './cardRender';
+import { CardsContainer} from '../styles';
+import { CardRender } from './cardRender';
 
 export const CardsContainerRender = ({ content }) => {
   const CardsData = content.content;
   
   return(
-    <ContentContainer>
+    <CardsContainer className={content.externalName}>
       {CardsData.map((card) => {
-        return <Card
+        return <CardRender
           key={card.contentful_id}
           content={card}
         />
       })}
-    </ContentContainer>
+    </CardsContainer>
   )
 }
 
 export const query = graphql`
- fragment CardsRender on ContentfulContentContainer{
+ fragment cardsRender on ContentfulContentContainer{
   codeId
   contentful_id
-  internalName
+  externalName
   content {
-  ...CardContent
+  ...cardContent
   }
  }
 `

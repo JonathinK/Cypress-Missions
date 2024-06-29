@@ -27,6 +27,12 @@ exports.createPages = async({actions, graphql,reporter}) => {
         slug
       }
     }
+    allContentfulEvent{
+      nodes{
+        codeId
+        slug
+      }
+    }
   }
   `)  
   //Error Handling
@@ -46,6 +52,24 @@ exports.createPages = async({actions, graphql,reporter}) => {
     }
     else if(codeId === "about_cypress"){
       templateSelector = require.resolve("./src/templates/about_template.js");
+    }
+    else if(codeId === "our_work"){
+      templateSelector = require.resolve("./src/templates/our_work_template.js");
+    }
+    else if (codeId === "events"){
+      templateSelector = require.resolve("./src/templates/events_template.js");
+    }
+    else if (codeId === "volunteer"){
+      templateSelector = require.resolve("./src/templates/volunteer_template.js");
+    }
+    else if (codeId === "contact"){
+      templateSelector = require.resolve("./src/templates/contact_template.js");
+    }
+    else if (codeId === "projects"){
+      templateSelector = require.resolve("./src/templates/projects_template.js");
+    }
+    else if (codeId === "news_and_stories"){
+      templateSelector = require.resolve("./src/templates/blog_template.js");
     }
     else{
       return null;
@@ -79,13 +103,33 @@ exports.createPages = async({actions, graphql,reporter}) => {
         slug: project.slug,
       }
     })
+  }); 
+  
+  //EventPage
+  result.data.allContentfulEvent.nodes.forEach(event => {
+    const { codeId, slug } = event;
+    actions.createPage({
+      path: `/events/${event.slug}`,
+      component: require.resolve("./src/templates/event_template.js"),
+      context: {
+        slug: event.slug,
+      }
+    })
   });
   
   //Blog Article
   result.data.allContentfulBlogArticle.nodes.forEach(article => {
+    let templateSelector;
+    if(article.codeId === "story_article"){
+      templateSelector = require.resolve("./src/templates/story_template.js")
+    }else if (article.codeId === "news_article"){
+      templateSelector = require.resolve("./src/templates/news_template.js")
+    }else{
+      return null;
+    }
     actions.createPage({
-      path: `/cypress-blog/${article.slug}`,
-      component: require.resolve("./src/templates/news_template.js"),
+      path: `/news-and-stories/${article.slug}`,
+      component: templateSelector,
       context: {
         slug: article.slug,
       }

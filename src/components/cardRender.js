@@ -1,53 +1,44 @@
 import React from 'react';
 import { graphql } from "gatsby"
-import { ContentContainer } from '../styles';
-import { MediaRenderer, ButtonRender, SvgRender, TextRender } from './';
+import { ButtonContainer, Card, ContentContainer } from '../styles';
+import { MediaRenderer, ButtonRender, SvgRender, IconSelector, TextContainerRender, BgRender } from './';
 
-export const Card = ({ content }) => {
+export const CardRender = ({ content }) => {
   const CardContent = content.content;
-  
 
   return(
-    <ContentContainer $Card> 
+    <Card> 
       {CardContent.map((items) => {
         if(items.codeId === "svg"){
-          return <SvgRender key={items.contentful_id} content={items}/>
-        }
-        else if(items.codeId === "card_media"){
-          return <MediaRenderer content={items} key={items.contentful_id}/>
+          return <IconSelector key={items.contentful_id} content={items.content[0]}/>
         }
         else if(items.codeId === "text_container"){
-         return <TextRender key={items.contentful_id} content={items}/>
+         return <TextContainerRender key={items.contentful_id} content={items}/>
+        }
+        else if(items.codeId === "bg_image"){
+          return <BgRender key={items.contentful_id} content={items}/>
         }
         else{
           return null;
         }
       })}
-      <ContentContainer $ButtonContainer>
-         {CardContent.map((items) => {
-        if(items.codeId === "cta_button"){
-          return(
-            <ButtonRender content={items} key={items.contentful_id}/>
-          )
-        }
-        else{
-          return null;
-        }
-      })}
-      </ContentContainer>
-    </ContentContainer>
+    </Card>
   )
 }
 
 export const query = graphql`
-  fragment CardContent on ContentfulContentContainer{
+  fragment cardContent on ContentfulContentContainer{
     codeId
     contentful_id
     externalName
     content{
-      ...SVG
-      ...MediaRender
-      ...TextRender
+      ...on ContentfulMedia{
+        ...iconSelector
+        ...backgroundImageRender
+      }
+      ...on ContentfulText{
+        ...textRender
+      }
     }
   }
 `

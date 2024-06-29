@@ -7,7 +7,7 @@ import { useStaticQuery, graphql } from "gatsby";
 export const Logo = () => {
   const data = useStaticQuery(graphql`
   query {
-    contentfulContentContainer(codeId: {eq: "logo_container"}) {
+    contentfulContentContainer(codeId: {eq: "brand_logo_container"}) {
       id
       codeId
       content {

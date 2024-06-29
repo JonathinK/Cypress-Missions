@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContentContainer, Heading1, Heading2, Heading3, Heading4, Heading5, Overline, } from '../styles';
+import { ContentContainer, Heading1, Heading2, Heading3, Heading4, Heading5, Overline } from '../styles';
 import { RichTextRender } from './contentRender';
 import { graphql } from "gatsby";
 import { ButtonRender } from './buttonRender';
@@ -116,17 +116,18 @@ const TextContainerContent = content.content;
         }
       })}
     <ContentContainer $TextButtonContainer>
-         {TextContainerContent.map((items) => {
-        if(items.codeId === "cta_button"){
-          return(
-            <ButtonRender content={items} key={items.contentful_id}/>
-          )
-        }
-        else{
-          return null;
-        }
-      })}
-      </ContentContainer>
+        {TextContainerContent.map((items) => {
+      if(items.codeId === "cta_button"){
+        return(
+          <ButtonRender content={items} key={items.contentful_id}/>
+        )
+      }
+      else{
+        return null;
+      }
+    })}
+    </ContentContainer>
+      
     </ContentContainer>
   )
 }

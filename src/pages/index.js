@@ -1,34 +1,93 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { Hero, SectionRender } from '../components';
+import  Seo  from "../components/seo"
 
 const Homepage = ({ data }) => {
+  const pageHero = data.contentfulPage.pageHero;
+  const pageSections = data.contentfulPage.sections;
+  console.log(data);
   return(
     <React.Fragment>
-      sections
+      <Hero content={pageHero}/>
+      {pageSections.map((section) => {
+      return <SectionRender
+            key={section.contentful_id}
+            section={section}
+          />
+   })}
     </React.Fragment>
   )
 }
 export const query = graphql`
   query {
-    allContentfulPage(filter: {codeId: {eq: "home"}}) {
-      nodes {
-        codeId
+    contentfulPage(codeId: {eq: "home"}){
+      id
+      codeId
+      contentful_id
+      externalName
+      metadata {
+      contentful_id
+      googleBots
+      internalName
+      keywords
+      content {
+        id
+        content
+      }
+      name {
         contentful_id
-        externalName
-        sections {
+        codeId
+      }
+    }
+      pageHero{
+        ...PageHero
+      }
+      sections {
           codeId
           contentful_id
           externalName
           content {
-            ... on ContentfulContentContainer {
-              codeId
-              contentful_id
-              externalName
-            }
+            ...SectionContentRender
           }
         }
-      }
     }
   }
 `
 export default Homepage
+
+export const Head = ({ data }) => {
+  const metadata = data.contentfulPage.metadata;
+  console.log(metadata);
+
+  const seoData = metadata.reduce((acc,meta) => {
+    if(meta.name.codeId === 'title'){
+      acc.title = meta.content.content;
+    } else if (meta.name.codeId === 'description'){
+      acc.description = meta.content.content
+    } else if (meta.name.codeId === 'canonical'){
+      acc.canonical = meta.content.content
+    } else if (meta.name.codeId === 'keywords'){
+      acc.keywords = meta.keywords ? meta.keywords.join(', ') : '';
+    }
+    return acc;
+  }, { title: 'Default Title', description: 'Default description', keywords: '' });
+
+  return(
+    <Seo
+      title={seoData.title}
+      description={seoData.description}
+      meta={[
+        {
+          name: 'keywords',
+          content: seoData.keywords,
+        },
+        {
+          name: 'canonical',
+          content: seoData.canonical,
+        }
+      ]}
+      canonical={seoData.canonical}
+    />
+  );
+};
