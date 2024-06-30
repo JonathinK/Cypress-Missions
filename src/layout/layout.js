@@ -1,7 +1,6 @@
 import React from "react";
 import { PageWrapper } from "../styles";
-import { Header } from "../components";
-import PageFooter from "../components/footer";
+import { PageFooter, Header } from "../components";
 
 export const Layout = ({ element }) => {
   return(

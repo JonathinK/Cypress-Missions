@@ -6,7 +6,8 @@ import { Logo } from './logo';
 import { SocialMedia } from './socialMedia';
 
 
-const PageFooter = () => {
+
+export const PageFooter = () => {
   const data = useStaticQuery(graphql`
     query{
       contentfulFooter{
@@ -126,4 +127,3 @@ const PageFooter = () => {
    </Footer>
   )
 }
-export default PageFooter

@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { SectionRender } from "../components";
+import { Hero, SectionRender } from "../components";
 import Seo from '../components/seo';
-import Hero from "../components/hero";
+
 
 const ContactPage = ({ data }) => {
   const pageHero = data.contentfulPage.pageHero;

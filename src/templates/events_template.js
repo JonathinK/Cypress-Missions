@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
 import React from 'react';
-import Hero from "../components/hero";
+import { Hero } from '../components';
 import { Card, CardsContainer, Heading4, NavLink, Paragraph, Section, TextContainer } from '../styles';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Seo from '../components/seo';
