@@ -5,7 +5,7 @@ import { VideoRender } from './videoRender';
 import { HeroImageRender } from './heroImageRender';
 import { TextContainerRender } from './textContainerRender';
 
-export const Hero = ({ content }) => {
+const Hero = ({ content }) => {
   const HeroRender = content;
 
   return(
@@ -46,3 +46,4 @@ export const query = graphql`
   }
   }
 `
+export default Hero

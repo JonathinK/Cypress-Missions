@@ -156,7 +156,8 @@ export const FooterInfoContainer = styled.div`
     justify-content:center;
     align-items:center;
     padding: 1em 0em;
-    background: ${({theme}) => theme.colors.secondary};
+    background: ${({theme}) => theme.colors.primary};
+    color: ${({theme}) => theme.shades._50};
     @media ${({theme}) => theme.breakpoints.tablet}{
       grid-column: 1/9;
     }

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
-import { Hero, FilterComponent, ProjectsRender, PaginationComponent } from '../components';
+import { FilterComponent, ProjectsRender, PaginationComponent } from '../components';
 import { Section } from '../styles';
 import Seo from '../components/seo';
+import Hero from "../components/hero";
 
 const Projects = ({ data }) => {
   //Gets the heroData

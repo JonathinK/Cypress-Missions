@@ -1,8 +1,9 @@
 import { graphql } from 'gatsby';
 import React, {useState,useEffect} from 'react';
-import { BlogRender, FilterComponent, Hero, PaginationComponent } from '../components';
+import { BlogRender, FilterComponent, PaginationComponent } from '../components';
 import { Section } from '../styles';
 import Seo from '../components/seo';
+import Hero from "../components/hero";
 
 const BlogPage = ({ data }) => {
   console.log(data);
