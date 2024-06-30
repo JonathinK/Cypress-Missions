@@ -40,8 +40,8 @@ module.exports = {
     {/*Gatsby Plugin Contentful*/
       resolve:`gatsby-source-contentful`,
       options:{
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: process.env.CYPRESS_CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CYPRESS_CONTENTFUL_ACCESS_TOKEN,
         host: process.env.CONTENTFUL_HOST || 'cdn.contentful.com',
         downloadLocal: false,
         environment:"production",
