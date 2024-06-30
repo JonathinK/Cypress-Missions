@@ -71,7 +71,10 @@ function Seo({ description, lang, meta, title, canonical }) {
       ].concat(meta)}
       link={[
         ...(canonical ? [{ rel: 'canonical', href: canonical }] : []),
-        { rel: 'stylesheet', href: 'https://use.typekit.net/doy6ebw.css' }
+        { rel: 'preload', href: 'https://use.typekit.net/doy6ebw.css', as: 'style' },
+        { rel: 'stylesheet', href: 'https://use.typekit.net/doy6ebw.css' },
+        { rel: 'dns-prefetch', href: 'https://use.typekit.net' },
+        { rel: 'preconnect', href: 'https://use.typekit.net', crossOrigin: 'anonymous' },
       ]}
     />
   )

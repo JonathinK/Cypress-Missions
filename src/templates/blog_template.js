@@ -1,6 +1,7 @@
 import { graphql } from 'gatsby';
 import React, {useState,useEffect} from 'react';
-import { BlogRender, FilterComponent, Hero, PaginationComponent } from '../components';
+import { BlogRender, FilterComponent, PaginationComponent } from '../components';
+import { Hero } from "../components";
 import { Section } from '../styles';
 import Seo from '../components/seo';
 
