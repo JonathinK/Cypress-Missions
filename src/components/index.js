@@ -1,7 +1,7 @@
 export { Header } from "./header";
-export { PageFooter } from "./footer";
+export { PageFooter } from "./page-footer";
 export { RichTextRender } from "./contentRender";
-export { Hero } from "./hero"; 
+export { Hero } from "./hero-render"; 
 export { SectionRender } from "./sectionRender";
 export { TextRender } from "./textRender";
 export { MediaRender } from "./mediaRender";
