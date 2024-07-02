@@ -149,7 +149,7 @@ export const Section = styled.section.attrs(props => ({
               box-sizing: border-box;
               width: 100%;
 
-              ${Heading4}{
+              ${Heading3}{
                 overflow: hidden;
                 text-overflow: ellipsis;
                 display: -webkit-box;
@@ -616,7 +616,6 @@ export const Section = styled.section.attrs(props => ({
     background:${({theme}) => theme.shades._50};
     overflow: hidden;
     
-
     ${BackgroundContainer}{
       grid-column: 1/15;
       grid-row: 1/3;
@@ -931,8 +930,7 @@ export const Section = styled.section.attrs(props => ({
           align-self: end;
           margin: 1em;
           color: ${({theme}) => theme.shades._50};
-          ${Heading4}{
-            
+          ${Heading3}{
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;

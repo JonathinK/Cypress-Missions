@@ -2,7 +2,7 @@ import styled, {css} from "styled-components";
 import { Iframe } from "./iframe.styled";
 import { ContentContainer, MediaContainer, TextContainer } from "./contentContainers.styled";
 import { Overline } from "./typography.styled";
-import { theme } from "../theme/site-theme";
+
 
 export const HeroImage = styled.div`
 position: relative;
@@ -33,7 +33,7 @@ export const HeroContainer = styled.section.attrs(props => ({
 
   &.full_width_image{
     grid-column: 1/15;
-    height: calc(100vh - 76px);
+    height: 100vh;
     width: 100%;
 
     ${HeroImage}{
@@ -65,7 +65,7 @@ export const HeroContainer = styled.section.attrs(props => ({
         font-weight: ${({theme}) => theme.font_weight.medium};
       }
     }
-    .
+    
     @media ${({theme}) => theme.breakpoints.tablet}{
       grid-column: 1/9;
       ${HeroImage}{
@@ -77,21 +77,29 @@ export const HeroContainer = styled.section.attrs(props => ({
     }
     @media ${({theme}) => theme.breakpoints.mobile}{
       grid-column: 1/7;
-      padding-bottom: 1em;
-
+      height: 70vh;
       ${HeroImage}{
         grid-column: 1/7;
         grid-row: 1/2;
-        height:50vh;
+        height: 70vh;
       }
       ${TextContainer}{
         grid-column: 2/6;
-        grid-row: 2/3;
+        grid-row: 1/2;
         padding: 0;
-        color: ${({theme}) => theme.shades._900};
+        color: ${({theme}) => theme.shades._50};
         justify-content: flex-start;
         align-items: flex-start;
         text-align: left;
+        justify-self: center;
+        align-self: center;
+        text-align: left;
+        height: auto;
+        position: relative;
+
+        p:last-child{
+          font-weight: ${({theme}) => theme.font_weight.medium};
+        }
       }
     }
   }
@@ -106,7 +114,7 @@ export const HeroContainer = styled.section.attrs(props => ({
       opacity: 0.65;
       mix-blend-mode: multiply;
     @media  ${({theme}) => theme.breakpoints.mobile}{
-      display:none;
+ 
     }
   }
   
@@ -204,7 +212,8 @@ export const HeroContainer = styled.section.attrs(props => ({
     }
   }
   &.text_left_asset_right{
-    margin: 5em 0em;
+    margin-top: 76px;
+    padding: 5em 0em;
     
     ${TextContainer}{
       grid-column: 2 / 6;
@@ -216,9 +225,20 @@ export const HeroContainer = styled.section.attrs(props => ({
       grid-column: 7 / 14;
       grid-row: 1 / 2;
       aspect-ratio: 3/2;
+      justify-self: center;
+      align-self:center;
       overflow: hidden;
+      aspect-ratio: ;
+      width: 100%;
       border-radius: 1em;
       overflow: hidden;
+
+      .full_image{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
       img{
         border-radius: 1em;
       }
@@ -279,7 +299,7 @@ export const HeroContainer = styled.section.attrs(props => ({
   }
   &.centered_text_no_image{
     grid-column: 1/15;
-    padding: 5.5em 0em 0em 0em;
+    padding: 5.5em 0em;
     background: ${({theme}) => theme.shades._50};
    
     ${TextContainer}{
