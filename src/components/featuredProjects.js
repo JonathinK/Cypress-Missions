@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql} from 'gatsby';
 import React from 'react';
-import { Card, FeatureContainer, Heading4, MediaContainer, NavLink, Paragraph } from '../styles';
+import { Card, FeatureContainer, Heading3, Heading4, MediaContainer, NavLink, Paragraph } from '../styles';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 
@@ -51,7 +51,7 @@ export const FeaturedProjects = () => {
               />
             </MediaContainer>
             <div className="project_info">
-              <Heading4>{card.projectTitle}</Heading4>
+              <Heading3>{card.projectTitle}</Heading3>
               <Paragraph>{card.projectLocation}</Paragraph>
             </div>
          

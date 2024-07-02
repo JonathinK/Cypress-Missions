@@ -15,12 +15,15 @@ body{
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-weight: normal;
-${'' /*   font-family: ${({theme}) => theme.fonts.main_font}; */}
+  width: 100%;
+  height: 100vh;
+  font-family: ${({theme}) => theme.fonts.body};
   margin: 0;
   word-wrap: break-word;
   height: 100%;
   background-color: ${({theme}) => theme.shades._50};
   box-sizing: border-box;
+  overflow: auto;
   
   &.no-scroll{
     position: fixed;

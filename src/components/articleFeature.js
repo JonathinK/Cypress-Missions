@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardsContainer, Heading4, MediaContainer, NavLink, Overline, TextContainer } from '../styles';
+import { Card, CardsContainer, Heading3, Heading4, MediaContainer, NavLink, Overline, TextContainer } from '../styles';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
@@ -52,9 +52,9 @@ export const ArticleFeature = () => {
             {article.tags.filter(tag => tag.tagFamilies === "Article Type").map(tag => (
               <Overline key={tag.codeId}>{tag.value}</Overline>
             ))}
-              <Heading4>
+              <Heading3>
                   {article.articleTitle}
-              </Heading4>
+              </Heading3>
               <NavLink to={`/news-and-stories/${article.slug}`}>Read Article</NavLink>
            </TextContainer>
           </Card>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardsContainer, ContentContainer, Heading2, Heading4, MediaContainer, NavLink, Overline, TextContainer } from '../styles';
+import { Card, CardsContainer, ContentContainer, Heading2, Heading3, Heading4, MediaContainer, NavLink, Overline, TextContainer } from '../styles';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
@@ -46,9 +46,9 @@ const eventsContent = data.allContentfulEvent.nodes;
            </MediaContainer> 
            <TextContainer>
            <Overline>{event.startTime}</Overline>
-              <Heading4>
+              <Heading3>
                   {event.eventTitle}
-              </Heading4>
+              </Heading3>
               <NavLink to={`/events/${event.slug}`}>View Event</NavLink>
            </TextContainer>
           </Card>

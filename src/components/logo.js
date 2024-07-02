@@ -35,10 +35,12 @@ export const Logo = () => {
     <NavLink 
       to="/" 
       $LogoLink
+      aria-label="Homepage Link"
+      tabIndex={0}
     >
       <GatsbyImage
         image={logo}
-        alt=''
+        alt='Cypress Logo'
       />
     </NavLink>
     </LogoContainer>

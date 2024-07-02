@@ -16,6 +16,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-webpack-bundle-analyser-v2`,
     { /*Gatsby Source Filesystem*/
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -49,12 +50,12 @@ module.exports = {
       }
     },
     {/*Gatsby Svg Loader*/
-    resolve: "gatsby-plugin-react-svg",
-    options:{
-      rule: {
-        include: /assets/
+      resolve: "gatsby-plugin-react-svg",
+      options:{
+        rule: {
+          include: /assets/
+        }
       }
-    }
     },
   ],
 }

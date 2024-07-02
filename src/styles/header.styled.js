@@ -13,11 +13,11 @@ export const PageHeader = styled.header`
   background: ${({theme}) => theme.shades._50};
   padding: ${({theme}) => theme.sizes.small} ${({theme}) => theme.sizes.xxxx_large};
   height:calc(6.75rem - ${({theme}) => theme.sizes.large});
-  position:sticky;
+  position:fixed;
   top:0;
   z-index: 100;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,.2);
-  
+  width: 100%;
   @media ${({theme}) => theme.breakpoints.tablet}{
     grid-column: 1/9;
     padding: 0em 0em 0em 2em;

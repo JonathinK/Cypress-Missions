@@ -2,6 +2,7 @@ import styled, {css} from "styled-components";
 import { Iframe } from "./iframe.styled";
 import { ContentContainer, MediaContainer, TextContainer } from "./contentContainers.styled";
 import { Overline } from "./typography.styled";
+import { theme } from "../theme/site-theme";
 
 export const HeroImage = styled.div`
 position: relative;
@@ -21,6 +22,7 @@ export const HeroContainer = styled.section.attrs(props => ({
   grid-template-columns: inherit;
   position:relative;
   gap:1em 1em;
+  width: 100%;
 
   @media ${({theme}) => theme.breakpoints.tablet}{
     grid-column: 1/9;
@@ -31,15 +33,17 @@ export const HeroContainer = styled.section.attrs(props => ({
 
   &.full_width_image{
     grid-column: 1/15;
-    
+    height: calc(100vh - 76px);
+    width: 100%;
+
     ${HeroImage}{
       grid-column: 1/15;
       grid-row: 1/2;
       position:relative; 
       z-index: 1;
       border-radius: 0;
-      height: calc(100vh - 76px);
-      
+      height: 100%;
+     
       .full_image{
         border-radius: 0;
       }
@@ -59,7 +63,6 @@ export const HeroContainer = styled.section.attrs(props => ({
       
       p:last-child{
         font-weight: ${({theme}) => theme.font_weight.medium};
-        text-shadow: -1px 0 black, 0 1px black, 0 -1px black;
       }
     }
     .
@@ -109,15 +112,15 @@ export const HeroContainer = styled.section.attrs(props => ({
   
   &.full_width_image_align_left{
     grid-column: 1/15;
-    
+    height: 100vh;
+
     ${HeroImage}{
       grid-column: 1/15;
       grid-row: 1/2;
       position:relative; 
       z-index: 1;
       border-radius: 0;
-      height: calc(100vh - 76px);
-      
+
       .full_image{
         border-radius: 0;
       }
@@ -134,6 +137,7 @@ export const HeroContainer = styled.section.attrs(props => ({
       color: ${({theme}) => theme.shades._50};
       padding: 1em 2em;
       text-align: left;
+      
       ${Overline}{
         text-align: left;
       }
@@ -153,21 +157,28 @@ export const HeroContainer = styled.section.attrs(props => ({
     }
     @media ${({theme}) => theme.breakpoints.mobile}{
       grid-column: 1/7;
-      padding-bottom: 1em;
+      height:100vh;
 
       ${HeroImage}{
         grid-column: 1/7;
         grid-row: 1/2;
-        height:50vh;
       }
       ${TextContainer}{
-        grid-column: 2/6;
-        grid-row: 2/3;
-        padding: 0;
-        color: ${({theme}) => theme.shades._900};
+        grid-column: 1/7;
+        grid-row: 1/2;
+        padding: 1em 1em;
+        color: ${({theme}) => theme.shades._50};
         justify-content: flex-start;
         align-items: flex-start;
+        justify-self: center;
+        align-self: center;
         text-align: left;
+        height: auto;
+        position: relative;
+
+        p:last-child{
+          font-weight: ${({theme}) => theme.font_weight.medium};
+        }
       }
     }
   }
@@ -178,9 +189,9 @@ export const HeroContainer = styled.section.attrs(props => ({
       bottom:0;
       width: 100%;
       background-image: linear-gradient(
-        to right,
-        rgba(0,0,0,.8) 20%,
-        rgba(0,0,0,.1)
+        to top right,
+        rgba(0,0,0,.8) 35%,
+        rgba(0,0,0,0)
       );
       z-index: 2;
 
@@ -189,7 +200,7 @@ export const HeroContainer = styled.section.attrs(props => ({
       opacity: .7;
     }
     @media  ${({theme}) => theme.breakpoints.mobile}{
-      display:none;
+      opacity: .6;
     }
   }
   &.text_left_asset_right{
