@@ -9,7 +9,6 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 export const RichTextRender = ({ content, references }) => {
   // Gets the rich Text no matter what the input from data is.
   const richTextData = content || null;
-  console.log("References", references);
 
   //Variables For Rich Text
   const Headline1 = ({ children }) => <Heading1 $BlogHeading1>{children}</Heading1>;
@@ -49,9 +48,6 @@ export const RichTextRender = ({ content, references }) => {
 
     // Find the corresponding reference entry
     const entry = references.find(ref => ref.contentful_id === entryId) || '';
-
-    // Log the found entry for debugging
-    console.log("EntryHyperlink - Found Entry:", entry);
 
     if (!entry) {
       console.error("EntryHyperlink - Entry not found for ID:", entryId);
