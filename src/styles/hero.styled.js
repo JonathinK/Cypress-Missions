@@ -5,7 +5,7 @@ import { Overline } from "./typography.styled";
 
 
 export const HeroImage = styled.div`
-position: relative;
+  position: relative;
   .full_image{
     position:absolute;
     width:100%;
@@ -16,7 +16,7 @@ position: relative;
 `
 export const HeroContainer = styled.section.attrs(props => ({
   type:"section"
-}))`
+  }))`
   grid-column: 1/15;
   display: grid;
   grid-template-columns: inherit;
@@ -500,7 +500,7 @@ export const HeroContainer = styled.section.attrs(props => ({
   ${props => props.$EventHero && css`
     grid-template-rows: 5em auto 5em auto;
     grid-column: 1/15;
-    grid-row:2/3;
+    
     position: relative;
     grid-gap: 1em 1em;
     
