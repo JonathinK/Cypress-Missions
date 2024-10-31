@@ -57,6 +57,16 @@ module.exports = {
         }
       }
     },
+    {
+      resolve: 'gatsby-plugin-netlify',
+      options: {
+        headers: {
+          '/*': [
+            "Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://trustedscripts.example.com https://use.typekit.net; style-src 'self' 'unsafe-inline' https://use.typekit.net; font-src 'self' data: https://use.typekit.net; img-src 'self' data: https://images.ctfassets.net https://p.typekit.net; connect-src 'self' https://cdn.contentful.com https://images.ctfassets.net; object-src 'none'; base-uri 'self'; form-action 'self'; report-uri /csp-violation-report-endpoint;"
+          ]
+        }
+      }
+    }
   ],
 }
     

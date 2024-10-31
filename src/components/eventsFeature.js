@@ -7,7 +7,7 @@ export const EventsFeature = () => {
   const data = useStaticQuery(graphql`
     query{
       allContentfulEvent(
-        limit: 3,
+        limit: 4,
         sort: {createdAt: ASC}
       )
       {
@@ -36,22 +36,22 @@ const eventsContent = data.allContentfulEvent.nodes;
        {eventsContent.map(event => {
         return(
           <Card key={event.contentful_id}>
-           <MediaContainer className="latest_feature_image">
-            <GatsbyImage
-              image={getImage(event.featureImage.gatsbyImageData)}
-              alt=''
-              loading="lazy"
-              className="full_image"
-            />
-           </MediaContainer> 
-           <TextContainer>
-           <Overline>{event.startTime}</Overline>
-              <Heading3>
+            <NavLink to={`/events/${event.slug}`} className="card_link" />
+              <MediaContainer className="latest_feature_image">
+                <GatsbyImage
+                  image={getImage(event.featureImage.gatsbyImageData)}
+                  alt=''
+                  loading="lazy"
+                  className="full_image"
+                />
+              </MediaContainer> 
+              <TextContainer>
+                <Overline>{event.startTime}</Overline>
+                <Heading3>
                   {event.eventTitle}
-              </Heading3>
-              <NavLink to={`/events/${event.slug}`}>View Event</NavLink>
-           </TextContainer>
-          </Card>
+                </Heading3>
+              </TextContainer>
+              </Card>
         )
       })}
     </CardsContainer>

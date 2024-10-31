@@ -4,7 +4,6 @@ import { Accordion, Heading2 } from '../styles';
 import { RichTextRender } from './contentRender';
 
 export const AccordionRender = ({ content }) => {
-  console.log(content)
   const InnerContent = content.content;
   return(
     <React.Fragment>

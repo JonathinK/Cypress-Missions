@@ -6,6 +6,7 @@ import { Overline } from "./typography.styled";
 
 export const HeroImage = styled.div`
   position: relative;
+  
   .full_image{
     position:absolute;
     width:100%;
@@ -299,7 +300,7 @@ export const HeroContainer = styled.section.attrs(props => ({
   }
   &.centered_text_no_image{
     grid-column: 1/15;
-    padding: 5.5em 0em;
+    padding: 9em 0em 4em 0em;
     background: ${({theme}) => theme.shades._50};
    
     ${TextContainer}{
@@ -382,6 +383,67 @@ export const HeroContainer = styled.section.attrs(props => ({
     }
     @media ${({theme}) => theme.breakpoints.mobile}{
       grid-column: 1/7;
+    }
+  }
+  &.half_hero{
+    grid-column: 1/15;
+    grid-template-columns: inherit;
+    width: 100%;
+    background:red;
+    height:50vh;
+    margin-top: 76px; 
+    position:relative;
+
+    ${HeroImage}{
+      grid-column: 1/15;
+      grid-row: 1/2;
+      position:relative;
+      z-index: 1;
+    }
+    ${TextContainer}{
+      color: white;
+      grid-column: 5/11;
+      grid-row: 1/2;
+      position: relative;
+      z-index: 4;
+      justify-self:center;
+      align-self:center;
+      text-align:center;
+      justify-content:center;
+      align-items:center;
+    }
+    @media ${({theme}) => theme.breakpoints.tablet}{
+      grid-column: 1/9;
+      ${HeroImage}{
+        grid-column: 1/9;
+      }
+      ${TextContainer}{
+        grid-column: 2/8;
+      }
+    }
+    @media ${({theme}) => theme.breakpoints.mobile}{
+      grid-column: 1/7;
+      ${HeroImage}{
+        grid-column: 1/7;
+      }
+      ${TextContainer}{
+        grid-column: 2/6;
+        grid-row: 1/2;
+      }
+    }
+  }
+  &.half_hero::before{
+    content: '';
+      position: absolute;
+      top: 0;
+      bottom:0;
+      width: 100%;
+      background: black;
+      z-index: 2;
+      opacity: 0.65;
+      mix-blend-mode: multiply;
+    @media  ${({theme}) => theme.breakpoints.mobile}{
+ 
     }
   }
 /* Blog Template Heros */

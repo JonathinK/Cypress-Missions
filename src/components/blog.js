@@ -8,6 +8,10 @@ export const BlogCard = ({ blog }) => {
   const featureImage = getImage(blog.featureImage);
   return(
     <Blog>
+    <ButtonPageLink 
+        className="blog_page_link"
+        to={`/news-and-stories/${blog.slug}`}
+      >
       <MediaContainer className='project_image no_radius' >
         <GatsbyImage 
           image={featureImage}  
@@ -16,9 +20,9 @@ export const BlogCard = ({ blog }) => {
           className={blog.featureImage.externalName || 'full_image'}
         />
       </MediaContainer>
-      <TextContainer className='project_text'>
+      <TextContainer className='project_text_container'>
       {blog.tags[0].tagFamilies === "Article Type" && (
-        <Overline>
+        <Overline className="blog_card_overline_tag">
           {blog.tags[0].value}
         </Overline>
       )}
@@ -26,7 +30,7 @@ export const BlogCard = ({ blog }) => {
           {blog.articleTitle}
         </Heading2>
       <ContentContainer className="date_container">
-        <Paragraph>{blog.datePosted}</Paragraph>
+        <Paragraph className="date_posted">{blog.datePosted}</Paragraph>
           {blog.updatedAt && blog.updatedAt !== blog.datePosted && (
             <React.Fragment>
               <LabelChip className='project_updated_at'>
@@ -35,17 +39,14 @@ export const BlogCard = ({ blog }) => {
             </React.Fragment>
           )}
       </ContentContainer>
-      <Paragraph dangerouslySetInnerHTML={{
-          __html: blog.summary.summary,
-        }}/>
-      <ButtonPageLink 
-        $TextButton
-        to={`/news-and-stories/${blog.slug}`}
-      >
-        View Article
-        <Icon icon="heroicons-solid:arrow-sm-right"/>
-      </ButtonPageLink>
+      <Paragraph 
+        className="blog_card_summary"
+        dangerouslySetInnerHTML={{
+            __html: blog.summary.summary,
+          }}
+      />
       </TextContainer>
+      </ButtonPageLink>
     </Blog>
   )
 }

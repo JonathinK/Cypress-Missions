@@ -1,25 +1,25 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { Global, PageWrapper } from "../styles";
-import { Header } from "../components";
-import { PageFooter } from "../components";
+import { Header, PageFooter } from "../components";
+import { Helmet } from "react-helmet";
 
 export const Layout = ({ element }) => {
 
-const SetCookie = () => {
-  useEffect(() => {
-    document.cookie = 'name=value; SameSite=Lax; Secure';
-  }, []);
+  const SetCookie = () => {
+    useEffect(() => {
+      document.cookie = 'name=value; SameSite=Lax; Secure';
+    }, []);
 
-  return null;
+    return null;
+  };
+
+  return (
+    <PageWrapper>
+      <SetCookie />
+      <Global />
+      <Header />
+      {element}
+      <PageFooter />
+    </PageWrapper>
+  );
 };
-  return(
-   <PageWrapper>
-   <SetCookie />
-   <Global/>
-    <Header/>
-       {element}
-    <PageFooter/>
-    
-   </PageWrapper>
-  )
-}

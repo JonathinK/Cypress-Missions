@@ -125,4 +125,14 @@ export const ButtonPageLink = styled(Link).attrs(props => ({
       font-size: 1.5em;
 
   `}
+
+  &.blog_page_link{
+    display:inherit;
+    flex-flow:inherit;
+    gap: inherit;
+    padding: inherit;
+    min-width: inherit;
+    color: none;
+    background: transparent;
+  }
 `

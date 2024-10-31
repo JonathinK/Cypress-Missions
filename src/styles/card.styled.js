@@ -6,4 +6,11 @@ export const Card =  styled.div`
   p{
     margin-bottom:0;
   }
+
+  &.event_card{
+    .event_card_date,
+    .event_card_text{
+      pointer-events: none;
+    }
+  }
 `

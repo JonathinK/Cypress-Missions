@@ -9,6 +9,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { useLocation } from "@reach/router"
 
 function Seo({ description, lang, meta, title, canonical }) {
   const { site } = useStaticQuery(
@@ -25,8 +26,10 @@ function Seo({ description, lang, meta, title, canonical }) {
     `
   )
 
+  const location = useLocation()
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const canonicalUrl = canonical || location.href
 
   return (
     <Helmet
@@ -70,7 +73,7 @@ function Seo({ description, lang, meta, title, canonical }) {
         },
       ].concat(meta)}
       link={[
-        ...(canonical ? [{ rel: 'canonical', href: canonical }] : []),
+        { rel: 'canonical', href: canonicalUrl },
       ]}
     />
   )
@@ -80,7 +83,7 @@ Seo.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
-  canonical:``,
+  canonical: ``,
 }
 
 Seo.propTypes = {

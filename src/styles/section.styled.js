@@ -30,11 +30,65 @@ export const Section = styled.section.attrs(props => ({
 /* Default Styles End */
 
 /* Homepage Styles Start */
+  &.feature_donate_section{
+    grid-column: 1/15;
+    padding: 5em 1em;
+    justify-self:center;
+    align-items:center;
+    width: 100%;
+    color: ${({theme}) => theme.shades._900};
+    background-image: linear-gradient(
+      to bottom right,
+      ${({theme}) => theme.colors.primary},
+      ${({theme}) => theme.shades._50},
+      ${({theme}) => theme.colors.tertiary}
+    );
+
+    .donate_feature_media{
+      grid-column: 2/9;
+      grid-row: 1/2;
+      position:relative;
+    }
+    .donate_feature_text_container{
+      grid-column: 10/14;
+      grid-row: 1/2;
+      position: relative;
+      z-index: 5;
+
+      .hot_donate_feature_button-con{
+        width: fit-content;
+      }
+    }
+    
+    @media ${({theme}) => theme.breakpoints.tablet}{
+      grid-column: 1/9;
+      
+      .donate_feature_media{
+        grid-column: 2/8;
+        grid-row: 1/2;
+        z-index: 2;
+      }
+      .donate_feature_text_container{
+        grid-column: 2/8;
+        grid-row: 2/3;
+        z-index: 1;
+        padding-top: 1em;
+      }
+    }
+    @media ${({theme}) => theme.breakpoints.mobile}{
+      grid-column: 1/7;
+      .donate_feature_media{
+      grid-column: 2/6;
+    }
+    .donate_feature_text_container{
+      grid-column: 2/6; 
+    }
+    }
+  }
   &.the_latest_section{   
     box-sizing: border-box;
     overflow: hidden;
     background: ${({theme}) => theme.shades._100};
-    
     .latest_bg_container{
      grid-row: 1/3;
      grid-column: 1/15;
@@ -69,7 +123,7 @@ export const Section = styled.section.attrs(props => ({
     }
     .latest_feature_container{
       grid-row: 2/3;
-      grid-column: 2/14;s
+      grid-column: 2/14;
       display:flex;
       flex-flow: column nowrap;
       box-sizing: border-box;
@@ -104,26 +158,38 @@ export const Section = styled.section.attrs(props => ({
       .events_feature{
         display: flex;
         flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
         gap: 2em 2em;
 
         .feature_cards_container{
           gap: 2em;
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(300px,max-content));
           grid-auto-rows: auto auto auto;
           grid-auto-flow: row;
-        
+          width: 100%;
+          justify-content: start;
+          align-content: start;
+
           ${Card}{
             display: grid;
             grid-template-row: 1fr;
             grid-template-column: 1fr;
-            flex: 1 1 100%;
-            aspect-ratio: 4/3;
+            aspect-ratio: 2/1.5;
             border-radius: .5em;
             overflow:hidden;
             position:relative;
+            width: 100%;    
+
+            .card_link{
+              grid-column: 1/2;
+              grid-row: 1/2;
+              position: relative;
+              z-index: 1;
+              
+            }
             @media ${({theme}) => theme.breakpoints.desktop}{
-              max-width: 667px;
+              max-width: 492px;
             }
             
             ${MediaContainer}{
@@ -131,8 +197,12 @@ export const Section = styled.section.attrs(props => ({
               grid-column: 1/2;
               position:relative;
               z-index: 1;
+              width: 100%;
               border-radius: 0em !important;
               box-shadow: none !important;
+              aspect-ratio: 2/1.5;
+              pointer-events: none;
+
               .full_image{
                 border-radius: 0em !important;
               }
@@ -148,6 +218,7 @@ export const Section = styled.section.attrs(props => ({
               color: ${({theme}) => theme.shades._50};
               box-sizing: border-box;
               width: 100%;
+              pointer-events: none;
 
               ${Heading3}{
                 overflow: hidden;
@@ -155,6 +226,7 @@ export const Section = styled.section.attrs(props => ({
                 display: -webkit-box;
                 -webkit-line-clamp: 1;
                 -webkit-box-orient: vertical;
+                font-size: clamp(1.2rem, 5vw, 1.4rem);
               }
               ${NavLink}{
                 color: inherit;
@@ -169,6 +241,7 @@ export const Section = styled.section.attrs(props => ({
             height:100%;
             top:0;
             z-index: 2;
+            pointer-events: none;
             background-image: linear-gradient(
               rgba(0,0,0,.1),
               rgba(0,0,0,.7)
@@ -200,49 +273,52 @@ export const Section = styled.section.attrs(props => ({
           flex-flow: row nowrap;
           justify-content: center;
           align-items:center;
-          .selector_button
+
+          .selector_button{
             height: auto;
             flex: 1 1 10%;
             padding: 1em 1.5em;
           }
         }
+      }
         .news_and_stories_feature,
         .projects_feature,
         .events_feature{  
 
-          .feature_cards_container{
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+          & .feature_cards_container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)) !important;
             grid-auto-rows: auto auto auto;
             grid-auto-flow: row;
+
             ${Card}{
-              flex: 1 0 100%;
-              aspect-ratio: 16/7 !important;
+              aspect-ratio: 2/1.5 !important;
               border-radius: .25em;
               overflow:hidden;
 
               .latest_feature_image{
                 width: 100%;
+                .full_image{
+                  border-radius: .5em !important;
+                }
+              }
 
-              .full_image{
-                border-radius: .5em !important;
-              }
-              }
               ${TextContainer}{
                 padding: 1em;
-
-              ${NavLink}{
-                font-size: ${({theme}) => theme.font_size.body_medium};
-              }
+                ${NavLink}{
+                  font-size: ${({theme}) => theme.font_size.body_medium};
+                }
               } 
             }
-            ${Card}:first-child{
-              grid-column: span 2;
+            ${Card}:first-child{ 
+              grid-column: span / 2;
             }
           }
         }
     }
     @media ${({theme}) => theme.breakpoints.mobile}{
      grid-column: 1/7;
+
       .latest_bg_container{
         grid-row: 1/4;
         grid-column: 1/7;
@@ -278,10 +354,10 @@ export const Section = styled.section.attrs(props => ({
           width: 100%;   
 
           .feature_cards_container{
-        
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
             ${Card}{
               width:100%;
-              aspect-ratio: 7/3;
+              aspect-ratio: 2/1 !important;
               border-radius: .25em;
               overflow:hidden;
               grid-column: span 2;
@@ -2072,14 +2148,16 @@ export const Section = styled.section.attrs(props => ({
     ${ContentContainer}{
       grid-column: 5/14;
       grid-row: 2/3;
-      justify-self: start;
-      align-self: start;
+      justify-self: stretch;
+      align-self: stretch;
       gap: 1em 1em;
       margin-top: 8.75em;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
       grid-auto-rows: auto auto auto;
       grid-auto-flow: row;
+      justify-content: stretch;
+      align-self: stretch;
       box-sizing: inherit;
     }
     @media ${({theme}) => theme.breakpoints.tablet}{
@@ -2089,7 +2167,7 @@ export const Section = styled.section.attrs(props => ({
       ${ContentContainer}{
         grid-column: 2/8; 
         margin: 0em;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(332px, 1fr));
       }
     }
     @media ${({theme}) => theme.breakpoints.mobile}{
@@ -2107,9 +2185,10 @@ export const Section = styled.section.attrs(props => ({
   &.tags_section{
     grid-column: 1/15;
     background: ${({theme}) => theme.colors.primary};
-    padding: 2em 0;
+    padding: 1em 0;
     ${Tag}{
       min-width: 200px;
+      display: none;
     }
     @media ${({theme}) => theme.breakpoints.tablet}{
       grid-column: 1/9;
@@ -2191,7 +2270,7 @@ export const Section = styled.section.attrs(props => ({
     padding: 10em 0em;
     
     .slider_section_heading_2_text{
-      grid-column:2/14;
+      grid-column:3/13;
       display:flex;
       flex-flow: row nowrap;
       justify-content: flex-start;
@@ -2363,66 +2442,66 @@ export const Section = styled.section.attrs(props => ({
         writing-mode: vertical-rl;
       }
     }  
-  @media ${({theme}) => theme.breakpoints.tablet}{
-    grid-column: 1/9;
-    padding: 3em 0;
-
-    .get_involved_media{
-      grid-column: 2/8;
-      grid-row: 2/3;
-      aspect-ratio: 3/2;
-    }
-    .get_involved_text{
-      grid-column: 2/8;
-      grid-row: 3/4;
-    }
-    .get_involved_display_text{
+    @media ${({theme}) => theme.breakpoints.tablet}{
       grid-column: 1/9;
-      grid-row: 1/2;
-      justify-self: center;
-      align-self: center;
+      padding: 3em 0;
 
-      ${Display}{
-        writing-mode: horizontal-tb;
+      .get_involved_media{
+        grid-column: 2/8;
+        grid-row: 2/3;
+        aspect-ratio: 3/2;
       }
-    } 
-  }
-  @media ${({theme}) => theme.breakpoints.mobile}{
-    grid-column: 1/7;
-    .get_involved_media{
-      grid-column: 2/6;
-      grid-row: 2/3;
-      aspect-ratio: 3/2;
+      .get_involved_text{
+        grid-column: 2/8;
+        grid-row: 3/4;
+      }
+      .get_involved_display_text{
+        grid-column: 1/9;
+        grid-row: 1/2;
+        justify-self: center;
+        align-self: center;
+
+        ${Display}{
+          writing-mode: horizontal-tb;
+        }
+      } 
     }
-    .get_involved_text{
-      grid-column: 2/6;
-      grid-row: 3/4;
-      .get_involved_button_container{
-        width: 100%;
-        margin-top: 1em;
-        
-        ${ButtonPageLink}{
-          display: flex;
+    @media ${({theme}) => theme.breakpoints.mobile}{
+      grid-column: 1/7;
+      .get_involved_media{
+        grid-column: 2/6;
+        grid-row: 2/3;
+        aspect-ratio: 3/2;
+      }
+      .get_involved_text{
+        grid-column: 2/6;
+        grid-row: 3/4;
+        .get_involved_button_container{
           width: 100%;
-          justify-content: center;
-          align-items: center;
-          gap: .5em;
-          ${IconContainer}{
+          margin-top: 1em;
+          
+          ${ButtonPageLink}{
             display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            gap: .5em;
+            ${IconContainer}{
+              display: flex;
+            }
           }
         }
       }
-    }
-    .get_involved_display_text{
-      grid-column: 2/6;
-      grid-row: 1/2;  
-      ${Display}{
-        writing-mode: horizontal-tb;
-        text-align: center;
+      .get_involved_display_text{
+        grid-column: 2/6;
+        grid-row: 1/2;  
+        ${Display}{
+          writing-mode: horizontal-tb;
+          text-align: center;
+        }
       }
+      
     }
-    
-  }
   }
   &.get_involved_cta_section::before{
       content: '';
@@ -2467,10 +2546,10 @@ export const Section = styled.section.attrs(props => ({
       gap: 1em 1em;
       margin-top: 8.75em;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       grid-auto-rows: auto auto auto;
       grid-auto-flow: row;
-    
+      justify-content: stretch;
     }
     ${Pagination}{
       grid-row: 2/3;
@@ -2484,7 +2563,7 @@ export const Section = styled.section.attrs(props => ({
       grid-column: 2/8;
       grid-row: 2/3;
       margin-top: 0em;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
      }
      ${Pagination}{
       grid-row: 2/3;
@@ -2492,6 +2571,7 @@ export const Section = styled.section.attrs(props => ({
     }
     @media ${({theme}) => theme.breakpoints.mobile}{
       grid-column: 1/7;
+      gap: .4em;
       ${ContentContainer}{
         grid-column: 2/6;
       }

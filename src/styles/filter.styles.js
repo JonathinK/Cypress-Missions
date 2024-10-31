@@ -14,13 +14,12 @@ export const Filter = styled.aside`
   background: ${({theme}) => theme.shades._50};
   z-index:5;
   border-radius: 1em;
-  overflow: hidden;
   min-width: 200px;
   
   @media ${({theme}) => theme.breakpoints.tablet}{
     grid-column: 2/8;
     grid-row: 1/2;
-    padding: 5.5em 1em 1em 1em;
+    padding: 0em 1em 1em 1em;
   }
   @media ${({theme}) => theme.breakpoints.mobile}{
     grid-column: 2/6;

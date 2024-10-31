@@ -53,10 +53,10 @@ exports.createPages = async({actions, graphql,reporter}) => {
     else if(codeId === "about_cypress"){
       templateSelector = require.resolve("./src/templates/about_template.js");
     }
-    else if(codeId === "our_work"){
-      templateSelector = require.resolve("./src/templates/our_work_template.js");
+    else if(codeId === "projects"){
+      templateSelector = require.resolve("./src/templates/projects_template.js");
     }
-    else if (codeId === "events"){
+    else if (codeId === "future_plans"){
       templateSelector = require.resolve("./src/templates/events_template.js");
     }
     else if (codeId === "volunteer"){
@@ -65,8 +65,8 @@ exports.createPages = async({actions, graphql,reporter}) => {
     else if (codeId === "contact"){
       templateSelector = require.resolve("./src/templates/contact_template.js");
     }
-    else if (codeId === "projects"){
-      templateSelector = require.resolve("./src/templates/projects_template.js");
+    else if (codeId === "portfolio"){
+      templateSelector = require.resolve("./src/templates/portfolio_template.js");
     }
     else if (codeId === "news_and_stories"){
       templateSelector = require.resolve("./src/templates/blog_template.js");
@@ -97,7 +97,7 @@ exports.createPages = async({actions, graphql,reporter}) => {
   result.data.allContentfulProject.nodes.forEach(project => {
     const { codeId, slug } = project;
     actions.createPage({
-      path: `/projects/${project.slug}`,
+      path: `/portfolio/${project.slug}`,
       component: require.resolve("./src/templates/project_template.js"),
       context: {
         slug: project.slug,

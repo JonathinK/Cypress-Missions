@@ -26,7 +26,7 @@ export const Footer = styled.footer`
   }
   ${SocialsContainer}{
     grid-column: 5/11;
-    grid-row: 3/4;
+    grid-row: 5/6;
     justify-self:center;
     align-items:center;
     gap: 1em;
@@ -46,16 +46,36 @@ export const Footer = styled.footer`
       grid-column: 2/6;
     }
   }
+  .mailchimp{
+    grid-column: 6/10;
+    grid-row: 3/4;
+    .signup_scroll{
+      h2{
+        color: ${({theme}) => theme.shades._900};
+      }
+    }
+    .clear{
+      .button{
+       ${'' /*  background: ${({theme}) => theme.colors.primary} !important; */}
+      }
+    }
+  }
+  
 
   @media ${({theme}) => theme.breakpoints.tablet}{
     grid-column: 1/9;
+    .mailchimp{
+      grid-column: 2/8;
+    }
   }
   @media ${({theme}) => theme.breakpoints.mobile}{
     grid-column: 1/7;
 
+    .mailchimp{
+      grid-column: 2/6;
+    }
   }
 `
-
 export const FooterNavigationContainer = styled.nav`
   display: flex;
   flex-flow: row nowrap;
@@ -101,7 +121,7 @@ export const FooterNavigationContainer = styled.nav`
   }
 
   &.policy_doc_links{
-    grid-row: 5/6;
+    grid-row: 6/7;
     grid-column: 5/11;
     ${NavLink}{
       font-weight: ${({theme}) => theme.font_weight.bold};
@@ -151,13 +171,16 @@ export const FooterInfoContainer = styled.div`
     }
   }
   &.copyright{
-    grid-row: 6/7;
+    grid-row: 7/8;
     grid-column: 1/15;
     justify-content:center;
     align-items:center;
     padding: 1em 0em;
     background: ${({theme}) => theme.colors.primary};
-    color: ${({theme}) => theme.shades._50};
+   
+    p{
+       color: ${({theme}) => theme.shades._50};
+    }
     @media ${({theme}) => theme.breakpoints.tablet}{
       grid-column: 1/9;
     }
@@ -165,5 +188,4 @@ export const FooterInfoContainer = styled.div`
       grid-column: 1/7;
     }
   }
-
 `

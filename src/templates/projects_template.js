@@ -1,149 +1,58 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { Hero, SectionRender } from "../components";
 import { graphql } from 'gatsby';
-import { Hero, FilterComponent, ProjectsRender, PaginationComponent } from '../components';
-import { Section } from '../styles';
 import Seo from '../components/seo';
 
 
-const Projects = ({ data }) => {
-  //Gets the heroData
+const OurWorkPage = ({ data }) => {
   const pageHero = data.contentfulPage.pageHero;
-
-  //Manages States
-  const [selectedTags, setSelectedTags] = useState([]);
-  const [filteredProjects, setFilteredProjects] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const projectsPerPage = 9;
-
-  useEffect(() => {
-    setFilteredProjects(data.allContentfulProject.nodes);
-  }, [data.allContentfulProject.nodes]);
-
-  const handleTagChange = (tag) => {
-    const newSelectedTags = selectedTags.includes(tag)
-      ? selectedTags.filter(t => t !== tag)
-      : [...selectedTags, tag];
-
-    setSelectedTags(newSelectedTags);
-
-    const filtered = data.allContentfulProject.nodes.filter(project =>
-      newSelectedTags.length === 0 || newSelectedTags.every(tag => project.tags.some(t => t.value === tag))
-    );
-    setFilteredProjects(filtered);
-    setCurrentPage(1);
-  };
-
-  const indexOfLastProject = currentPage * projectsPerPage;
-  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
-  const currentProjects = filteredProjects.slice(indexOfFirstProject, indexOfLastProject);
-
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
- 
+  const pageSections = data.contentfulPage.sections;
+  
   return(
     <React.Fragment>
-      <Hero content={pageHero}/>
-      <Section className='projects_section'>
-        <FilterComponent
-          tags={data.allContentfulTag.nodes} 
-          selectedTags={selectedTags} 
-          onTagChange={handleTagChange}
-          filteredItems={filteredProjects}
-        />
-        <ProjectsRender 
-          projects={currentProjects}
-        />
-        {filteredProjects.length > 9 && (
-          <PaginationComponent 
-            itemsPerPage={projectsPerPage}
-            totalItems={filteredProjects.length}
-            paginate={paginate}
-            currentPage={currentPage}
+    <Hero content={pageHero}/>
+    {pageSections.map((section) => {
+      return <SectionRender 
+            key={section.contentful_id}
+            section={section}
           />
-        )}   
-      </Section>
+   })}
     </React.Fragment>
   )
 }
 export const query = graphql`
-  query {
-  contentfulPage(codeId: {eq: "projects"}) {
-    codeId
-    contentful_id
-    externalName
-    metadata {
-      contentful_id
-      googleBots
-      internalName
-      keywords
-      content {
-        id
-        content
-      }
-      name {
-        contentful_id
-        codeId
-      }
-    }
-    pageHero {
+  query{
+    contentfulPage(codeId: {eq: "projects"}) {
       codeId
       contentful_id
       externalName
-      heroType
-      content {
+      metadata {
+        contentful_id
+        googleBots
+        internalName
+        keywords
+        content {
+          id
+          content
+        }
+        name {
+          contentful_id
+          codeId
+        }
+      }
+      pageHero{
+        ...PageHero
+      }
+      sections {
         codeId
         contentful_id
         externalName
         content {
-          ... on ContentfulText {
-            id
-            codeId
-            shortSimpleText
-            richText {
-              raw
-            }
-          }
+          ...SectionContentRender
         }
       }
-    }
-    }
-  allContentfulProject {
-      nodes {
-        codeId
-        contentful_id
-        externalName
-        slug
-        updatedAt(formatString: "MMM Do, YYYY") 
-        projectStartDate(formatString: "MMM Do, YYYY")
-        projectTitle
-        summary {
-        id
-        summary
-        }
-        featureImage {
-          contentful_id
-          externalName
-          asset {
-            contentful_id
-            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 60)
-          }
-        }
-        tags {
-          contentful_id
-          codeId
-          value
-          tagFamilies
-        }
-      }
-    }
-  allContentfulTag(filter: {codeId: {eq: "project_tag"}}) {
-    nodes {
-      codeId
-      value
-      tagFamilies
     }
   }
-} 
 `
 export const Head = ({ data }) => {
   const metadata = data.contentfulPage.metadata;
@@ -179,4 +88,6 @@ export const Head = ({ data }) => {
     />
   );
 };
-export default Projects
+export default OurWorkPage
+
+

@@ -7,7 +7,7 @@ export const ArticleFeature = () => {
   const data = useStaticQuery(graphql`
     query{
       allContentfulBlogArticle(
-        limit: 3,
+        limit: 4,
         sort: {createdAt: ASC}
       ){
         nodes{
@@ -34,29 +34,29 @@ export const ArticleFeature = () => {
       }
     }
   `)
-  const articleContent = data.allContentfulBlogArticle.nodes;
+  const articleContent = data.allContentfulBlogArticle.nodes || null;
   return(
     <CardsContainer className="feature_cards_container">
       {articleContent.map(article => {
         return(
           <Card key={article.contentful_id}>
-           <MediaContainer className="latest_feature_image article">
-            <GatsbyImage
-              image={getImage(article.featureImage.gatsbyImageData)}
-              alt=''
-              loading="lazy"
-              className="full_image"
-            />
-           </MediaContainer> 
-           <TextContainer>
-            {article.tags.filter(tag => tag.tagFamilies === "Article Type").map(tag => (
-              <Overline key={tag.codeId}>{tag.value}</Overline>
-            ))}
-              <Heading3>
+            <NavLink to={`/news-and-stories/${article.slug}`} className="card_link" />
+              <MediaContainer className="latest_feature_image article">
+                <GatsbyImage
+                  image={getImage(article.featureImage.gatsbyImageData)}
+                  alt=''
+                  loading="lazy"
+                  className="full_image"
+                />
+              </MediaContainer> 
+              <TextContainer>
+                {article.tags.filter(tag => tag.tagFamilies === "Article Type").map(tag => (
+                  <Overline key={tag.codeId}>{tag.value}</Overline>
+                ))}
+                <Heading3>
                   {article.articleTitle}
-              </Heading3>
-              <NavLink to={`/news-and-stories/${article.slug}`}>Read Article</NavLink>
-           </TextContainer>
+                </Heading3>
+              </TextContainer>
           </Card>
         )
       })}

@@ -45,7 +45,7 @@ const EventPage = ({ data }) => {
 export const query = graphql`
   query{
     contentfulPage(
-      codeId: {eq: "events"}
+      codeId: {eq: "future_plans"}
     ) {
         codeId
         contentful_id

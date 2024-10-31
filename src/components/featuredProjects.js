@@ -34,25 +34,26 @@ export const FeaturedProjects = () => {
       }
     }
   `)
-  const featureCards = data.allContentfulProject.nodes;
+  const featureCards = data?.allContentfulProject?.nodes || "";
+  console.log("Feature Cards: ", featureCards);
   return(
     <FeatureContainer $ProjectsFeature>
       {featureCards.map((card) => {
-        const cardImage = getImage(card.featureImage.asset);
+        console.log("Card Image: ", card);
         return(
           <Card $FeaturedProject key={card.contentful_id}>
             <NavLink to={`/projects/${card.slug}`}/>
             <MediaContainer className="featured_projects_image">
               <GatsbyImage
-                image={cardImage}
-                loading="lazy"
+                image={getImage(card.featureImage.asset)}
+                loading="lazy"y
                 className={card.featureImage.externalName || ''}
                 alt={card.featureImage.altText || ''}
               />
             </MediaContainer>
             <div className="project_info">
               <Heading3>{card.projectTitle}</Heading3>
-              <Paragraph>{card.projectLocation}</Paragraph>
+              <Paragraph className='white_text'>{card.projectLocation}</Paragraph>
             </div>
          
  

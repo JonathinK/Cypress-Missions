@@ -6,7 +6,13 @@ import { Icon } from '@iconify-icon/react/dist/iconify.mjs';
 export const ProjectCard = ({ project }) => {
   const featureImage = getImage(project.featureImage.asset);
   return(
-    <Project>
+    <Project
+      className="project_card"
+    >
+      <ButtonPageLink 
+        className="project_page_link"
+        to={`/projects/${project.slug}`}
+      />
       <MediaContainer className='project_image no_radius' >
         <GatsbyImage 
           image={featureImage}
@@ -31,14 +37,7 @@ export const ProjectCard = ({ project }) => {
       <Paragraph dangerouslySetInnerHTML={{
           __html: project.summary.summary,
         }}/>
-      <ButtonPageLink 
-        $TextButton
-        to={`/projects/${project.slug}`}
-      >
-        View This Project
-        <Icon icon="heroicons-solid:arrow-sm-right"/>
-      </ButtonPageLink>
-      </TextContainer>
+        </TextContainer>
     </Project>
   )
 }

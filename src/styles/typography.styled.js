@@ -89,6 +89,11 @@ export const Paragraph = styled.p`
   letter-spacing: ${({theme}) => theme.letter_spacing.body};
   margin-bottom: 0em;
   font-family: ${({theme}) => theme.fonts.body};
+  color: ${({theme}) => theme.shades._900}; 
+
+  &.white_text{
+    color: ${({theme}) => theme.shades._50};
+  }
 `
 export const BoldText = styled.strong.attrs(props => ({
 
@@ -130,11 +135,12 @@ export const LItem = styled.li.attrs(props => ({
 }))`
 
 `
-export const LabelChip = styled.label.attrs(props => ({
-  type: 'label',
+export const LabelChip = styled.span.attrs(props => ({
+  
 }))`
   font-size: clamp(.750rem, 4vw, .875rem );
   font-family: ${({theme}) => theme.fonts.body};
+  color: ${({theme}) => theme.shades._900};
 `
 export const Caption = styled.caption.attrs(props => ({
   type: 'caption',

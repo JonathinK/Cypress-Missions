@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react';
 import { Hamburger, NavLink, NavListItem, NavigationContainer, PageHeader, ButtonLink, NavListItems, ContentContainer } from '../styles';
 import { Logo } from './logo';
 import { Navigation } from "./navigation";
+import { disableScroll, enableScroll } from '../utils/noScroll';
 
 export const Header = () => {
 // Query for Navigation Data
@@ -66,6 +67,18 @@ const toggleMenu = () => {
 const closeMenu = () => {
   setMenuOpen(false);
 }
+
+useEffect(() => {
+  if (menuOpen) {
+    disableScroll();
+  } else {
+    enableScroll();
+  }
+
+  return () => {
+    enableScroll();
+  };
+}, [menuOpen]);
 //Mobile Hamburger Menu To Open & Close Mobile Menu
   const MobileMenuBurger = () => {
     return(

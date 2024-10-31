@@ -1,15 +1,15 @@
 import React from 'react';
 import { Button, LItem, Pagination, UList } from '../styles';
 
-export const PaginationComponent = ({ itemsPerPage, totalItems, paginate, currentPage }) => {
+export const PaginationComponent = ({ itemsPerPage, totalItems, paginate, currentPage, className}) => {
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
     pageNumbers.push(i);
   }
-
+  console.log("Class Name: ", className);
   return (
-    <Pagination>
+    <Pagination className={className || ""}> 
       <UList>
         {pageNumbers.map(number => (
           <LItem key={number} style={{ margin: '0 0.25rem' }}>

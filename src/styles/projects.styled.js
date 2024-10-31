@@ -5,18 +5,30 @@ import { Tag } from "./tag.styled";
 import { ButtonPageLink } from "./button.styled";
 
 export const Project = styled.article`
-  display: grid;
-  grid-template-columns: 1em auto 1em;
-  grid-template-rows: auto .8fr auto;
-  justify-self:start;
-  align-self:start;
-  gap: 1em;
+    display: grid;
+    grid-template-columns: 1em auto 1em;
+    grid-template-rows: auto .8fr auto;
+    justify-self:start;
+    align-self:start;
+    gap: 1em;
   
-  box-sizing: border-box;
-  border: 4px solid ${({theme}) => theme.colors.tertiary};
-  border-radius: 1em;
-  overflow: hidden;
-  padding-bottom: .5em;
+    box-sizing: border-box;
+    border: 4px solid ${({theme}) => theme.colors.tertiary};
+    border-radius: 1em;
+    overflow: hidden;
+    padding-bottom: .5em;
+    
+  &.project_card{
+    
+  }
+
+  && .project_page_link{
+      grid-row: 1/4;
+      grid-column: 1/4;
+      position: relative;
+      padding: 0;
+      background: transparent;
+  }
 
   ${MediaContainer}{
     grid-column: 1/4;
@@ -27,6 +39,7 @@ export const Project = styled.article`
     aspect-ratio: 5/3;
     z-index: 1;
     box-shadow: none;
+    pointer-events: none;
   }
   .no_radius{
     border-radius: 0em;
@@ -56,7 +69,7 @@ export const Project = styled.article`
     align-items:start;
     gap: 1em;
    
-    
+    pointer-events: none;
 
     ${Heading2}{
       display: -webkit-box;
@@ -92,10 +105,6 @@ export const Project = styled.article`
       overflow: hidden;
       text-overflow: ellipsis;
       -webkit-line-clamp: 4; 
-    }
-    ${ButtonPageLink}{
-      padding-top: .5em;
-      justify-content: flex-start;
     }
   }
 `

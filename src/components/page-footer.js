@@ -4,6 +4,7 @@ import { Footer, FooterInfoContainer,  Paragraph } from '../styles';
 import { FooterNav } from './footerNav';
 import { Logo } from './logo';
 import { SocialMedia } from './socialMedia';
+import MailChimpForm from './mailChimp';
 
 
 
@@ -111,9 +112,12 @@ export const PageFooter = () => {
       else if(component.codeId === "social_media_container"){
         return <SocialMedia key={component.contentful_id} content={component}/>
       }
+      else if(component.codeId === "footer_mailchimp"){
+        return <MailChimpForm key={component.contentful_id} content={component}/>
+      }
       else if(component.codeId === "copyright_container"){
         return(
-          <FooterInfoContainer key={component.contentful_id} className={component.externalName}>
+          <FooterInfoContainer key={component.contentful_id} className={component.externalName || "copyright"}>
             <Paragraph>
               ©{new Date().getFullYear()} {component.content[0].shortSimpleText}
             </Paragraph>
