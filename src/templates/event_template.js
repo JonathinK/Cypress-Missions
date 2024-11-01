@@ -30,7 +30,7 @@ const EventHero = ({ content }) => {
       <div className="background"/>
         <TextContainer $EventHeroText>
           <Heading1>{content.eventTitle}</Heading1>
-          <Paragraph>
+          <Paragraph className='white_text'>
             {content.eventSummary.eventSummary}
           </Paragraph>
         </TextContainer>
@@ -77,9 +77,9 @@ const EventInfoBar = ({ content }) => {
             <Icon icon="system-uicons:location" class="icons location" />
           </IconContainer>
           <TextContainer className="info_text">
-            <Paragraph>{content.location.externalName}</Paragraph>
-            {content.location.ctaExternalUrl && (
-              <a href={content.location.ctaExternalUrl}><strong>Get Directions </strong></a>
+            <Paragraph>{content.locationName}</Paragraph>
+            {content.googleMapLink && (
+              <a href={content.googleMapLink}><strong>Get Directions </strong></a>
             )}
           </TextContainer>
         </div>
@@ -119,7 +119,7 @@ const EventCtaSection = ({ content }) => {
           to="/volunteer"
           target='_blank'
         >
-          <Paragraph>Volunteer</Paragraph>
+          <Paragraph className='white_text'>Volunteer</Paragraph>
           <Icon icon="uil:arrow-right" class="arrow_right"/>
         </ButtonPageLink>
         <ButtonLink 
@@ -183,12 +183,8 @@ export const query = graphql`
       id
     }
     icsCalendar
-    location {
-      openInNewWindow
-      externalName
-      contentful_id
-      ctaExternalUrl
-    }
+    locationName
+    googleMapLink
     addEntireGoogleCalendar
     startDate:startTime(formatString: "MMM Do")
     startTime: startTime(formatString: "hh:mm A")

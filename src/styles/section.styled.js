@@ -48,6 +48,9 @@ export const Section = styled.section.attrs(props => ({
       grid-column: 2/9;
       grid-row: 1/2;
       position:relative;
+      aspect-ratio: 2/1.5;
+      overflow: hidden;
+      position: relative;
     }
     .donate_feature_text_container{
       grid-column: 10/14;
