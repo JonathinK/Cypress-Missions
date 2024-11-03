@@ -11,7 +11,7 @@ export const ProjectCard = ({ project }) => {
     >
       <ButtonPageLink 
         className="project_page_link"
-        to={`/projects/${project.slug}`}
+        to={`/portfolio/${project.slug}`}
       />
       <MediaContainer className='project_image no_radius' >
         <GatsbyImage 

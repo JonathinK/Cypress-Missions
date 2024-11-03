@@ -107,8 +107,14 @@ const ProjectGallery = styled.div`
 const ProjectImage = styled(MediaContainer)`
   aspect-ratio: 2/1.5;
   cursor: pointer;
-  border-radius: 1em;
+  border-radius: .5em;
   border: 1px solid ${({theme}) => theme.colors.secondary};
+
+  .grid_image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
 
   @media ${({theme}) => theme.breakpoints.tablet}{
     border-radius: .75em;

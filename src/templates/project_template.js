@@ -9,10 +9,10 @@ import Seo from '../components/seo';
 
 
 const Project = ({ data }) => {
-  const projectData = data.contentfulProject;
+  const projectData = data?.contentfulProject;
   const sliderGallery = data.contentfulProject.imageSlider;
   const getInvolvedCta = data.contentfulContentContainer;
-  console.log("Project Data:", projectData);
+  
   return(
     <React.Fragment>
       <HeroContainer className="text_left_asset_right">
@@ -182,6 +182,9 @@ export const Head = ({ data }) => {
       acc.canonical = meta.content.content
     } else if (meta.name.codeId === 'keywords'){
       acc.keywords = meta.keywords ? meta.keywords.join(', ') : '';
+    }
+    else {
+      return null
     }
     return acc;
   }, { title: 'Default Title', description: 'Default description', keywords: '' });
