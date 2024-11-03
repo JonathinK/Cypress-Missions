@@ -47,7 +47,7 @@ export const ProjectsFeature = () => {
       {projectContent.map(project => {
         return(
           <Card key={project.contentful_id}>
-            <NavLink to={`/projects/${project.slug}`} className="card_link" />
+            <NavLink to={`/portfolio/${project.slug}`} className="card_link" />
               <MediaContainer className="latest_feature_image">
                 <GatsbyImage
                   image={getImage(project.featureImage.asset.gatsbyImageData)}

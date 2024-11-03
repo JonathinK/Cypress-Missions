@@ -35,19 +35,18 @@ export const FeaturedProjects = () => {
     }
   `)
   const featureCards = data?.allContentfulProject?.nodes || "";
-  console.log("Feature Cards: ", featureCards);
   return(
     <FeatureContainer $ProjectsFeature>
       {featureCards.map((card) => {
         console.log("Card Image: ", card);
         return(
           <Card $FeaturedProject key={card.contentful_id}>
-            <NavLink to={`/projects/${card.slug}`}/>
+            <NavLink to={`/portfolio/${card.slug}`}/>
             <MediaContainer className="featured_projects_image">
               <GatsbyImage
                 image={getImage(card.featureImage.asset)}
                 loading="lazy"y
-                className={card.featureImage.externalName || ''}
+                className="full_image"
                 alt={card.featureImage.altText || ''}
               />
             </MediaContainer>
@@ -55,8 +54,6 @@ export const FeaturedProjects = () => {
               <Heading3>{card.projectTitle}</Heading3>
               <Paragraph className='white_text'>{card.projectLocation}</Paragraph>
             </div>
-         
- 
           </Card>
         )
       })}

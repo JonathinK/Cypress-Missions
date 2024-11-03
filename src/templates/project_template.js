@@ -183,9 +183,6 @@ export const Head = ({ data }) => {
     } else if (meta.name.codeId === 'keywords'){
       acc.keywords = meta.keywords ? meta.keywords.join(', ') : '';
     }
-    else {
-      return null
-    }
     return acc;
   }, { title: 'Default Title', description: 'Default description', keywords: '' });
 
@@ -203,7 +200,6 @@ export const Head = ({ data }) => {
           content: seoData.canonical,
         }
       ]}
-      canonical={seoData.canonical}
     />
   );
 };

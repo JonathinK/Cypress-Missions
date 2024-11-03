@@ -5,18 +5,18 @@ import { Tag } from "./tag.styled";
 import { ButtonPageLink } from "./button.styled";
 
 export const Project = styled.article`
-    display: grid;
-    grid-template-columns: 1em auto 1em;
-    grid-template-rows: auto .8fr auto;
-    justify-self:start;
-    align-self:start;
-    gap: 1em;
-  
-    box-sizing: border-box;
-    border: 4px solid ${({theme}) => theme.colors.tertiary};
-    border-radius: 1em;
-    overflow: hidden;
-    padding-bottom: .5em;
+  display: grid;
+  grid-template-columns: 1em auto 1em;
+  grid-template-rows: auto .8fr auto;
+  justify-self:start;
+  align-self:start;
+  gap: 1em;
+
+  box-sizing: border-box;
+  border: 4px solid ${({theme}) => theme.colors.tertiary};
+  border-radius: 1em;
+  overflow: hidden;
+  padding-bottom: .5em;
     
   &.project_card{
     
@@ -116,7 +116,7 @@ export const ProjectTagContainer = styled.div`
   align-items:center;
   gap: 1em;
 
-  padding: 1em 0em;
+  padding: .5em 0em;
   width: 100%;
   box-sizing: border-box;
   
