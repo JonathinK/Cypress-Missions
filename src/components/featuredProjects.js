@@ -38,7 +38,6 @@ export const FeaturedProjects = () => {
   return(
     <FeatureContainer $ProjectsFeature>
       {featureCards.map((card) => {
-        console.log("Card Image: ", card);
         return(
           <Card $FeaturedProject key={card.contentful_id}>
             <NavLink to={`/portfolio/${card.slug}`}/>
