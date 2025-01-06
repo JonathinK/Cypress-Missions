@@ -13,7 +13,6 @@ export const ProjectsFeature = () => {
         nodes{
           codeId
           contentful_id
-          externalName
           projectTitle
           slug
           featureImage {
