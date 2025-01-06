@@ -71,7 +71,6 @@ export const query = graphql`
   contentfulPage(codeId: {eq: "portfolio"}) {
     codeId
     contentful_id
-    externalName
     metadata {
       contentful_id
       googleBots
@@ -112,7 +111,6 @@ export const query = graphql`
       nodes {
         codeId
         contentful_id
-        externalName
         slug
         updatedAt(formatString: "MMM Do, YYYY") 
         projectStartDate(formatString: "MMM Do, YYYY")

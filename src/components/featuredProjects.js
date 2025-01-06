@@ -11,7 +11,6 @@ export const FeaturedProjects = () => {
         nodes {
           codeId
           contentful_id
-          externalName
           slug
           projectLocation
           projectTitle
