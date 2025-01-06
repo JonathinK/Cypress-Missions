@@ -121,14 +121,14 @@ export const BlockQuote = styled.blockquote.attrs(props => ({
 
 `
 export const OList = styled.ol.attrs(props => ({
-
+  
 }))`
-
+  list-style-position: inside;
 `
 export const UList = styled.ul.attrs(props => ({
-
+ 
 }))`
-  
+   list-style-: square inside;
 `
 export const LItem = styled.li.attrs(props => ({
 

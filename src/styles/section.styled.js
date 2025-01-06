@@ -721,16 +721,16 @@ export const Section = styled.section.attrs(props => ({
       z-index: 2;
 
       ${Card}{
-        border: 2px solid ${({theme}) => theme.shades._200};
+        border:none;
         border-radius: ${({theme}) => theme.sizes.medium};
-        background: ${({theme}) => theme.colors.secondary};
+        
         flex-flow: column nowrap;
-        justify-content:center;
+        justify-content:start;
         align-items:center;
         flex: 1 1 100%;
         padding: 2.5em 2em;
         gap: 1em;
-        box-shadow: 0px 151px 42px 0px rgba(0, 0, 0, 0.00), 0px 97px 39px 0px rgba(0, 0, 0, 0.04), 0px 54px 33px 0px rgba(0, 0, 0, 0.12), 0px 24px 24px 0px rgba(0, 0, 0, 0.21), 0px 6px 13px 0px rgba(0, 0, 0, 0.24);
+        /* box-shadow: 0px 151px 42px 0px rgba(0, 0, 0, 0.00), 0px 97px 39px 0px rgba(0, 0, 0, 0.04), 0px 54px 33px 0px rgba(0, 0, 0, 0.12), 0px 24px 24px 0px rgba(0, 0, 0, 0.21), 0px 6px 13px 0px rgba(0, 0, 0, 0.24); */
         
         ${TextContainer}{
           justify-content:center;

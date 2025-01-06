@@ -7,7 +7,7 @@ export const PaginationComponent = ({ itemsPerPage, totalItems, paginate, curren
   for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
     pageNumbers.push(i);
   }
-  console.log("Class Name: ", className);
+  
   return (
     <Pagination className={className || ""}> 
       <UList>

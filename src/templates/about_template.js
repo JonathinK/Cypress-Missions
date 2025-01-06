@@ -7,7 +7,6 @@ import Seo from '../components/seo';
 const AboutPage = ({ data }) => {
   const pageHero = data.contentfulPage.pageHero;
   const pageSections = data.contentfulPage.sections;
-  console.log(data);
   return(
     <React.Fragment>
     <Hero content={pageHero}/>
@@ -57,7 +56,7 @@ export const query = graphql`
 `
 export const Head = ({ data }) => {
   const metadata = data.contentfulPage.metadata;
-  console.log(metadata);
+
 
   const seoData = metadata.reduce((acc,meta) => {
     if(meta.name.codeId === 'title'){

@@ -7,7 +7,7 @@ import Seo from '../components/seo';
 
 
 const BlogPage = ({ data }) => {
-  console.log(data);
+  
   //Gets the heroData
   const pageHero = data.contentfulPage.pageHero;
 
@@ -150,7 +150,7 @@ export const query = graphql`
 `
 export const Head = ({ data }) => {
   const metadata = data.contentfulPage.metadata;
-  console.log(metadata);
+  
 
   const seoData = metadata.reduce((acc,meta) => {
     if(meta.name.codeId === 'title'){

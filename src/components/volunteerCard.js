@@ -8,7 +8,6 @@ import { Card } from '../styles';
 export const VolunteerCard = ({ content }) => {
   const experience = content;
 
-  console.log(experience, "experience_card_content")
   return(
     <Card>
       {experience.content.map((items) => {

@@ -49,7 +49,7 @@ const Project = ({ data }) => {
       </HeroContainer>
       <Section className="tags_section">
         <ProjectTagContainer className="project_template_tags">
-          {projectData.tags.map(tag => {
+          {projectData.tags && projectData.tags.map(tag => {
             return(
               <Tag key={tag.contentful_id}>
                 {tag.value}
