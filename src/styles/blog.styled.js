@@ -10,11 +10,14 @@ export const Blog = styled(Project)`
   gap: .5em;
   padding: .5em .5em;
   min-width: none;
-
+  justify-self: stretch;
+  
+  
   && .project_image{
     flex: 1 1 50%;
     aspect-ratio: 2/1;
     border-radius:.5em;
+    width: 100%;
   } 
 
   && .project_text_container{
@@ -23,6 +26,7 @@ export const Blog = styled(Project)`
       align-items:flex-start;
       gap: .5em;
       text-align: left;
+      width: 100%;
 
       .blog_card_overline_tag{
         color: ${({theme}) => theme.shades._700};
@@ -31,6 +35,9 @@ export const Blog = styled(Project)`
         color: ${({theme}) => theme.colors.primary};
         font-size: 1.5rem !important;
         -webkit-line-clamp: 1;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
       }
       .date_container{
         justify-content: flex-start;
@@ -47,6 +54,11 @@ export const Blog = styled(Project)`
       }
       .blog_card_summary{
         text-transform: initial;
+        height: auto;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
       }
   }
 
@@ -61,6 +73,7 @@ export const Blog = styled(Project)`
     padding: 0;
     border-radius: .5rem;
     border: 1px solid inherit !important;
+    width:
 
    & > .blog_page_link{
       justify-content:center;
@@ -88,6 +101,9 @@ export const Blog = styled(Project)`
         color: ${({theme}) => theme.colors.primary};
         font-size: 1.25rem !important;
         -webkit-line-clamp: 1;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
       }
       .date_container{
         justify-content: flex-start;

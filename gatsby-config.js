@@ -46,7 +46,6 @@ module.exports = {
         host: process.env.CONTENTFUL_HOST || 'cdn.contentful.com',
         downloadLocal: false,
         environment:"production",
-
       }
     },
     {/*Gatsby Svg Loader*/

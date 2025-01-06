@@ -49,12 +49,13 @@ const EventInfoBar = ({ content }) => {
           </IconContainer>
           <TextContainer className="info_text">
             {content.startDate === content.endDate && (
-              <Paragraph><strong>Starts: </strong>{content.startDate}</Paragraph>
+              <Paragraph>{content.startDate}</Paragraph>
             )}
             {content.startDate !== content.endDate && (
               <>
-                <Paragraph><strong>Starts: </strong>{content.startDate}</Paragraph>
-                <Paragraph><strong>Ends: </strong>{content.endDate}</Paragraph>
+                <Paragraph>{content.startDate}</Paragraph>
+                -
+                <Paragraph>{content.endDate}</Paragraph>
               </> 
             )}
           </TextContainer>
@@ -65,9 +66,10 @@ const EventInfoBar = ({ content }) => {
             <Icon icon="bi:clock" class="icons clock"/>
           </IconContainer>
           <TextContainer className="info_text">
-            <Paragraph><strong>Starts: </strong>{content.startTime}</Paragraph>
+            <Paragraph>{content.startTime}</Paragraph>
+            -
             {content.endTime && (
-              <Paragraph><strong>Ends: </strong>{content.endTime}</Paragraph>
+              <Paragraph>{content.endTime}</Paragraph>
             )}
           </TextContainer>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardsContainer, Heading3, Heading4, MediaContainer, NavLink, Overline, TextContainer } from '../styles';
+import { Card, CardsContainer, Heading3, MediaContainer, NavLink, Overline, TextContainer } from '../styles';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
@@ -38,6 +38,7 @@ export const ArticleFeature = () => {
   return(
     <CardsContainer className="feature_cards_container">
       {articleContent.map(article => {
+        const articleType = article.tags ? article.tags.find(tag => tag.tagFamilies === "Article Type") : null;
         return(
           <Card key={article.contentful_id}>
             <NavLink to={`/news-and-stories/${article.slug}`} className="card_link" />
@@ -50,9 +51,7 @@ export const ArticleFeature = () => {
                 />
               </MediaContainer> 
               <TextContainer>
-                {article.tags.filter(tag => tag.tagFamilies === "Article Type").map(tag => (
-                  <Overline key={tag.codeId}>{tag.value}</Overline>
-                ))}
+                {articleType && <Overline key={articleType.codeId}>{articleType.value}</Overline>}
                 <Heading3>
                   {article.articleTitle}
                 </Heading3>

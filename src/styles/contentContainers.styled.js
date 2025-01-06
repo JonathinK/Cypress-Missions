@@ -140,8 +140,17 @@ export const MediaContainer = styled.div`
   }
   &.rich_text_image{
     width: 100%;
-    margin-bottom: 2em;
+    aspect-ratio: 2/1.5;
+    height: auto;
+    margin: 2em 0em;
     box-shadow: none;
+    position:relative;
+
+    .full-width{
+      position:absolute;
+      width: 100%;
+      height: 100%;
+    }
   }
   ${props => props.$EventFeature && css`
     

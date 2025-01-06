@@ -4,7 +4,6 @@ import { CardsContainer } from '../styles';
 import { VolunteerCard } from './volunteerCard';
 
 export const VolunteerExperiences = ({ content }) => {
-  console.log(content,"cards_content");
   const experienceCard = content.content;
   return(
     <CardsContainer $VolunteerExperiences>

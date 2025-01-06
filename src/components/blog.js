@@ -17,7 +17,7 @@ export const BlogCard = ({ blog }) => {
           image={featureImage}  
           alt=''
           loading='eager'
-          className={blog.featureImage.externalName || 'full_image'}
+          className="full_image"
         />
       </MediaContainer>
       <TextContainer className='project_text_container'>

@@ -127,7 +127,7 @@ export const RichTextRender = ({ content, references }) => {
                 <GatsbyImage 
                   image={gatsbyImageData} 
                   alt='' 
-                  className=""  
+                  className="full-width"  
                 />
               </MediaContainer>
       },

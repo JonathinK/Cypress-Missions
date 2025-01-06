@@ -121,12 +121,11 @@ export const query = graphql`
           description
           __typename
           gatsbyImageData(
-          quality: 100
+          quality: 80
           resizingBehavior: SCALE
           layout: FULL_WIDTH
           placeholder: BLURRED
           cropFocus: CENTER
-          aspectRatio: 2.1
           )
         }
       }

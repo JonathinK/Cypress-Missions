@@ -49,7 +49,8 @@ export const SubmitInput = styled(TextInput).attrs({
   border: none;
   background: ${({theme}) => theme.colors.tertiary};
   font-family: ${({theme}) => theme.fonts.body};
-  color: ${({theme}) => theme.shades._50};
+  color: white;
+  cursor: pointer;
 `
 export const ResetInput = styled(SubmitInput).attrs({
     type:"reset",

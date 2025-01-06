@@ -12,9 +12,10 @@ export const FormRender = ({ content }) => {
       autoComplete='on' 
       autoCorrect='on'
       method="POST"
-      data-remove-prefix
       data-netlify="true"
+      data-netlify-honeypot="bot-field"
     >  
+      <input type="hidden" name="form-name" value={formContainer.externalName} />
       <input 
         type='hidden' 
         name='subject'
@@ -27,12 +28,12 @@ export const FormRender = ({ content }) => {
             <FormElement key={component.contentful_id}>
               <Label htmlFor={component.name}>
                 {component.label}
-                {component.isRequired === true ? "*" : ""}
+                {component.isRequired ? "*" : ""}
               </Label>
               <TextInput 
                 id={component.name} 
                 name={component.name} 
-                required={component.isRequired === "true"}
+                required={component.isRequired}
                 placeholder={component.placeholder || ''} 
               />
             </FormElement>  
@@ -43,12 +44,12 @@ export const FormRender = ({ content }) => {
             <FormElement key={component.contentful_id}>
               <Label htmlFor={component.name}>
                 {component.label}
-                {component.isRequired === true ? "*" : ""}
+                {component.isRequired ? "*" : ""}
               </Label>
               <EmailInput 
                 id={component.name}
                 name={component.name}
-                required={component.isRequired === "true"}
+                required={component.isRequired}
               />
             </FormElement>
           )
@@ -58,13 +59,13 @@ export const FormRender = ({ content }) => {
             <FormElement key={component.contentful_id}>
               <Label htmlFor={component.name}>
                 {component.label}
-                {component.isRequired === true ? "*" : ""}
+                {component.isRequired ? "*" : ""}
               </Label>
               <PhoneInput 
                 id={component.name} 
                 name={component.name} 
                 placeholder={component.placeholder}
-                required={component.isRequired === "true"}
+                required={component.isRequired}
                 pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'
             />
             </FormElement>
@@ -75,14 +76,14 @@ export const FormRender = ({ content }) => {
             <FormElement key={component.contentful_id}>
               <Label htmlFor={component.name}>
                 {component.label}
-                {component.isRequired === true ? "*" : ""}
+                {component.isRequired ? "*" : ""}
               </Label>
               <NumberInput 
                 id={component.name} 
                 name={component.name} 
                 min="0" 
                 placeholder='0' 
-                required={component.isRequired === "true"}
+                required={component.isRequired}
                 />
             </FormElement>
           )
@@ -92,12 +93,12 @@ export const FormRender = ({ content }) => {
             <FormElement key={component.contentful_id}>
               <Label htmlFor={component.name}>
                 {component.label}
-                {component.isRequired === true ? "*" : ""}
+                {component.isRequired ? "*" : ""}
               </Label>
               <DateInput 
                 id={component.name} 
                 name={component.name} 
-                required={component.isRequired === "true"}
+                required={component.isRequired}
               />
             </FormElement>
           )
@@ -107,12 +108,12 @@ export const FormRender = ({ content }) => {
             <FormElement key={component.contentful_id}>
               <Label htmlFor={component.name}>
               {component.label}
-              {component.isRequired === true ? "*" : ""}
+              {component.isRequired ? "*" : ""}
               </Label>
               <TimeInput 
                 id={component.name} 
                 name={component.name} 
-                required={component.isRequired === "true"}
+                required={component.isRequired}
               />
             </FormElement>
           )
@@ -122,7 +123,7 @@ export const FormRender = ({ content }) => {
             <FormElement key={component.contentful_id}>
             <Label htmlFor={component.name}>
               {component.label}
-              {component.isRequired === true ? "*" : ""}
+              {component.isRequired ? "*" : ""}
             </Label>
             {/* Maps through radio selections and wraps each in a div*/}
              {component.values.map((items) => {
@@ -132,7 +133,7 @@ export const FormRender = ({ content }) => {
                     name={items.name} 
                     value={items.value} 
                     id={items.value}
-                    required={component.isRequired === "true"}
+                    required={component.isRequired}
                     />
                   <Label $RadioButtonLabel htmlFor={items.value}>{items.value}</Label>
                 </FormElement> 
@@ -146,13 +147,13 @@ export const FormRender = ({ content }) => {
             <FormElement key={component.contentful_id}>
               <Label htmlFor={component.name}>
                 {component.label}
-                {component.isRequired === true ? "*" : ""}
+                {component.isRequired ? "*" : ""}
               </Label>
               <TextArea 
                 id={component.name} 
                 name={component.name} 
                 placeholder={component.placeholder} 
-                required={component.isRequired === "true"}
+                required={component.isRequired}
               />
             </FormElement>
           )
@@ -164,10 +165,10 @@ export const FormRender = ({ content }) => {
             >
               <Label htmlFor={component.name}>
                 {component.label}
-                {component.isRequired === true ? "*":""}
+                {component.isRequired ? "*":""}
               </Label>
               <Select
-              required={component.isRequired === "true"}
+              required={component.isRequired}
               name={component.name}
               id={component.name}
               multiple={component.allowMultipleSelections === "true"}

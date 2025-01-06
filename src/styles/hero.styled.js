@@ -451,7 +451,7 @@ export const HeroContainer = styled.section.attrs(props => ({
   &.news_hero{
     grid-column: 1/15;
     width: 100%;
-    padding: 5em 0em;
+    padding: 8em 0em;
     gap: 3em 1em;
     ${TextContainer}{
       justify-content:center;
@@ -472,6 +472,7 @@ export const HeroContainer = styled.section.attrs(props => ({
     }
     @media ${({theme}) => theme.breakpoints.mobile}{
       grid-column: 1/7; 
+      padding: 7em 0em 2em 0em;
     }
   }
   &.story_hero{

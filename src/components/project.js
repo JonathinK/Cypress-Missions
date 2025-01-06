@@ -5,6 +5,11 @@ import { Icon } from '@iconify-icon/react/dist/iconify.mjs';
 
 export const ProjectCard = ({ project }) => {
   const featureImage = getImage(project.featureImage.asset);
+
+  const getDisplayDate = (project) => {
+    return project.updatedAt !== project.projectStartDate ? `Updated On: ${project.updatedAt}` : `Started On: ${project.projectStartDate}`;
+  };
+
   return(
     <Project
       className="project_card"
@@ -25,19 +30,15 @@ export const ProjectCard = ({ project }) => {
         <Heading2 className="project_headline">
           {project.projectTitle}
         </Heading2>
-      <ContentContainer className="date_container">
-          {project.updatedAt && project.updatedAt !== project.projectStartDate && (
-            <React.Fragment>
-              <LabelChip className='project_updated_at'>
-                Updated On: {project.updatedAt}
-              </LabelChip> 
-            </React.Fragment>
-          )}
-      </ContentContainer>
-      <Paragraph dangerouslySetInnerHTML={{
+        <ContentContainer className="date_container">
+          <LabelChip className='project_date'>
+            {getDisplayDate(project)}
+          </LabelChip>
+        </ContentContainer>
+        <Paragraph dangerouslySetInnerHTML={{
           __html: project.summary.summary,
         }}/>
-        </TextContainer>
+      </TextContainer>
     </Project>
   )
 }
