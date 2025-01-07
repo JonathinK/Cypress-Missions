@@ -9,7 +9,7 @@ import Seo from '../components/seo';
 const Story = ({ data }) => {
   const  story  = data.contentfulBlogArticle;
   const featureImg = getImage(story.featureImage.gatsbyImageData);
-  console.log(story);
+
   return(
     <>
     <HeroContainer className="story_hero">
@@ -139,7 +139,6 @@ export const query = graphql`
 `
 export const Head = ({ data }) => {
   const metadata = data.contentfulBlogArticle.metadata;
-  console.log(metadata);
 
   const seoData = metadata.reduce((acc,meta) => {
     if(meta.name.codeId === 'title'){
