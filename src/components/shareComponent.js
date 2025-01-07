@@ -12,20 +12,11 @@ export const ShareComponent = ({ title }) => {
       case 'twitter':
         shareUrl = `https://twitter.com/intent/tweet?url=${url}`;
         break;
-<<<<<<< HEAD
-      case 'facebook':
-        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        shareUrl = isMobile 
-          ? `fb://facewebmodal/f?href=https://www.facebook.com/sharer/sharer.php?u=${url}`
-          : `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-        break;
-=======
->>>>>>> development
       case 'linkedin':
         shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
         break;
       case 'email':
-        shareUrl = `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(url)}`;
+        shareUrl = `mailto:?subject=${title}&body=${url}`;
         break;
       default:
         shareUrl = url;
