@@ -10,7 +10,7 @@ export const ShareComponent = ({ title }) => {
 
     switch (platform) {
       case 'twitter':
-        shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+        shareUrl = `https://twitter.com/intent/tweet?url=${url}`;
         break;
       case 'linkedin':
         shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
