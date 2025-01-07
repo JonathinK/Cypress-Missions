@@ -1,25 +1,23 @@
 import { graphql } from 'gatsby';
-import React, {useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { BlogRender, FilterComponent, PaginationComponent } from '../components';
 import { Hero } from "../components";
 import { Section } from '../styles';
 import Seo from '../components/seo';
 
-
 const BlogPage = ({ data }) => {
-  
-  //Gets the heroData
-  const pageHero = data.contentfulPage.pageHero;
+  // Gets the heroData
+  const pageHero = data.contentfulPage?.pageHero || {};
 
-  //Manages States
+  // Manages States
   const [selectedTags, setSelectedTags] = useState([]);
   const [filteredBlogs, setFilteredBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 6;
 
   useEffect(() => {
-    setFilteredBlogs(data.allContentfulBlogArticle.nodes);
-  }, [data.allContentfulBlogArticle.nodes]);
+    setFilteredBlogs(data.allContentfulBlogArticle?.nodes || []);
+  }, [data.allContentfulBlogArticle?.nodes]);
 
   const handleTagChange = (tag) => {
     const newSelectedTags = selectedTags.includes(tag)
@@ -28,7 +26,7 @@ const BlogPage = ({ data }) => {
 
     setSelectedTags(newSelectedTags);
 
-    const filtered = data.allContentfulBlogArticle.nodes.filter(project =>
+    const filtered = (data.allContentfulBlogArticle?.nodes || []).filter(project =>
       newSelectedTags.length === 0 || newSelectedTags.every(tag => project.tags.some(t => t.value === tag))
     );
     setFilteredBlogs(filtered);
@@ -40,13 +38,13 @@ const BlogPage = ({ data }) => {
   const currentBlogs = filteredBlogs.slice(indexOfFirstProject, indexOfLastProject);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-  return(
+  return (
     <React.Fragment>
-      <Hero content={pageHero}/>
+      <Hero content={pageHero} />
       <Section className='blogs_section'>
         <FilterComponent
-          tags={data.allContentfulTag.nodes} 
-          selectedTags={selectedTags} 
+          tags={data.allContentfulTag?.nodes || []}
+          selectedTags={selectedTags}
           onTagChange={handleTagChange}
           filteredItems={filteredBlogs}
         />
@@ -54,38 +52,39 @@ const BlogPage = ({ data }) => {
           blogs={currentBlogs}
         />
         {filteredBlogs.length > 9 && (
-          <PaginationComponent 
-          itemsPerPage={blogsPerPage}
-          totalItems={filteredBlogs.length}
-          paginate={paginate}
-          currentPage={currentPage}
-        />
+          <PaginationComponent
+            itemsPerPage={blogsPerPage}
+            totalItems={filteredBlogs.length}
+            paginate={paginate}
+            currentPage={currentPage}
+          />
         )}
       </Section>
     </React.Fragment>
-  )
+  );
 }
+
 export const query = graphql`
-  query{
-    contentfulPage(codeId: {eq: "news_and_stories"}){
+  query {
+    contentfulPage(codeId: { eq: "news_and_stories" }) {
       codeId
       contentful_id
-      externalName 
+      externalName
       metadata {
+        contentful_id
+        googleBots
+        internalName
+        keywords
+        content {
+          id
+          content
+        }
+        name {
           contentful_id
-          googleBots
-          internalName
-          keywords
-          content {
-            id
-            content
-          }
-          name {
-            contentful_id
-            codeId
-          }
-        } 
-      pageHero{
+          codeId
+        }
+      }
+      pageHero {
         codeId
         contentful_id
         externalName
@@ -108,14 +107,14 @@ export const query = graphql`
       }
     }
     allContentfulBlogArticle(
-      sort:{datePosted: ASC}
+      sort: { datePosted: ASC }
     ) {
       nodes {
         codeId
         contentful_id
         externalName
         slug
-        updatedAt(formatString: "MMM Do, YYYY") 
+        updatedAt(formatString: "MMM Do, YYYY")
         datePosted(formatString: "MMM Do, YYYY")
         articleTitle
         summary {
@@ -126,7 +125,6 @@ export const query = graphql`
           contentful_id
           description
           gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 60)
-   
         }
         tags {
           contentful_id
@@ -135,10 +133,10 @@ export const query = graphql`
           tagFamilies
         }
       }
-    } 
+    }
     allContentfulTag(
-      filter: {codeId: {eq: "article_tag"}}
-      sort: {tagFamilies: ASC}
+      filter: { codeId: { eq: "article_tag" } }
+      sort: { tagFamilies: ASC }
     ) {
       nodes {
         codeId
@@ -148,24 +146,35 @@ export const query = graphql`
     }
   }
 `
-export const Head = ({ data }) => {
-  const metadata = data.contentfulPage.metadata;
-  
 
-  const seoData = metadata.reduce((acc,meta) => {
-    if(meta.name.codeId === 'title'){
-      acc.title = meta.content.content;
-    } else if (meta.name.codeId === 'description'){
-      acc.description = meta.content.content
-    } else if (meta.name.codeId === 'canonical'){
-      acc.canonical = meta.content.content
-    } else if (meta.name.codeId === 'keywords'){
+export const Head = ({ data }) => {
+  const metadata = data.contentfulPage?.metadata || [];
+  console.log('Metadata:', metadata); // Add logging to check metadata
+
+  if (!metadata.length) {
+    return (
+      <Seo
+        title="Default Title"
+        description="Default description"
+        meta={[]}
+      />
+    );
+  }
+
+  const seoData = metadata.reduce((acc, meta) => {
+    if (meta.name?.codeId === 'title') {
+      acc.title = meta.content?.content || 'Default Title';
+    } else if (meta.name?.codeId === 'description') {
+      acc.description = meta.content?.content || 'Default description';
+    } else if (meta.name?.codeId === 'canonical') {
+      acc.canonical = meta.content?.content || '';
+    } else if (meta.name?.codeId === 'keywords') {
       acc.keywords = meta.keywords ? meta.keywords.join(', ') : '';
     }
     return acc;
   }, { title: 'Default Title', description: 'Default description', keywords: '' });
 
-  return(
+  return (
     <Seo
       title={seoData.title}
       description={seoData.description}
@@ -183,5 +192,6 @@ export const Head = ({ data }) => {
     />
   );
 };
-export default BlogPage
+
+export default BlogPage;
 

@@ -9,6 +9,7 @@ import Seo from '../components/seo';
 const Story = ({ data }) => {
   const  story  = data.contentfulBlogArticle;
   const featureImg = getImage(story.featureImage.gatsbyImageData);
+
   return(
     <>
     <HeroContainer className="story_hero">

@@ -77,6 +77,10 @@ export const ContentContainer = styled.div.attrs(props => ({
       grid-column: 2/6;
     }
   `}
+
+  .article_relation{
+    margin-top: 2em;
+  }
   
   &.date_container{
         display: inherit;
@@ -127,6 +131,9 @@ export const TextContainer = styled.div`
   ol{
     list-style: inside square;
   }
+    &.story_text{
+      margin-top: 4em;
+    }
 `
 export const MediaContainer = styled.div`
   box-shadow: 0px 60px 17px 0px rgba(0, 0, 0, 0.00), 0px 38px 15px 0px rgba(0, 0, 0, 0.02), 0px 22px 13px 0px rgba(0, 0, 0, 0.08), 0px 10px 10px 0px rgba(0, 0, 0, 0.14), 0px 2px 5px 0px rgba(0, 0, 0, 0.16);

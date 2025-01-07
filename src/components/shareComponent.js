@@ -12,12 +12,15 @@ export const ShareComponent = ({ title }) => {
       case 'twitter':
         shareUrl = `https://twitter.com/intent/tweet?url=${url}`;
         break;
+<<<<<<< HEAD
       case 'facebook':
         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         shareUrl = isMobile 
           ? `fb://facewebmodal/f?href=https://www.facebook.com/sharer/sharer.php?u=${url}`
           : `https://www.facebook.com/sharer/sharer.php?u=${url}`;
         break;
+=======
+>>>>>>> development
       case 'linkedin':
         shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
         break;
@@ -36,7 +39,6 @@ export const ShareComponent = ({ title }) => {
     <ContentContainer className="share_component">
       {/* Render a button for each sharing platform */}
       <Button className="icon_share_button" onClick={() => handleShareClick('twitter')}><Icon icon="prime:twitter"/></Button>
-      <Button className="icon_share_button" onClick={() => handleShareClick('facebook')}><Icon icon="eva:facebook-fill"/></Button>
       <Button className="icon_share_button" onClick={() => handleShareClick('linkedin')}><Icon icon="mdi:linkedin"/></Button>
       <Button className="icon_share_button" onClick={() => handleShareClick('email')}><Icon icon="ic:round-email"/></Button>
     </ContentContainer>
