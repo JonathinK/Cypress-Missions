@@ -10,16 +10,19 @@ export const ShareComponent = ({ title }) => {
 
     switch (platform) {
       case 'twitter':
-        shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+        shareUrl = `https://twitter.com/intent/tweet?url=${url}`;
         break;
       case 'facebook':
-        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}&t=${title}`;
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        shareUrl = isMobile 
+          ? `fb://facewebmodal/f?href=https://www.facebook.com/sharer/sharer.php?u=${url}`
+          : `https://www.facebook.com/sharer/sharer.php?u=${url}`;
         break;
       case 'linkedin':
         shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
         break;
       case 'email':
-        shareUrl = `mailto:?subject=${title}&body=${url}`;
+        shareUrl = `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(url)}`;
         break;
       default:
         shareUrl = url;
