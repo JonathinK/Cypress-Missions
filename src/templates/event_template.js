@@ -8,7 +8,7 @@ import Seo from '../components/seo';
 
 const EventTemplate = ({ data }) => {
 const eventData = data.contentfulEvent;
-console.log(data);
+
 //Hero
 const EventHero = ({ content }) => {
   //Feature Image

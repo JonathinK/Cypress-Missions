@@ -42,6 +42,10 @@ export const Button = styled.button.attrs((props) => ({
     text-align: center;
     padding: 1em 1.5em;
   }
+
+  &:hover{
+    cursor: pointer; 
+  }
 `
 export const ButtonLink = styled.a.attrs(props => ({
     type:'button'

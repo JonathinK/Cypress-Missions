@@ -79,12 +79,7 @@ function Seo({ description, lang, meta, title, canonical }) {
   )
 }
 
-Seo.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-  canonical: ``,
-}
+
 
 Seo.propTypes = {
   description: PropTypes.string,

@@ -63,23 +63,23 @@ const [menuOpen, setMenuOpen] = useState(false);
 const toggleMenu = () => {
   setMenuOpen(!menuOpen);
 }
-//Close Menu
-const closeMenu = () => {
-  setMenuOpen(false);
-}
-
-useEffect(() => {
-  if (menuOpen) {
-    disableScroll();
-  } else {
-    enableScroll();
+// Close Menu
+  const closeMenu = () => {
+    setMenuOpen(false);
   }
 
-  return () => {
-    enableScroll();
-  };
-}, [menuOpen]);
-//Mobile Hamburger Menu To Open & Close Mobile Menu
+  useEffect(() => {
+    if (menuOpen) {
+      disableScroll();
+    } else {
+      enableScroll();
+    }
+
+    return () => {
+      enableScroll();
+    };
+  }, [menuOpen]);
+// Mobile Hamburger Menu To Open & Close Mobile Menu
   const MobileMenuBurger = () => {
     return(
       <Hamburger onClick={toggleMenu} className={menuOpen ? 'open' : ''}>
@@ -90,21 +90,21 @@ useEffect(() => {
     )
   } 
 
-  // Prevent body scroll when menu is open
-  useEffect(() => {
-    if (menuOpen) {
-      document.body.classList.add('no-scroll');
-    } else {
-      document.body.classList.remove('no-scroll');
-    }
+// Prevent body scroll when menu is open
+    useEffect(() => {
+      if (menuOpen) {
+        document.body.classList.add('no-scroll');
+      } else {
+        document.body.classList.remove('no-scroll');
+      }
 
-    // Clean up
-    return () => {
-      document.body.classList.remove('no-scroll');
-    };
-  }, [menuOpen]);
+      // Clean up
+      return () => {
+        document.body.classList.remove('no-scroll');
+      };
+    }, [menuOpen]);
   
-//Navigation Cta Buttons Render
+// Navigation Cta Buttons Render
   const NavigationButtons = ({ content }) => {
     return(
       <ContentContainer>
@@ -126,7 +126,7 @@ useEffect(() => {
     )
   }
 
-//Return for Header Content
+// Return for Header Content
   return(
     <PageHeader>
       <Logo/>

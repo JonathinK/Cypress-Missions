@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Button, ContentContainer, Heading3 } from '../styles';
+import { Button, ContentContainer } from '../styles';
 import { graphql } from 'gatsby';
 
 export const LatestFeatureSwitch = ({ content, activeFeature, onFeatureChange }) => {
