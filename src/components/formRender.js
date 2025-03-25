@@ -12,6 +12,7 @@ export const FormRender = ({ content }) => {
       autoComplete='on' 
       autoCorrect='on'
       method="POST"
+      action='/volunteer/'
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >  
@@ -33,6 +34,7 @@ export const FormRender = ({ content }) => {
               <TextInput 
                 id={component.name} 
                 name={component.name} 
+                type='text'
                 required={component.isRequired}
                 placeholder={component.placeholder || ''} 
               />
@@ -49,6 +51,7 @@ export const FormRender = ({ content }) => {
               <EmailInput 
                 id={component.name}
                 name={component.name}
+                type='email'
                 required={component.isRequired}
               />
             </FormElement>
@@ -64,6 +67,7 @@ export const FormRender = ({ content }) => {
               <PhoneInput 
                 id={component.name} 
                 name={component.name} 
+                type='tel'
                 placeholder={component.placeholder}
                 required={component.isRequired}
                 pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'
@@ -80,7 +84,8 @@ export const FormRender = ({ content }) => {
               </Label>
               <NumberInput 
                 id={component.name} 
-                name={component.name} 
+                name={component.name}
+                type='number' 
                 min="0" 
                 placeholder='0' 
                 required={component.isRequired}
@@ -98,6 +103,7 @@ export const FormRender = ({ content }) => {
               <DateInput 
                 id={component.name} 
                 name={component.name} 
+                type='date'
                 required={component.isRequired}
               />
             </FormElement>
@@ -114,6 +120,7 @@ export const FormRender = ({ content }) => {
                 id={component.name} 
                 name={component.name} 
                 required={component.isRequired}
+                type='time'
               />
             </FormElement>
           )
@@ -193,7 +200,7 @@ export const FormRender = ({ content }) => {
           }
           else if(buttons.typeSelector === "submit"){
             return(
-              <SubmitInput key={buttons.contentful_id}  id="submit"/>
+              <SubmitInput key={buttons.contentful_id}  id="submit" type='submit'/>
             )
           }
           else{

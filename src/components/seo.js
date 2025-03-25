@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { useLocation } from "@reach/router"
 
-function Seo({ description, lang, meta, title, canonical }) {
+function Seo({ description, lang, meta = [], title, canonical }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -28,7 +28,6 @@ function Seo({ description, lang, meta, title, canonical }) {
 
   const location = useLocation()
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
   const canonicalUrl = canonical || location.href
 
   return (
@@ -37,7 +36,6 @@ function Seo({ description, lang, meta, title, canonical }) {
         lang,
       }}
       title={title}
-      titleTemplate={defaultTitle ? `%s / ${defaultTitle}` : null}
       meta={[
         {
           name: `description`,
@@ -78,8 +76,6 @@ function Seo({ description, lang, meta, title, canonical }) {
     />
   )
 }
-
-
 
 Seo.propTypes = {
   description: PropTypes.string,
