@@ -87,20 +87,6 @@ export const query = graphql`
       codeId
       contentful_id
       externalName
-      metadata {
-          contentful_id
-          googleBots
-          internalName
-          keywords
-          content {
-            id
-            content
-          }
-          name {
-            contentful_id
-            codeId
-          }
-        }
       articleTitle
       datePosted(formatString: "MMM Do, YYYY")
       updatedAt(fromNow: true)
@@ -157,38 +143,14 @@ export const query = graphql`
     }
   }
 `
-export const Head = ({ data }) => {
-  const metadata = data.contentfulBlogArticle.metadata;
-  console.log(metadata);
-
-  const seoData = metadata.reduce((acc,meta) => {
-    if(meta.name.codeId === 'title'){
-      acc.title = meta.content.content;
-    } else if (meta.name.codeId === 'description'){
-      acc.description = meta.content.content
-    } else if (meta.name.codeId === 'canonical'){
-      acc.canonical = meta.content.content
-    } else if (meta.name.codeId === 'keywords'){
-      acc.keywords = meta.keywords ? meta.keywords.join(', ') : '';
-    }
-    return acc;
-  }, { title: 'Default Title', description: 'Default description', keywords: '' });
+export const Head = ({ data, location }) => {
+  const news = data.contentfulBlogArticle;
 
   return(
     <Seo
-      title={seoData.title}
-      description={seoData.description}
-      meta={[
-        {
-          name: 'keywords',
-          content: seoData.keywords,
-        },
-        {
-          name: 'canonical',
-          content: seoData.canonical,
-        }
-      ]}
-      canonical={seoData.canonical}
+      title={news.articleTitle}
+      description={news.summary.summary}
+      canonical={location.href}
     />
   );
 };

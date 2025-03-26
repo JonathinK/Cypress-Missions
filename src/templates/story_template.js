@@ -3,7 +3,6 @@ import React from 'react';
 import { ContentContainer, Heading1, Heading2, HeroContainer, HeroImage,  Overline,  Paragraph,  Section, TextContainer, LabelChip } from '../styles';
 import { RichTextRender, ShareComponent } from '../components';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { Caption } from '../styles/typography.styled';
 import Seo from '../components/seo';
 
 const Story = ({ data }) => {
@@ -56,11 +55,11 @@ const Story = ({ data }) => {
         </Overline> 
         {story.tags.map(tag => {
             return(
-              <Caption
+              <span
                 key={tag.contentful_id}
               >
                 {tag.value}
-              </Caption>
+              </span>
             )
           })}
       </ContentContainer>
@@ -78,20 +77,6 @@ export const query = graphql`
       codeId
       contentful_id
       externalName
-      metadata {
-          contentful_id
-          googleBots
-          internalName
-          keywords
-          content {
-            id
-            content
-          }
-          name {
-            contentful_id
-            codeId
-          }
-        }
       articleTitle
       datePosted(formatString: "MMM Do, YYYY")
       updatedAt(fromNow: true)
@@ -137,37 +122,15 @@ export const query = graphql`
     }
   }
 `
-export const Head = ({ data }) => {
-  const metadata = data.contentfulBlogArticle.metadata;
-
-  const seoData = metadata.reduce((acc,meta) => {
-    if(meta.name.codeId === 'title'){
-      acc.title = meta.content.content;
-    } else if (meta.name.codeId === 'description'){
-      acc.description = meta.content.content
-    } else if (meta.name.codeId === 'canonical'){
-      acc.canonical = meta.content.content
-    } else if (meta.name.codeId === 'keywords'){
-      acc.keywords = meta.keywords ? meta.keywords.join(', ') : '';
-    }
-    return acc;
-  }, { title: 'Default Title', description: 'Default description', keywords: '' });
-
+export const Head = ({ data, location }) => {
+  const metaTitle = data.contentfulBlogArticle.articleTitle;
+  const metaDescription = data.contentfulBlogArticle.summary.summary;
+ 
   return(
     <Seo
-      title={seoData.title}
-      description={seoData.description}
-      meta={[
-        {
-          name: 'keywords',
-          content: seoData.keywords,
-        },
-        {
-          name: 'canonical',
-          content: seoData.canonical,
-        }
-      ]}
-      canonical={seoData.canonical}
+      title={metaTitle}
+      description={metaDescription}
+      canonical={location.href}
     />
   );
 };
