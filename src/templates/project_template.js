@@ -35,9 +35,6 @@ const Project = ({ data }) => {
               </React.Fragment>
               )}
           </ContentContainer>
-          <Paragraph dangerouslySetInnerHTML={{
-            __html: projectData.summary.summary
-          }}/>
         </TextContainer>
         <HeroImage>
           <GatsbyImage
@@ -63,13 +60,15 @@ const Project = ({ data }) => {
           <RichTextRender content={projectData.richTextBody} references={projectData.richTextBody.references}/>
         </TextContainer>
       </Section>
-      <Section className="project_slider_section">
-      <TextContainer className="slider_section_heading_2_text">
-        <Heading2>Gallery</Heading2>
-        <hr/>
-      </TextContainer>
-        <ImageSlider content={sliderGallery}/>
-      </Section>
+      {sliderGallery && sliderGallery.length > 0 && (
+        <Section className="project_slider_section">
+          <TextContainer className="slider_section_heading_2_text">
+            <Heading2>Gallery</Heading2>
+            <hr/>
+          </TextContainer>
+          <ImageSlider content={sliderGallery}/>
+        </Section>
+      )}
       {projectData.video && 
           <Section className='project_video_section'>
           <IframeContainer className="project_video_iframe_container">
@@ -120,15 +119,6 @@ export const query = graphql`
       }
       richTextBody{
         raw
-        references{
-          ... on ContentfulBlogArticle{
-            contentful_id     
-            __typename
-            codeId
-            slug
-            id
-          }
-        }
       }
       imageSlider {
         contentful_id
