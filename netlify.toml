@@ -1,0 +1,7 @@
+[build.environment]
+  NODE_VERSION = "18"
+  NODE_NO_WARNINGS = "1"
+
+[build]
+  publish = "public"
+  command = "npm run build"
